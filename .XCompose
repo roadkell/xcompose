@@ -1,5 +1,5 @@
 # Cyrillic international keyboard layout: compose sequences
-# https://github.com/roadkell/cyrillic-intl-layout/XCompose
+# https://github.com/roadkell/cyrillic-intl-layout/.XCompose
 #
 # Mnemonics:
 #	'		acute (or upturn in Ґґ)
@@ -25,9 +25,6 @@
 # to type these symbols (unless they have custom-configured their layout /
 # / layers / dead keys / etc.; most users haven't).
 # This should be taken into account when proposing new compose sequences here.
-#
-# "Every time a user is forced to needlessly switch input languages,
-# God kills a kitten. Stop the slaughter!" - Anonymous
 #
 # TODO: add Kildin Sámi letters
 # TODO: add Archi multigraphs

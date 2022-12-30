@@ -112,7 +112,7 @@ include "%L"
 <Multi_key> <Cyrillic_te> <1>		: "тӀ"
 <Multi_key> <Cyrillic_U> <bar>		: "УӀ"
 <Multi_key> <Cyrillic_U> <1>		: "УӀ"
-<Multi_key> <Cyrillic_u> <bar>		: "УӀ"
+<Multi_key> <Cyrillic_u> <bar>		: "уӀ"
 <Multi_key> <Cyrillic_u> <1>		: "уӀ"
 <Multi_key> <Cyrillic_EF> <bar>		: "ФӀ"
 <Multi_key> <Cyrillic_EF> <1>		: "ФӀ"
@@ -427,15 +427,21 @@ include "%L"
 <dead_hook> <Cyrillic_SHHA>					: "Ђ"	Serbian_DJE # CYRILLIC CAPITAL LETTER DJE
 <dead_hook> <dead_stroke> <Cyrillic_SHHA>	: "Ђ"	Serbian_DJE # CYRILLIC CAPITAL LETTER DJE
 <dead_stroke> <dead_hook> <Cyrillic_SHHA>	: "Ђ"	Serbian_DJE # CYRILLIC CAPITAL LETTER DJE
+<dead_hook> <Cyrillic_TE>					: "Ђ"	Serbian_DJE # CYRILLIC CAPITAL LETTER DJE
 <Multi_key> <Cyrillic_SHHA> <5>				: "Ђ"	Serbian_DJE # CYRILLIC CAPITAL LETTER DJE
 <Multi_key> <Cyrillic_SHHA> <Cyrillic_JE>	: "Ђ"	Serbian_DJE # CYRILLIC CAPITAL LETTER DJE
+<Multi_key> <Cyrillic_TE> <5>				: "Ђ"	Serbian_DJE # CYRILLIC CAPITAL LETTER DJE
+<Multi_key> <Cyrillic_TE> <Cyrillic_JE>		: "Ђ"	Serbian_DJE # CYRILLIC CAPITAL LETTER DJE
 <dead_hook> <Serbian_tshe>					: "ђ"	Serbian_dje # CYRILLIC SMALL LETTER DJE
 <Multi_key> <Serbian_tshe> <5>				: "ђ"	Serbian_dje # CYRILLIC SMALL LETTER DJE
 <dead_hook> <Cyrillic_shha>					: "ђ"	Serbian_dje # CYRILLIC SMALL LETTER DJE
 <dead_hook> <dead_stroke> <Cyrillic_shha>	: "ђ"	Serbian_dje # CYRILLIC SMALL LETTER DJE
 <dead_stroke> <dead_hook> <Cyrillic_shha>	: "ђ"	Serbian_dje # CYRILLIC SMALL LETTER DJE
+<dead_hook> <Cyrillic_te>					: "ђ"	Serbian_dje # CYRILLIC SMALL LETTER DJE
 <Multi_key> <Cyrillic_shha> <5>				: "ђ"	Serbian_dje # CYRILLIC SMALL LETTER DJE
 <Multi_key> <Cyrillic_shha> <Cyrillic_je>	: "ђ"	Serbian_dje # CYRILLIC SMALL LETTER DJE
+<Multi_key> <Cyrillic_te> <5>				: "ђ"	Serbian_dje # CYRILLIC SMALL LETTER DJE
+<Multi_key> <Cyrillic_te> <Cyrillic_je>		: "ђ"	Serbian_dje # CYRILLIC SMALL LETTER DJE
 
 # Letters with left hooks
 <Multi_key> <9> <Cyrillic_EN>			: "Ԩ"	U0528 # CYRILLIC CAPITAL LETTER EN WITH LEFT HOOK

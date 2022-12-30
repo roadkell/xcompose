@@ -1,7 +1,16 @@
-## Международная кириллическая раскладка клавиатуры / Cyrillic International Keyboard Layout ##
+# Международная кириллическая раскладка клавиатуры / Cyrillic International Keyboard Layout #
 
 *"Every time a user is forced to needlessly switch input languages,
 God kills a kitten. Stop the slaughter!" — Anonymous*
+
+- [Что это](#что-это)
+- [Как установить](#как-установить)
+  - [Windows](#windows)
+  - [Linux](#linux)
+- [Как пользоваться](#как-пользоваться)
+- [Список комбинаций](#список-комбинаций)
+- [Важное](#важное)
+- [Лицензия](#лицензия)
 
 ## Что это ##
 

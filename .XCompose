@@ -1,7 +1,7 @@
 # Cyrillic international keyboard layout: compose sequences
 # https://github.com/roadkell/cyrillic-intl-layout
 #
-# 1016 custom sequences
+# 1010 custom sequences
 #
 # Mnemonics:
 #	'		acute (or upturn in Ґґ)
@@ -36,13 +36,11 @@ include "%L"
 
 # ============================================================================ #
 
-# Reversed letter lookalikes
+# Rotated letter lookalikes
 <Multi_key> <Cyrillic_E> <Cyrillic_E>		: "Є"	Ukrainian_IE # CYRILLIC CAPITAL LETTER UKRAINIAN IE
 <Multi_key> <Cyrillic_e> <Cyrillic_e>		: "є"	Ukrainian_ie # CYRILLIC SMALL LETTER UKRAINIAN IE
 <Multi_key> <Cyrillic_CHE> <Cyrillic_CHE>	: "Һ"	Cyrillic_SHHA # CYRILLIC CAPITAL LETTER SHHA
-<Multi_key> <Cyrillic_HA> <Cyrillic_HA>		: "Һ"	Cyrillic_SHHA # CYRILLIC CAPITAL LETTER SHHA
 <Multi_key> <Cyrillic_che> <Cyrillic_che>	: "һ"	Cyrillic_shha # CYRILLIC SMALL LETTER SHHA
-<Multi_key> <Cyrillic_ha> <Cyrillic_ha>		: "һ"	Cyrillic_shha # CYRILLIC SMALL LETTER SHHA
 <Multi_key> <Cyrillic_IE> <Cyrillic_IE>		: "Ә"	Cyrillic_SCHWA # CYRILLIC CAPITAL LETTER SCHWA
 <Multi_key> <Cyrillic_ie> <Cyrillic_ie>		: "ә"	Cyrillic_schwa # CYRILLIC SMALL LETTER SCHWA
 <Multi_key> <Cyrillic_EF> <Cyrillic_EF>		: "Ө"	Cyrillic_O_bar # CYRILLIC CAPITAL LETTER BARRED O
@@ -57,6 +55,8 @@ include "%L"
 <Multi_key> <Cyrillic_em> <Cyrillic_em>		: "ԝ"	U051D # CYRILLIC SMALL LETTER WE
 
 # More double-letter sequences
+<Multi_key> <Cyrillic_HA> <Cyrillic_HA>		: "Һ"	Cyrillic_SHHA # CYRILLIC CAPITAL LETTER SHHA
+<Multi_key> <Cyrillic_ha> <Cyrillic_ha>		: "һ"	Cyrillic_shha # CYRILLIC SMALL LETTER SHHA
 <Multi_key> <Cyrillic_U> <Cyrillic_U>		: "Ү"	Cyrillic_U_straight # CYRILLIC CAPITAL LETTER STRAIGHT U
 <Multi_key> <Cyrillic_u> <Cyrillic_u>		: "ү"	Cyrillic_u_straight # CYRILLIC SMALL LETTER STRAIGHT U
 <Multi_key> <Cyrillic_TSE> <Cyrillic_TSE>	: "Џ"	Cyrillic_DZHE # CYRILLIC CAPITAL LETTER DZHE
@@ -316,9 +316,17 @@ include "%L"
 <Multi_key> <7> <Cyrillic_YERU>		: "Ꙑ"	UA650 # CYRILLIC CAPITAL LETTER YERU WITH BACK YER
 <Multi_key> <7> <Cyrillic_yeru>		: "ꙑ"	UA651 # CYRILLIC SMALL LETTER YERU WITH BACK YER
 
-# For languages that have Ъъ, but lack Ьь
+# For languages that have Ъъ, but lack Ьь (Tajik, Uzbek)
 <Multi_key> <7> <Cyrillic_HARDSIGN>	: "Ь"	Cyrillic_SOFTSIGN # CYRILLIC CAPITAL LETTER SOFT SIGN
 <Multi_key> <7> <Cyrillic_hardsign>	: "ь"	Cyrillic_softsign # CYRILLIC SMALL LETTER SOFT SIGN
+
+# For languages that have Ыы, but lack Ьь (Abkhaz)
+<Multi_key> <Cyrillic_YERU> <Ukrainian_I>	: "Ь"	Cyrillic_SOFTSIGN # CYRILLIC CAPITAL SOFT SIGN
+<Multi_key> <Cyrillic_YERU> <bar>			: "Ь"	Cyrillic_SOFTSIGN # CYRILLIC CAPITAL SOFT SIGN
+<Multi_key> <Cyrillic_YERU> <1>				: "Ь"	Cyrillic_SOFTSIGN # CYRILLIC CAPITAL SOFT SIGN
+<Multi_key> <Cyrillic_yeru> <Ukrainian_i>	: "ь"	Cyrillic_softsign # CYRILLIC SMALL LETTER SOFT SIGN
+<Multi_key> <Cyrillic_yeru> <bar>			: "ь"	Cyrillic_softsign # CYRILLIC SMALL LETTER SOFT SIGN
+<Multi_key> <Cyrillic_yeru> <1>				: "ь"	Cyrillic_softsign # CYRILLIC SMALL LETTER SOFT SIGN
 
 # Letters with cedilla
 <dead_cedilla> <Cyrillic_ZE>		: "Ҙ"	U0498 # CYRILLIC CAPITAL LETTER ZE WITH DESCENDER
@@ -384,17 +392,17 @@ include "%L"
 <dead_belowcomma> <Cyrillic_TSE>	: "Џ"	Cyrillic_DZHE # CYRILLIC CAPITAL LETTER DZHE
 <Multi_key> <comma> <Cyrillic_TSE>	: "Џ"	Cyrillic_DZHE # CYRILLIC CAPITAL LETTER DZHE
 <Multi_key> <Cyrillic_TSE> <comma>	: "Џ"	Cyrillic_DZHE # CYRILLIC CAPITAL LETTER DZHE
-<Multi_key> <exclam> <Cyrillic_SHA>	: "Џ"	Cyrillic_DZHE # CYRILLIC CAPITAL LETTER DZHE
-<Multi_key> <bar> <Cyrillic_SHA>	: "Џ"	Cyrillic_DZHE # CYRILLIC CAPITAL LETTER DZHE
-<Multi_key> <1> <Cyrillic_SHA>		: "Џ"	Cyrillic_DZHE # CYRILLIC CAPITAL LETTER DZHE
-<Multi_key> <Cyrillic_SHA> <exclam>	: "Џ"	Cyrillic_DZHE # CYRILLIC CAPITAL LETTER DZHE
+# <Multi_key> <exclam> <Cyrillic_SHA>	: "Џ"	Cyrillic_DZHE # CYRILLIC CAPITAL LETTER DZHE
+# <Multi_key> <bar> <Cyrillic_SHA>	: "Џ"	Cyrillic_DZHE # CYRILLIC CAPITAL LETTER DZHE
+# <Multi_key> <1> <Cyrillic_SHA>		: "Џ"	Cyrillic_DZHE # CYRILLIC CAPITAL LETTER DZHE
+# <Multi_key> <Cyrillic_SHA> <exclam>	: "Џ"	Cyrillic_DZHE # CYRILLIC CAPITAL LETTER DZHE
 <dead_belowcomma> <Cyrillic_tse>	: "џ"	Cyrillic_dzhe # CYRILLIC SMALL LETTER DZHE
 <Multi_key> <comma> <Cyrillic_tse>	: "џ"	Cyrillic_dzhe # CYRILLIC SMALL LETTER DZHE
 <Multi_key> <Cyrillic_tse> <comma>	: "џ"	Cyrillic_dzhe # CYRILLIC SMALL LETTER DZHE
-<Multi_key> <exclam> <Cyrillic_sha>	: "џ"	Cyrillic_dzhe # CYRILLIC SMALL LETTER DZHE
-<Multi_key> <bar> <Cyrillic_sha>	: "џ"	Cyrillic_dzhe # CYRILLIC SMALL LETTER DZHE
-<Multi_key> <1> <Cyrillic_sha>		: "џ"	Cyrillic_dzhe # CYRILLIC SMALL LETTER DZHE
-<Multi_key> <Cyrillic_sha> <exclam>	: "џ"	Cyrillic_dzhe # CYRILLIC SMALL LETTER DZHE
+# <Multi_key> <exclam> <Cyrillic_sha>	: "џ"	Cyrillic_dzhe # CYRILLIC SMALL LETTER DZHE
+# <Multi_key> <bar> <Cyrillic_sha>	: "џ"	Cyrillic_dzhe # CYRILLIC SMALL LETTER DZHE
+# <Multi_key> <1> <Cyrillic_sha>		: "џ"	Cyrillic_dzhe # CYRILLIC SMALL LETTER DZHE
+# <Multi_key> <Cyrillic_sha> <exclam>	: "џ"	Cyrillic_dzhe # CYRILLIC SMALL LETTER DZHE
 <dead_belowcomma> <Cyrillic_IE>		: "Ҿ"	U04BE # CYRILLIC CAPITAL LETTER ABKHASIAN CHE WITH DESCENDER
 <Multi_key> <Cyrillic_IE> <comma>	: "Ҿ"	U04BE # CYRILLIC CAPITAL LETTER ABKHASIAN CHE WITH DESCENDER
 <Multi_key> <comma> <Cyrillic_IE>	: "Ҿ"	U04BE # CYRILLIC CAPITAL LETTER ABKHASIAN CHE WITH DESCENDER
@@ -506,12 +514,15 @@ include "%L"
 <Multi_key> <minus> <quotedbl> <Cyrillic_o>	: "ӫ"	U04EB # CYRILLIC SMALL LETTER BARRED O WITH DIAERESIS
 
 # Letters Ӛ (U+04DA CYRILLIC CAPITAL LETTER SCHWA WITH DIAERESIS) and ӛ (U+04DB
-# CYRILLIC SMALL LETTER SCHWA WITH DIAERESIS) can't be decomposed completely, as
-# the necessary sequence prefixes are already occupied. But we can cheat a bit.
-<Multi_key> <quotedbl> <Cyrillic_SHA> <Cyrillic_VE> <Cyrillic_A>	: "Ӛ"	U04DA # CYRILLIC CAPITAL LETTER SCHWA WITH DIAERESIS
-<Multi_key> <Cyrillic_SHA> <Cyrillic_VE> <Cyrillic_A> <quotedbl>	: "Ӛ"	U04DA # CYRILLIC CAPITAL LETTER SCHWA WITH DIAERESIS
-<Multi_key> <quotedbl> <Cyrillic_sha> <Cyrillic_ve> <Cyrillic_a>	: "ӛ"	U04DB # CYRILLIC SMALL LETTER SCHWA WITH DIAERESIS
-<Multi_key> <Cyrillic_sha> <Cyrillic_ve> <Cyrillic_a> <quotedbl>	: "ӛ"	U04DB # CYRILLIC SMALL LETTER SCHWA WITH DIAERESIS
+# CYRILLIC SMALL LETTER SCHWA WITH DIAERESIS) from Khanty alphabet, can't be
+# decomposed completely, as the necessary sequence prefixes are already occupied
+# (also, composing algorithm sucks). But we can cheat a bit (ugly solution,
+# commented out for now).
+# TODO: add more sequences for Әә
+# <Multi_key> <quotedbl> <Cyrillic_SHA> <Cyrillic_VE> <Cyrillic_A>	: "Ӛ"	U04DA # CYRILLIC CAPITAL LETTER SCHWA WITH DIAERESIS
+# <Multi_key> <Cyrillic_SHA> <Cyrillic_VE> <Cyrillic_A> <quotedbl>	: "Ӛ"	U04DA # CYRILLIC CAPITAL LETTER SCHWA WITH DIAERESIS
+# <Multi_key> <quotedbl> <Cyrillic_sha> <Cyrillic_ve> <Cyrillic_a>	: "ӛ"	U04DB # CYRILLIC SMALL LETTER SCHWA WITH DIAERESIS
+# <Multi_key> <Cyrillic_sha> <Cyrillic_ve> <Cyrillic_a> <quotedbl>	: "ӛ"	U04DB # CYRILLIC SMALL LETTER SCHWA WITH DIAERESIS
 
 # ============================================================================ #
 
@@ -1165,7 +1176,8 @@ include "%L"
 <Multi_key> <Cyrillic_TE> <underscore>	: "₸"	U20B8 # TENGE SIGN
 <Multi_key> <underscore> <Cyrillic_te>	: "₸"	U20B8 # TENGE SIGN
 <Multi_key> <Cyrillic_te> <underscore>	: "₸"	U20B8 # TENGE SIGN
-# Som is still unavailable in many fonts, as of 2022
+# Kyrgyz som was introduced into Unicode in 2021 and is still absent from most
+# fonts, as of 2023
 <dead_currency> <Cyrillic_ES>			: "⃀"	U20C0 # SOM SIGN
 <Multi_key> <underscore> <Cyrillic_ES>	: "⃀"	U20C0 # SOM SIGN
 <Multi_key> <Cyrillic_ES> <underscore>	: "⃀"	U20C0 # SOM SIGN

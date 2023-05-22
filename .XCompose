@@ -1,7 +1,7 @@
-# Cyrillic international keyboard layout: compose sequences
-# https://github.com/roadkell/cyrillic-intl-layout
+# Compose Table for Cyrillic Alphabets
+# https://github.com/roadkell/cyrillic-intl-compose
 #
-# 1010 custom sequences
+# 1010 custom sequences so far
 #
 # Mnemonics:
 #	'		acute (or upturn in Ґґ)
@@ -25,8 +25,8 @@
 # Most cyrillic keyboard layouts (ЙЦУКЕН-based) lack a substantial number
 # of symbols by default - `~@#$^&|[]{}'<> - thus leaving users with
 # .,'-_?!();:/\=+%* and forcing them to switch to English every time they need
-# to type these symbols (unless they have custom-configured their layout /
-# / layers / dead keys / etc.; most users haven't).
+# to type these symbols (unless they have custom-configured their layout;
+# most users haven't).
 # This should be taken into account when proposing new compose sequences here.
 #
 # TODO: add Kildin Sámi letters

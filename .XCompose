@@ -1,7 +1,7 @@
 # Compose Table for Cyrillic Alphabets
 # https://github.com/roadkell/cyrillic-intl-compose
 #
-# 1010 custom sequences so far
+# 1016 custom sequences so far
 #
 # Mnemonics:
 #	'		acute (or upturn in Ґґ)
@@ -39,6 +39,8 @@ include "%L"
 # Rotated letter lookalikes
 <Multi_key> <Cyrillic_E> <Cyrillic_E>		: "Є"	Ukrainian_IE # CYRILLIC CAPITAL LETTER UKRAINIAN IE
 <Multi_key> <Cyrillic_e> <Cyrillic_e>		: "є"	Ukrainian_ie # CYRILLIC SMALL LETTER UKRAINIAN IE
+<Multi_key> <Ukrainian_IE> <Ukrainian_IE>	: "Э"	Cyrillic_E # CYRILLIC CAPITAL LETTER E
+<Multi_key> <Ukrainian_ie> <Ukrainian_ie>	: "э"	Cyrillic_e # CYRILLIC SMALL LETTER E
 <Multi_key> <Cyrillic_CHE> <Cyrillic_CHE>	: "Һ"	Cyrillic_SHHA # CYRILLIC CAPITAL LETTER SHHA
 <Multi_key> <Cyrillic_che> <Cyrillic_che>	: "һ"	Cyrillic_shha # CYRILLIC SMALL LETTER SHHA
 <Multi_key> <Cyrillic_IE> <Cyrillic_IE>		: "Ә"	Cyrillic_SCHWA # CYRILLIC CAPITAL LETTER SCHWA
@@ -102,15 +104,25 @@ include "%L"
 
 # Digraphs
 <Multi_key> <Cyrillic_SOFTSIGN> <Ukrainian_I>	: "Ы"	Cyrillic_YERU # CYRILLIC CAPITAL LETTER YERU
+<Multi_key> <Cyrillic_HARDSIGN> <Ukrainian_I>	: "Ы"	Cyrillic_YERU # CYRILLIC CAPITAL LETTER YERU
 <Multi_key> <Cyrillic_SOFTSIGN> <bar>			: "Ы"	Cyrillic_YERU # CYRILLIC CAPITAL LETTER YERU
+<Multi_key> <Cyrillic_HARDSIGN> <bar>			: "Ы"	Cyrillic_YERU # CYRILLIC CAPITAL LETTER YERU
 <Multi_key> <Cyrillic_SOFTSIGN> <1>				: "Ы"	Cyrillic_YERU # CYRILLIC CAPITAL LETTER YERU
+<Multi_key> <Cyrillic_HARDSIGN> <1>				: "Ы"	Cyrillic_YERU # CYRILLIC CAPITAL LETTER YERU
 <Multi_key> <Cyrillic_softsign> <Ukrainian_i>	: "ы"	Cyrillic_yeru # CYRILLIC SMALL LETTER YERU
+<Multi_key> <Cyrillic_hardsign> <Ukrainian_i>	: "ы"	Cyrillic_yeru # CYRILLIC SMALL LETTER YERU
 <Multi_key> <Cyrillic_softsign> <bar>			: "ы"	Cyrillic_yeru # CYRILLIC SMALL LETTER YERU
+<Multi_key> <Cyrillic_hardsign> <bar>			: "ы"	Cyrillic_yeru # CYRILLIC SMALL LETTER YERU
 <Multi_key> <Cyrillic_softsign> <1>				: "ы"	Cyrillic_yeru # CYRILLIC SMALL LETTER YERU
+<Multi_key> <Cyrillic_hardsign> <1>				: "ы"	Cyrillic_yeru # CYRILLIC SMALL LETTER YERU
 <Multi_key> <diaeresis> <Cyrillic_SOFTSIGN> <Ukrainian_I>	: "Ӹ"	U04F8 # CYRILLIC CAPITAL LETTER YERU WITH DIAERESIS
+<Multi_key> <diaeresis> <Cyrillic_HARDSIGN> <Ukrainian_I>	: "Ӹ"	U04F8 # CYRILLIC CAPITAL LETTER YERU WITH DIAERESIS
 <Multi_key> <quotedbl> <Cyrillic_SOFTSIGN> <Ukrainian_I>	: "Ӹ"	U04F8 # CYRILLIC CAPITAL LETTER YERU WITH DIAERESIS
+<Multi_key> <quotedbl> <Cyrillic_HARDSIGN> <Ukrainian_I>	: "Ӹ"	U04F8 # CYRILLIC CAPITAL LETTER YERU WITH DIAERESIS
 <Multi_key> <diaeresis> <Cyrillic_softsign> <Ukrainian_i>	: "ӹ"	U04F9 # CYRILLIC SMALL LETTER YERU WITH DIAERESIS
+<Multi_key> <diaeresis> <Cyrillic_hardsign> <Ukrainian_i>	: "ӹ"	U04F9 # CYRILLIC SMALL LETTER YERU WITH DIAERESIS
 <Multi_key> <quotedbl> <Cyrillic_softsign> <Ukrainian_i>	: "ӹ"	U04F9 # CYRILLIC SMALL LETTER YERU WITH DIAERESIS
+<Multi_key> <quotedbl> <Cyrillic_hardsign> <Ukrainian_i>	: "ӹ"	U04F9 # CYRILLIC SMALL LETTER YERU WITH DIAERESIS
 <Multi_key> <Cyrillic_A> <bar>		: "АӀ"
 <Multi_key> <Cyrillic_A> <1>		: "АӀ"
 <Multi_key> <Cyrillic_a> <bar>		: "аӀ"
@@ -319,14 +331,6 @@ include "%L"
 # For languages that have Ъъ, but lack Ьь (Tajik, Uzbek)
 <Multi_key> <7> <Cyrillic_HARDSIGN>	: "Ь"	Cyrillic_SOFTSIGN # CYRILLIC CAPITAL LETTER SOFT SIGN
 <Multi_key> <7> <Cyrillic_hardsign>	: "ь"	Cyrillic_softsign # CYRILLIC SMALL LETTER SOFT SIGN
-
-# For languages that have Ыы, but lack Ьь (Abkhaz)
-<Multi_key> <Cyrillic_YERU> <Ukrainian_I>	: "Ь"	Cyrillic_SOFTSIGN # CYRILLIC CAPITAL SOFT SIGN
-<Multi_key> <Cyrillic_YERU> <bar>			: "Ь"	Cyrillic_SOFTSIGN # CYRILLIC CAPITAL SOFT SIGN
-<Multi_key> <Cyrillic_YERU> <1>				: "Ь"	Cyrillic_SOFTSIGN # CYRILLIC CAPITAL SOFT SIGN
-<Multi_key> <Cyrillic_yeru> <Ukrainian_i>	: "ь"	Cyrillic_softsign # CYRILLIC SMALL LETTER SOFT SIGN
-<Multi_key> <Cyrillic_yeru> <bar>			: "ь"	Cyrillic_softsign # CYRILLIC SMALL LETTER SOFT SIGN
-<Multi_key> <Cyrillic_yeru> <1>				: "ь"	Cyrillic_softsign # CYRILLIC SMALL LETTER SOFT SIGN
 
 # Letters with cedilla
 <dead_cedilla> <Cyrillic_ZE>		: "Ҙ"	U0498 # CYRILLIC CAPITAL LETTER ZE WITH DESCENDER

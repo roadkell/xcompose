@@ -120,6 +120,7 @@
 | <kbd>⎄ Compose</kbd> <kbd>ц</kbd> <kbd>ц</kbd>              | џ     |
 | <kbd>⎄ Compose</kbd> <kbd>ч</kbd> <kbd>ч</kbd>              | һ     |
 | <kbd>⎄ Compose</kbd> <kbd>э</kbd> <kbd>э</kbd>              | є     |
+| <kbd>⎄ Compose</kbd> <kbd>є</kbd> <kbd>є</kbd>              | э     |
 | <kbd>⎄ Compose</kbd> <kbd>з</kbd> <kbd>3</kbd>              | ӡ     |
 | <kbd>⎄ Compose</kbd> <kbd>3</kbd> <kbd>з</kbd>              | ӡ     |
 | <kbd>⎄ Compose</kbd> <kbd>о</kbd> <kbd>о</kbd>              | ҩ     |
@@ -136,10 +137,15 @@
 | <kbd>⎄ Compose</kbd> <kbd>т</kbd> <kbd>ц</kbd>              | ҵ     |
 | **Диграфы**                                                 |       |
 | <kbd>⎄ Compose</kbd> <kbd>ь</kbd> <kbd>і</kbd>              | ы     |
+| <kbd>⎄ Compose</kbd> <kbd>ъ</kbd> <kbd>і</kbd>              | ы     |
 | <kbd>⎄ Compose</kbd> <kbd>ь</kbd> <kbd>\|</kbd>             | ы     |
+| <kbd>⎄ Compose</kbd> <kbd>ъ</kbd> <kbd>\|</kbd>             | ы     |
 | <kbd>⎄ Compose</kbd> <kbd>ь</kbd> <kbd>1</kbd>              | ы     |
+| <kbd>⎄ Compose</kbd> <kbd>ъ</kbd> <kbd>1</kbd>              | ы     |
 | <kbd>⎄ Compose</kbd> <kbd>¨</kbd> <kbd>ь</kbd> <kbd>і</kbd> | ӹ     |
+| <kbd>⎄ Compose</kbd> <kbd>¨</kbd> <kbd>ъ</kbd> <kbd>і</kbd> | ӹ     |
 | <kbd>⎄ Compose</kbd> <kbd>"</kbd> <kbd>ь</kbd> <kbd>і</kbd> | ӹ     |
+| <kbd>⎄ Compose</kbd> <kbd>"</kbd> <kbd>ъ</kbd> <kbd>і</kbd> | ӹ     |
 | <kbd>⎄ Compose</kbd> <kbd>а</kbd> <kbd>\|</kbd>             | аӀ    |
 | <kbd>⎄ Compose</kbd> <kbd>а</kbd> <kbd>1</kbd>              | аӀ    |
 | <kbd>⎄ Compose</kbd> <kbd>г</kbd> <kbd>\|</kbd>             | гӀ    |
@@ -230,9 +236,6 @@
 | <kbd>⎄ Compose</kbd> <kbd>7</kbd> <kbd>ы</kbd>              | ꙑ     |
 | **Мягкий знак (для языков, в которых его нет)**             |       |
 | <kbd>⎄ Compose</kbd> <kbd>7</kbd> <kbd>ъ</kbd>              | ь     |
-| <kbd>⎄ Compose</kbd> <kbd>ы</kbd> <kbd>і</kbd>              | ь     |
-| <kbd>⎄ Compose</kbd> <kbd>ы</kbd> <kbd>\|</kbd>             | ь     |
-| <kbd>⎄ Compose</kbd> <kbd>ы</kbd> <kbd>1</kbd>              | ь     |
 | **Буквы с седилью**                                         |       |
 | <kbd>⎄ Compose</kbd> <kbd>,</kbd> <kbd>з</kbd>              | ҙ     |
 | <kbd>⎄ Compose</kbd> <kbd>з</kbd> <kbd>,</kbd>              | ҙ     |

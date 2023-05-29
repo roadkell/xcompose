@@ -186,7 +186,9 @@
 | <kbd>⎄ Compose</kbd> <kbd>.</kbd> <kbd>і</kbd>              | Ӏ     |
 | <kbd>⎄ Compose</kbd> <kbd>і</kbd> <kbd>.</kbd>              | Ӏ     |
 | <kbd>⎄ Compose</kbd> <kbd>ь</kbd> <kbd>ы</kbd>              | Ӏ     |
+| <kbd>⎄ Compose</kbd> <kbd>ъ</kbd> <kbd>ы</kbd>              | Ӏ     |
 | <kbd>⎄ Compose</kbd> <kbd>ы</kbd> <kbd>ь</kbd>              | Ӏ     |
+| <kbd>⎄ Compose</kbd> <kbd>ы</kbd> <kbd>ъ</kbd>              | Ӏ     |
 | **Кириллические і, ї, ј на основе и, й**                    |       |
 | <kbd>⎄ Compose</kbd> <kbd>˙</kbd> <kbd>и</kbd>              | і     |
 | <kbd>⎄ Compose</kbd> <kbd>и</kbd> <kbd>˙</kbd>              | і     |
@@ -232,10 +234,9 @@
 | <kbd>⎄ Compose</kbd> <kbd>\\</kbd> <kbd>р</kbd>             | ҏ     |
 | **Буквы со штрихом сверху слева**                           |       |
 | <kbd>⎄ Compose</kbd> <kbd>7</kbd> <kbd>ь</kbd>              | ъ     |
+| <kbd>⎄ Compose</kbd> <kbd>7</kbd> <kbd>ъ</kbd>              | ь     |
 | <kbd>⎄ Compose</kbd> <kbd>7</kbd> <kbd>к</kbd>              | ҡ     |
 | <kbd>⎄ Compose</kbd> <kbd>7</kbd> <kbd>ы</kbd>              | ꙑ     |
-| **Мягкий знак (для языков, в которых его нет)**             |       |
-| <kbd>⎄ Compose</kbd> <kbd>7</kbd> <kbd>ъ</kbd>              | ь     |
 | **Буквы с седилью**                                         |       |
 | <kbd>⎄ Compose</kbd> <kbd>,</kbd> <kbd>з</kbd>              | ҙ     |
 | <kbd>⎄ Compose</kbd> <kbd>з</kbd> <kbd>,</kbd>              | ҙ     |
@@ -245,7 +246,7 @@
 | <kbd>⎄ Compose</kbd> <kbd>с</kbd> <kbd>,</kbd>              | ҫ     |
 | <kbd>⎄ Compose</kbd> <kbd>¸</kbd> <kbd>с</kbd>              | ҫ     |
 | <kbd>⎄ Compose</kbd> <kbd>с</kbd> <kbd>¸</kbd>              | ҫ     |
-| **Буквы с подъёмом**                                        |       |
+| **Буква с подъёмом**                                        |       |
 | <kbd>⎄ Compose</kbd> <kbd>г</kbd> <kbd>'</kbd>              | ґ     |
 | **Буквы с нижним выносным элементом**                       |       |
 | <kbd>⎄ Compose</kbd> <kbd>т</kbd> <kbd>с</kbd>              | ц     |
@@ -262,7 +263,7 @@
 | <kbd>⎄ Compose</kbd> <kbd>һ</kbd> <kbd>,</kbd>              | ԧ     |
 | <kbd>⎄ Compose</kbd> <kbd>'</kbd> <kbd>ч</kbd> <kbd>ч</kbd> | ԧ     |
 | <kbd>⎄ Compose</kbd> <kbd>о</kbd> <kbd>,</kbd>              | ԛ     |
-| **Буквы с нижним выносом слева**                            |       |
+| **Буква с нижним выносом слева**                            |       |
 | <kbd>⎄ Compose</kbd> <kbd>,</kbd> <kbd>ч</kbd>              | ӌ     |
 | **Буквы с нижним выносом посередине**                       |       |
 | <kbd>⎄ Compose</kbd> <kbd>,</kbd> <kbd>ц</kbd>              | џ     |
@@ -314,6 +315,7 @@
 | <kbd>⎄ Compose</kbd> <kbd>"</kbd> <kbd>є</kbd>              | є̈     |
 | <kbd>⎄ Compose</kbd> <kbd>є</kbd> <kbd>"</kbd>              | є̈     |
 | **Буквы, отсутствующие в сербском и македонском**           |       |
+| <kbd>⎄ Compose</kbd> <kbd>ј</kbd> <kbd>и</kbd>              | й     |
 | <kbd>⎄ Compose</kbd> <kbd>й</kbd> <kbd>о</kbd>              | ё     |
 | <kbd>⎄ Compose</kbd> <kbd>ј</kbd> <kbd>о</kbd>              | ё     |
 | <kbd>⎄ Compose</kbd> <kbd>й</kbd> <kbd>у</kbd>              | ю     |

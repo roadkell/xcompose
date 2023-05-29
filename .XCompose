@@ -1,7 +1,8 @@
 # Compose Table for Cyrillic Alphabets
+#
 # https://github.com/roadkell/cyrillic-intl-compose
 #
-# 1016 custom sequences so far
+# 1022 sequences
 #
 # Mnemonics:
 #	'		acute (or upturn in Ґґ)
@@ -195,14 +196,18 @@ include "%L"
 <Multi_key> <period> <Ukrainian_I>				: "Ӏ"	U04C0 # CYRILLIC LETTER PALOCHKA
 <Multi_key> <Ukrainian_I> <period>				: "Ӏ"	U04C0 # CYRILLIC LETTER PALOCHKA
 <Multi_key> <Cyrillic_SOFTSIGN> <Cyrillic_YERU>	: "Ӏ"	U04C0 # CYRILLIC LETTER PALOCHKA
+<Multi_key> <Cyrillic_HARDSIGN> <Cyrillic_YERU>	: "Ӏ"	U04C0 # CYRILLIC LETTER PALOCHKA
 <Multi_key> <Cyrillic_YERU> <Cyrillic_SOFTSIGN>	: "Ӏ"	U04C0 # CYRILLIC LETTER PALOCHKA
+<Multi_key> <Cyrillic_YERU> <Cyrillic_HARDSIGN>	: "Ӏ"	U04C0 # CYRILLIC LETTER PALOCHKA
 <dead_abovedot> <Ukrainian_i>					: "Ӏ"	U04C0 # CYRILLIC LETTER PALOCHKA
 <Multi_key> <abovedot> <Ukrainian_i>			: "Ӏ"	U04C0 # CYRILLIC LETTER PALOCHKA
 <Multi_key> <Ukrainian_i> <abovedot>			: "Ӏ"	U04C0 # CYRILLIC LETTER PALOCHKA
 <Multi_key> <period> <Ukrainian_i>				: "Ӏ"	U04C0 # CYRILLIC LETTER PALOCHKA
 <Multi_key> <Ukrainian_i> <period>				: "Ӏ"	U04C0 # CYRILLIC LETTER PALOCHKA
 <Multi_key> <Cyrillic_softsign> <Cyrillic_yeru>	: "Ӏ"	U04C0 # CYRILLIC LETTER PALOCHKA
+<Multi_key> <Cyrillic_hardsign> <Cyrillic_yeru>	: "Ӏ"	U04C0 # CYRILLIC LETTER PALOCHKA
 <Multi_key> <Cyrillic_yeru> <Cyrillic_softsign>	: "Ӏ"	U04C0 # CYRILLIC LETTER PALOCHKA
+<Multi_key> <Cyrillic_yeru> <Cyrillic_hardsign>	: "Ӏ"	U04C0 # CYRILLIC LETTER PALOCHKA
 
 # ============================================================================ #
 
@@ -531,17 +536,19 @@ include "%L"
 # ============================================================================ #
 
 # Letters absent from Macedonian & Serbian cyrillic alphabets
+<Multi_key> <Cyrillic_JE> <Cyrillic_I>		: "Й"	Cyrillic_SHORTI # CYRILLIC CAPITAL LETTER SHORT I
+<Multi_key> <Cyrillic_je> <Cyrillic_i>		: "й"	Cyrillic_shorti # CYRILLIC SMALL LETTER SHORT I
 <Multi_key> <Cyrillic_SHORTI> <Cyrillic_O>	: "Ё"	Cyrillic_IO # CYRILLIC CAPITAL LETTER IO
-<Multi_key> <Cyrillic_shorti> <Cyrillic_o>	: "ё"	Cyrillic_io # CYRILLIC SMALL LETTER IO
 <Multi_key> <Cyrillic_JE> <Cyrillic_O>		: "Ё"	Cyrillic_IO # CYRILLIC CAPITAL LETTER IO
+<Multi_key> <Cyrillic_shorti> <Cyrillic_o>	: "ё"	Cyrillic_io # CYRILLIC SMALL LETTER IO
 <Multi_key> <Cyrillic_je> <Cyrillic_o>		: "ё"	Cyrillic_io # CYRILLIC SMALL LETTER IO
 <Multi_key> <Cyrillic_SHORTI> <Cyrillic_U>	: "Ю"	Cyrillic_YU # CYRILLIC CAPITAL LETTER YU
-<Multi_key> <Cyrillic_shorti> <Cyrillic_u>	: "ю"	Cyrillic_yu # CYRILLIC SMALL LETTER YU
 <Multi_key> <Cyrillic_JE> <Cyrillic_U>		: "Ю"	Cyrillic_YU # CYRILLIC CAPITAL LETTER YU
+<Multi_key> <Cyrillic_shorti> <Cyrillic_u>	: "ю"	Cyrillic_yu # CYRILLIC SMALL LETTER YU
 <Multi_key> <Cyrillic_je> <Cyrillic_u>		: "ю"	Cyrillic_yu # CYRILLIC SMALL LETTER YU
 <Multi_key> <Cyrillic_SHORTI> <Cyrillic_A>	: "Я"	Cyrillic_YA # CYRILLIC CAPITAL LETTER YA
-<Multi_key> <Cyrillic_shorti> <Cyrillic_a>	: "я"	Cyrillic_ya # CYRILLIC SMALL LETTER YA
 <Multi_key> <Cyrillic_JE> <Cyrillic_A>		: "Я"	Cyrillic_YA # CYRILLIC CAPITAL LETTER YA
+<Multi_key> <Cyrillic_shorti> <Cyrillic_a>	: "я"	Cyrillic_ya # CYRILLIC SMALL LETTER YA
 <Multi_key> <Cyrillic_je> <Cyrillic_a>		: "я"	Cyrillic_ya # CYRILLIC SMALL LETTER YA
 
 # Letters for Macedonian & Serbian cyrillic (with cyrillic Jj)

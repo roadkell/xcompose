@@ -2,10 +2,10 @@ In other languages: **English (WIP)**, [Русский](README.ru.md)
 
 # Compose Table for Cyrillic Alphabets #
 
-<p style="text-align:right">
+<div style="text-align:right">
 <i>Every time a user is forced to switch input languages,</br>
 God kills a kitten. Stop the slaughter!</i>
-</p>
+</div>
 
 - [What](#what)
 - [Installation](#installation)

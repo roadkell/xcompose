@@ -2,10 +2,10 @@ In other languages: [English (WIP)](README.en.md), **Русский**
 
 # Compose-таблица для кириллических алфавитов #
 
-<p style="text-align:right">
+<div style="text-align:right">
 <i>Every time a user is forced to switch input languages,</br>
 God kills a kitten. Stop the slaughter!</i>
-</p>
+</div>
 
 - [Что это](#что-это)
 - [Как установить](#как-установить)
@@ -23,7 +23,7 @@ God kills a kitten. Stop the slaughter!</i>
 
 Например, если в вашей раскладке нет буквы Ғ (Г со штрихом), её можно ввести, нажав по очереди клавиши <kbd>⎄ Compose</kbd> <kbd>Г</kbd> <kbd>-</kbd> (а саму клавишу <kbd>⎄ Compose</kbd> можно назначить, например, на <kbd>Caps Lock</kbd> или на правый <kbd>Alt</kbd>). Удерживать клавиши не нужно. Полный список доступных символов [см. ниже](#список-комбинаций).
 
-Подробнее об использовании compose-клавиши можно прочитать в Википедии ([Ру](https://ru.wikipedia.org/wiki/Compose) / [En](https://en.wikipedia.org/wiki/Compose_key)). Там же можно посмотреть комбинации, по умолчанию входящие в состав Xorg (Linux) и WinCompose (Windows). Например, там есть комбинации для длинного тире, различных кавычек, диакритических знаков [и т. д.]((https://gitlab.freedesktop.org/xorg/lib/libx11/-/blob/master/nls/en_US.UTF-8/Compose.pre))
+Подробнее об использовании compose-клавиши можно прочитать в Википедии ([Ру](https://ru.wikipedia.org/wiki/Compose) / [En](https://en.wikipedia.org/wiki/Compose_key)). Там же можно посмотреть комбинации, по умолчанию входящие в состав Xorg (Linux) и WinCompose (Windows). Например, там есть комбинации для длинного тире, различных кавычек, диакритических знаков [и т. д.](https://gitlab.freedesktop.org/xorg/lib/libx11/-/blob/master/nls/en_US.UTF-8/Compose.pre)
 
 ## Как установить ##
 

@@ -1,4 +1,4 @@
-# Compose Table for Cyrillic Alphabets
+# Compose Table for Cyrillic Alphabets / Compose-таблица для кириллических алфавитов
 #
 # https://github.com/roadkell/cyrillic-intl-compose
 #
@@ -328,14 +328,12 @@ include "%L"
 # Letters with top left bar
 <Multi_key> <7> <Cyrillic_SOFTSIGN>	: "Ъ"	Cyrillic_HARDSIGN # CYRILLIC CAPITAL LETTER HARD SIGN
 <Multi_key> <7> <Cyrillic_softsign>	: "ъ"	Cyrillic_hardsign # CYRILLIC SMALL LETTER HARD SIGN
+<Multi_key> <7> <Cyrillic_HARDSIGN>	: "Ь"	Cyrillic_SOFTSIGN # CYRILLIC CAPITAL LETTER SOFT SIGN
+<Multi_key> <7> <Cyrillic_hardsign>	: "ь"	Cyrillic_softsign # CYRILLIC SMALL LETTER SOFT SIGN
 <Multi_key> <7> <Cyrillic_KA>		: "Ҡ"	U04A0 # CYRILLIC CAPITAL LETTER BASHKIR KA
 <Multi_key> <7> <Cyrillic_ka>		: "ҡ"	U04A1 # CYRILLIC SMALL LETTER BASHKIR KA
 <Multi_key> <7> <Cyrillic_YERU>		: "Ꙑ"	UA650 # CYRILLIC CAPITAL LETTER YERU WITH BACK YER
 <Multi_key> <7> <Cyrillic_yeru>		: "ꙑ"	UA651 # CYRILLIC SMALL LETTER YERU WITH BACK YER
-
-# For languages that have Ъъ, but lack Ьь (Tajik, Uzbek)
-<Multi_key> <7> <Cyrillic_HARDSIGN>	: "Ь"	Cyrillic_SOFTSIGN # CYRILLIC CAPITAL LETTER SOFT SIGN
-<Multi_key> <7> <Cyrillic_hardsign>	: "ь"	Cyrillic_softsign # CYRILLIC SMALL LETTER SOFT SIGN
 
 # Letters with cedilla
 <dead_cedilla> <Cyrillic_ZE>		: "Ҙ"	U0498 # CYRILLIC CAPITAL LETTER ZE WITH DESCENDER
@@ -424,12 +422,6 @@ include "%L"
 <Multi_key> <Ukrainian_I> <9>				: "Ј"	Cyrillic_JE # CYRILLIC CAPITAL LETTER JE
 <dead_hook> <Ukrainian_i>					: "ј"	Cyrillic_je # CYRILLIC SMALL LETTER JE
 <Multi_key> <Ukrainian_i> <9>				: "ј"	Cyrillic_je # CYRILLIC SMALL LETTER JE
-<dead_hook> <Cyrillic_GHE>					: "Ҕ"	U0494 # CYRILLIC CAPITAL LETTER GHE WITH MIDDLE HOOK
-<Multi_key> <Cyrillic_GHE> <5>				: "Ҕ"	U0494 # CYRILLIC CAPITAL LETTER GHE WITH MIDDLE HOOK
-<Multi_key> <Cyrillic_GHE> <Cyrillic_JE>	: "Ҕ"	U0494 # CYRILLIC CAPITAL LETTER GHE WITH MIDDLE HOOK
-<dead_hook> <Cyrillic_ghe>					: "ҕ"	U0495 # CYRILLIC SMALL LETTER GHE WITH MIDDLE HOOK
-<Multi_key> <Cyrillic_ghe> <5>				: "ҕ"	U0495 # CYRILLIC SMALL LETTER GHE WITH MIDDLE HOOK
-<Multi_key> <Cyrillic_ghe> <Cyrillic_je>	: "ҕ"	U0495 # CYRILLIC SMALL LETTER GHE WITH MIDDLE HOOK
 <dead_hook> <Cyrillic_KA>					: "Ӄ"	U04C3 # CYRILLIC CAPITAL LETTER KA WITH HOOK
 <Multi_key> <Cyrillic_KA> <5>				: "Ӄ"	U04C3 # CYRILLIC CAPITAL LETTER KA WITH HOOK
 <Multi_key> <Cyrillic_KA> <9>				: "Ӄ"	U04C3 # CYRILLIC CAPITAL LETTER KA WITH HOOK
@@ -450,12 +442,6 @@ include "%L"
 <dead_hook> <Cyrillic_en>					: "ӈ"	U04C8 # CYRILLIC SMALL LETTER EN WITH HOOK
 <Multi_key> <Cyrillic_en> <9>				: "ӈ"	U04C8 # CYRILLIC SMALL LETTER EN WITH HOOK
 <Multi_key> <Cyrillic_en> <Cyrillic_je>		: "ӈ"	U04C8 # CYRILLIC SMALL LETTER EN WITH HOOK
-<dead_hook> <Cyrillic_PE>					: "Ҧ"	U04A6 # CYRILLIC CAPITAL LETTER PE WITH MIDDLE HOOK
-<Multi_key> <Cyrillic_PE> <5>				: "Ҧ"	U04A6 # CYRILLIC CAPITAL LETTER PE WITH MIDDLE HOOK
-<Multi_key> <Cyrillic_PE> <Cyrillic_JE>		: "Ҧ"	U04A6 # CYRILLIC CAPITAL LETTER PE WITH MIDDLE HOOK
-<dead_hook> <Cyrillic_pe>					: "ҧ"	U04A7 # CYRILLIC SMALL LETTER PE WITH MIDDLE HOOK
-<Multi_key> <Cyrillic_pe> <5>				: "ҧ"	U04A7 # CYRILLIC SMALL LETTER PE WITH MIDDLE HOOK
-<Multi_key> <Cyrillic_pe> <Cyrillic_je>		: "ҧ"	U04A7 # CYRILLIC SMALL LETTER PE WITH MIDDLE HOOK
 <dead_hook> <Cyrillic_HA>					: "Ӽ"	U04FC # CYRILLIC CAPITAL LETTER HA WITH HOOK
 <Multi_key> <Cyrillic_HA> <9>				: "Ӽ"	U04FC # CYRILLIC CAPITAL LETTER HA WITH HOOK
 <Multi_key> <Cyrillic_HA> <Cyrillic_JE>		: "Ӽ"	U04FC # CYRILLIC CAPITAL LETTER HA WITH HOOK
@@ -472,6 +458,20 @@ include "%L"
 <dead_hook> <dead_stroke> <Cyrillic_ghe>	: "ӻ"	U04FB # CYRILLIC SMALL LETTER GHE WITH STROKE AND HOOK
 <dead_stroke> <dead_hook> <Cyrillic_ghe>	: "ӻ"	U04FB # CYRILLIC SMALL LETTER GHE WITH STROKE AND HOOK
 <Multi_key> <Cyrillic_ghe> <9>				: "ӻ"	U04FB # CYRILLIC SMALL LETTER GHE WITH STROKE AND HOOK
+
+# Letters with middle hooks
+<dead_hook> <Cyrillic_GHE>					: "Ҕ"	U0494 # CYRILLIC CAPITAL LETTER GHE WITH MIDDLE HOOK
+<Multi_key> <Cyrillic_GHE> <5>				: "Ҕ"	U0494 # CYRILLIC CAPITAL LETTER GHE WITH MIDDLE HOOK
+<Multi_key> <Cyrillic_GHE> <Cyrillic_JE>	: "Ҕ"	U0494 # CYRILLIC CAPITAL LETTER GHE WITH MIDDLE HOOK
+<dead_hook> <Cyrillic_ghe>					: "ҕ"	U0495 # CYRILLIC SMALL LETTER GHE WITH MIDDLE HOOK
+<Multi_key> <Cyrillic_ghe> <5>				: "ҕ"	U0495 # CYRILLIC SMALL LETTER GHE WITH MIDDLE HOOK
+<Multi_key> <Cyrillic_ghe> <Cyrillic_je>	: "ҕ"	U0495 # CYRILLIC SMALL LETTER GHE WITH MIDDLE HOOK
+<dead_hook> <Cyrillic_PE>					: "Ҧ"	U04A6 # CYRILLIC CAPITAL LETTER PE WITH MIDDLE HOOK
+<Multi_key> <Cyrillic_PE> <5>				: "Ҧ"	U04A6 # CYRILLIC CAPITAL LETTER PE WITH MIDDLE HOOK
+<Multi_key> <Cyrillic_PE> <Cyrillic_JE>		: "Ҧ"	U04A6 # CYRILLIC CAPITAL LETTER PE WITH MIDDLE HOOK
+<dead_hook> <Cyrillic_pe>					: "ҧ"	U04A7 # CYRILLIC SMALL LETTER PE WITH MIDDLE HOOK
+<Multi_key> <Cyrillic_pe> <5>				: "ҧ"	U04A7 # CYRILLIC SMALL LETTER PE WITH MIDDLE HOOK
+<Multi_key> <Cyrillic_pe> <Cyrillic_je>		: "ҧ"	U04A7 # CYRILLIC SMALL LETTER PE WITH MIDDLE HOOK
 <dead_hook> <Serbian_TSHE>					: "Ђ"	Serbian_DJE # CYRILLIC CAPITAL LETTER DJE
 <Multi_key> <Serbian_TSHE> <5>				: "Ђ"	Serbian_DJE # CYRILLIC CAPITAL LETTER DJE
 <dead_hook> <Cyrillic_SHHA>					: "Ђ"	Serbian_DJE # CYRILLIC CAPITAL LETTER DJE

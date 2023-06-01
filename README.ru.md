@@ -2,9 +2,10 @@ In other languages: [English (WIP)](README.en.md), **Русский**
 
 # Compose-таблица для кириллических алфавитов #
 
-<div style="text-align: right">
+<p align="right">
 <i>Every time a user is forced to switch input languages,</br>
-God kills a kitten. Stop the slaughter!</i></div>
+God kills a kitten. Stop the slaughter!</i>
+</p>
 
 - [Что это](#что-это)
 - [Как установить](#как-установить)

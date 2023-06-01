@@ -1,0 +1,1 @@
+# Compose Table for Cyrillic Alphabets #

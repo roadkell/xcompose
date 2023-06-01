@@ -3,11 +3,12 @@
 # https://github.com/roadkell/cyrillic-intl-compose
 #
 # 1022 sequences
+# 327 glyphs
 #
 # Mnemonics:
 #	'		acute (or upturn in Ґґ)
 #	,		descender or cedilla
-#	;		tail (as in ӊӉ)
+#	;		tail (as in Ӊӊ)
 #	.		dot above or below
 #	=		double acute (or double stroke in currency symbols)
 #	`		grave
@@ -26,8 +27,7 @@
 # Most cyrillic keyboard layouts (ЙЦУКЕН-based) lack a substantial number
 # of symbols by default - `~@#$^&|[]{}'<> - thus leaving users with
 # .,'-_?!();:/\=+%* and forcing them to switch to English every time they need
-# to type these symbols (unless they have custom-configured their layout;
-# most users haven't).
+# to type these symbols (unless they have custom-configured their layout).
 # This should be taken into account when proposing new compose sequences here.
 #
 # TODO: add Kildin Sámi letters

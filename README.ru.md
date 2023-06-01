@@ -25,7 +25,7 @@
 ### Windows ###
 
 1. Установить [WinCompose](https://github.com/samhocevar/wincompose).
-2. Скачать файл [.XCompose](https://github.com/roadkell/cyrillic-intl-compose/blob/main/.XCompose).
+2. Скачать файл [.XCompose](/.XCompose).
 3. Сохранить его в папке пользовательского профиля (обычно это `C:\Users\имя_пользователя\`).
 4. Перезапустить WinCompose.
 5. Если нужно, переназначить compose-клавишу в настройках приложения (по умолчанию это правый <kbd>Alt</kbd>).
@@ -33,7 +33,7 @@
 ### Linux ###
 
 1. Скачать файл
-   [.XCompose](https://github.com/roadkell/cyrillic-intl-compose/blob/main/.XCompose)
+   [.XCompose](/.XCompose)
    (включите показ скрытых файлов).
 2. Сохранить его в домашней папке пользователя (обычно это
    `/home/имя_пользователя/`); если у вас уже установлен собственный
@@ -304,16 +304,6 @@
 | **Буквы с несколькими диакритиками**                        |       |
 | <kbd>⎄ Compose</kbd> <kbd>"</kbd> <kbd>-</kbd> <kbd>о</kbd> | ӫ     |
 | <kbd>⎄ Compose</kbd> <kbd>-</kbd> <kbd>"</kbd> <kbd>о</kbd> | ӫ     |
-| **Буквы с гачеком**                                         |       |
-| <kbd>⎄ Compose</kbd> <kbd>c</kbd> <kbd>р</kbd>              | р̌     |
-| <kbd>⎄ Compose</kbd> <kbd>v</kbd> <kbd>р</kbd>              | р̌     |
-| <kbd>⎄ Compose</kbd> <kbd><</kbd> <kbd>р</kbd>              | р̌     |
-| <kbd>⎄ Compose</kbd> <kbd>р</kbd> <kbd><</kbd>              | р̌     |
-| **Буквы с умлаутом**                                        |       |
-| <kbd>⎄ Compose</kbd> <kbd>¨</kbd> <kbd>є</kbd>              | є̈     |
-| <kbd>⎄ Compose</kbd> <kbd>є</kbd> <kbd>¨</kbd>              | є̈     |
-| <kbd>⎄ Compose</kbd> <kbd>"</kbd> <kbd>є</kbd>              | є̈     |
-| <kbd>⎄ Compose</kbd> <kbd>є</kbd> <kbd>"</kbd>              | є̈     |
 | **Буквы, отсутствующие в сербском и македонском**           |       |
 | <kbd>⎄ Compose</kbd> <kbd>ј</kbd> <kbd>и</kbd>              | й     |
 | <kbd>⎄ Compose</kbd> <kbd>й</kbd> <kbd>о</kbd>              | ё     |
@@ -334,69 +324,13 @@
 | <kbd>⎄ Compose</kbd> <kbd>_</kbd> <kbd>с</kbd>              | ⃀¹    |
 | <kbd>⎄ Compose</kbd> <kbd>с</kbd> <kbd>_</kbd>              | ⃀¹    |
 
-¹: Знак кыргызского сома (подчёркнутая С) лишь недавно (в 2021 году) был включён в стандарт Unicode, поэтому во многих шрифтах он пока отсутствует.
+¹: Знак кыргызского сома (подчёркнутая С) лишь в 2021 году был включён в стандарт Unicode, поэтому во многих шрифтах он пока отсутствует.
 
 </details>
 
-Compose-последовательности для кириллических букв с обычными диакритиками (акутом <kbd>´</kbd>, краткой <kbd>˘</kbd>, макроном <kbd>¯</kbd> и др.) уже есть в составе WinCompose (Windows) и в стандартных раскладках (Linux). Обычно они вводятся по схеме <kbd>⎄ Compose</kbd> <kbd>знак</kbd> <kbd>буква</kbd>. Мы немного дополнили их.
+Compose-последовательности для кириллических букв с "обычными" диакритиками (акутом <kbd>´</kbd>, краткой <kbd>˘</kbd>, макроном <kbd>¯</kbd>, гачеком <kbd>ˇ</kbd> и др.) уже есть в составе Xorg (Linux) и WinCompose (Windows). Обычно они вводятся по схеме <kbd>⎄ Compose</kbd> <kbd>знак</kbd> <kbd>буква</kbd>. Списки комбинаций: [раз](https://gitlab.freedesktop.org/xorg/lib/libx11/-/blob/master/nls/en_US.UTF-8/Compose.pre#L1559), [два](https://gitlab.freedesktop.org/xorg/lib/libx11/-/blob/master/nls/en_US.UTF-8/Compose.pre#L4874).
 
-<details><summary>Развернуть</summary>
-
-| Ввод                                                        | Буква |
-| ----------------------------------------------------------- | ----- |
-| <kbd>⎄ Compose</kbd> <kbd>е</kbd> <kbd>`</kbd>              | ѐ     |
-| <kbd>⎄ Compose</kbd> <kbd>и</kbd> <kbd>`</kbd>              | ѝ     |
-| <kbd>⎄ Compose</kbd> <kbd>г</kbd> <kbd>´</kbd>              | ѓ     |
-| <kbd>⎄ Compose</kbd> <kbd>к</kbd> <kbd>´</kbd>              | ќ     |
-| <kbd>⎄ Compose</kbd> <kbd>к</kbd> <kbd>'</kbd>              | ќ     |
-| <kbd>⎄ Compose</kbd> <kbd>у</kbd> <kbd>=</kbd>              | ӳ     |
-| <kbd>⎄ Compose</kbd> <kbd>˝</kbd> <kbd>у</kbd>              | ӳ     |
-| <kbd>⎄ Compose</kbd> <kbd>´</kbd> <kbd>´</kbd> <kbd>у</kbd> | ӳ     |
-| <kbd>⎄ Compose</kbd> <kbd>у</kbd> <kbd>˝</kbd>              | ӳ     |
-| <kbd>⎄ Compose</kbd> <kbd>и</kbd> <kbd>¯</kbd>              | ӣ     |
-| <kbd>⎄ Compose</kbd> <kbd>и</kbd> <kbd>_</kbd>              | ӣ     |
-| <kbd>⎄ Compose</kbd> <kbd>у</kbd> <kbd>¯</kbd>              | ӯ     |
-| <kbd>⎄ Compose</kbd> <kbd>у</kbd> <kbd>_</kbd>              | ӯ     |
-| <kbd>⎄ Compose</kbd> <kbd>а</kbd> <kbd>(</kbd>              | ӑ     |
-| <kbd>⎄ Compose</kbd> <kbd>е</kbd> <kbd>(</kbd>              | ӗ     |
-| <kbd>⎄ Compose</kbd> <kbd>ж</kbd> <kbd>(</kbd>              | ӂ     |
-| <kbd>⎄ Compose</kbd> <kbd>и</kbd> <kbd>(</kbd>              | й     |
-| <kbd>⎄ Compose</kbd> <kbd>у</kbd> <kbd>(</kbd>              | ў     |
-| <kbd>⎄ Compose</kbd> <kbd>а</kbd> <kbd>"</kbd>              | ӓ     |
-| <kbd>⎄ Compose</kbd> <kbd>¨</kbd> <kbd>а</kbd>              | ӓ     |
-| <kbd>⎄ Compose</kbd> <kbd>а</kbd> <kbd>¨</kbd>              | ӓ     |
-| <kbd>⎄ Compose</kbd> <kbd>е</kbd> <kbd>"</kbd>              | ё     |
-| <kbd>⎄ Compose</kbd> <kbd>¨</kbd> <kbd>е</kbd>              | ё     |
-| <kbd>⎄ Compose</kbd> <kbd>е</kbd> <kbd>¨</kbd>              | ё     |
-| <kbd>⎄ Compose</kbd> <kbd>ж</kbd> <kbd>"</kbd>              | ӝ     |
-| <kbd>⎄ Compose</kbd> <kbd>¨</kbd> <kbd>ж</kbd>              | ӝ     |
-| <kbd>⎄ Compose</kbd> <kbd>ж</kbd> <kbd>¨</kbd>              | ӝ     |
-| <kbd>⎄ Compose</kbd> <kbd>з</kbd> <kbd>"</kbd>              | ӟ     |
-| <kbd>⎄ Compose</kbd> <kbd>¨</kbd> <kbd>з</kbd>              | ӟ     |
-| <kbd>⎄ Compose</kbd> <kbd>з</kbd> <kbd>¨</kbd>              | ӟ     |
-| <kbd>⎄ Compose</kbd> <kbd>і</kbd> <kbd>"</kbd>              | ї     |
-| <kbd>⎄ Compose</kbd> <kbd>¨</kbd> <kbd>і</kbd>              | ї     |
-| <kbd>⎄ Compose</kbd> <kbd>і</kbd> <kbd>¨</kbd>              | ї     |
-| <kbd>⎄ Compose</kbd> <kbd>и</kbd> <kbd>"</kbd>              | ӥ     |
-| <kbd>⎄ Compose</kbd> <kbd>¨</kbd> <kbd>и</kbd>              | ӥ     |
-| <kbd>⎄ Compose</kbd> <kbd>и</kbd> <kbd>¨</kbd>              | ӥ     |
-| <kbd>⎄ Compose</kbd> <kbd>о</kbd> <kbd>"</kbd>              | ӧ     |
-| <kbd>⎄ Compose</kbd> <kbd>¨</kbd> <kbd>о</kbd>              | ӧ     |
-| <kbd>⎄ Compose</kbd> <kbd>о</kbd> <kbd>¨</kbd>              | ӧ     |
-| <kbd>⎄ Compose</kbd> <kbd>у</kbd> <kbd>"</kbd>              | ӱ     |
-| <kbd>⎄ Compose</kbd> <kbd>¨</kbd> <kbd>у</kbd>              | ӱ     |
-| <kbd>⎄ Compose</kbd> <kbd>у</kbd> <kbd>¨</kbd>              | ӱ     |
-| <kbd>⎄ Compose</kbd> <kbd>ч</kbd> <kbd>"</kbd>              | ӵ     |
-| <kbd>⎄ Compose</kbd> <kbd>¨</kbd> <kbd>ч</kbd>              | ӵ     |
-| <kbd>⎄ Compose</kbd> <kbd>ч</kbd> <kbd>¨</kbd>              | ӵ     |
-| <kbd>⎄ Compose</kbd> <kbd>ы</kbd> <kbd>"</kbd>              | ӹ     |
-| <kbd>⎄ Compose</kbd> <kbd>¨</kbd> <kbd>ы</kbd>              | ӹ     |
-| <kbd>⎄ Compose</kbd> <kbd>ы</kbd> <kbd>¨</kbd>              | ӹ     |
-| <kbd>⎄ Compose</kbd> <kbd>э</kbd> <kbd>"</kbd>              | ӭ     |
-| <kbd>⎄ Compose</kbd> <kbd>¨</kbd> <kbd>э</kbd>              | ӭ     |
-| <kbd>⎄ Compose</kbd> <kbd>э</kbd> <kbd>¨</kbd>              | ӭ     |
-
-</details>
+Некоторых букв там всё равно не хватает, поэтому [они есть в нашей таблице](/.XCompose#L567).
 
 ## Похожие проекты ##
 
@@ -412,4 +346,4 @@ Any donation helps, and we are always grateful to people who spread the word abo
 
 ## Лицензия ##
 
-[MIT](https://github.com/roadkell/cyrillic-intl-compose/blob/main/LICENSE)
+[MIT](blob/main/LICENSE)

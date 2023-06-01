@@ -1,6 +1,11 @@
-# Compose-таблица для кириллических алфавитов / Compose Table for Cyrillic Alphabets #
+In other languages: [English (WIP)](README.en.md), **Русский**
 
-*Every time a user is forced to needlessly switch input languages, God kills a kitten. Stop the slaughter!*
+# Compose-таблица для кириллических алфавитов #
+
+<p style="text-align:right">
+<i>Every time a user is forced to switch input languages,</br>
+God kills a kitten. Stop the slaughter!</i>
+</p>
 
 - [Что это](#что-это)
 - [Как установить](#как-установить)

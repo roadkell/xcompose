@@ -24,7 +24,7 @@
 #	5		middle hook (as in Ҕҕ)
 #	7		top left bar (as in Ъъ, Ҡҡ)
 #
-# Most cyrillic keyboard layouts (ЙЦУКЕН-based) lack a substantial number
+# Most Cyrillic keyboard layouts (ЙЦУКЕН-based) lack a substantial number
 # of symbols by default - `~@#$^&|[]{}'<> - thus leaving users with
 # .,'-_?!();:/\=+%* and forcing them to switch to English every time they need
 # to type these symbols (unless they have custom-configured their layout).
@@ -525,17 +525,12 @@ include "%L"
 # Letters Ӛ (U+04DA CYRILLIC CAPITAL LETTER SCHWA WITH DIAERESIS) and ӛ (U+04DB
 # CYRILLIC SMALL LETTER SCHWA WITH DIAERESIS) from Khanty alphabet, can't be
 # decomposed completely, as the necessary sequence prefixes are already occupied
-# (also, composing algorithm sucks). But we can cheat a bit (ugly solution,
-# commented out for now).
-# TODO: add more sequences for Әә
-# <Multi_key> <quotedbl> <Cyrillic_SHA> <Cyrillic_VE> <Cyrillic_A>	: "Ӛ"	U04DA # CYRILLIC CAPITAL LETTER SCHWA WITH DIAERESIS
-# <Multi_key> <Cyrillic_SHA> <Cyrillic_VE> <Cyrillic_A> <quotedbl>	: "Ӛ"	U04DA # CYRILLIC CAPITAL LETTER SCHWA WITH DIAERESIS
-# <Multi_key> <quotedbl> <Cyrillic_sha> <Cyrillic_ve> <Cyrillic_a>	: "ӛ"	U04DB # CYRILLIC SMALL LETTER SCHWA WITH DIAERESIS
-# <Multi_key> <Cyrillic_sha> <Cyrillic_ve> <Cyrillic_a> <quotedbl>	: "ӛ"	U04DB # CYRILLIC SMALL LETTER SCHWA WITH DIAERESIS
+# (also, composing algorithm sucks).
+# TODO: add sequences for Ӛӛ
 
 # ============================================================================ #
 
-# Letters absent from Macedonian & Serbian cyrillic alphabets
+# Letters absent from Macedonian & Serbian Cyrillic alphabets
 <Multi_key> <Cyrillic_JE> <Cyrillic_I>		: "Й"	Cyrillic_SHORTI # CYRILLIC CAPITAL LETTER SHORT I
 <Multi_key> <Cyrillic_je> <Cyrillic_i>		: "й"	Cyrillic_shorti # CYRILLIC SMALL LETTER SHORT I
 <Multi_key> <Cyrillic_SHORTI> <Cyrillic_O>	: "Ё"	Cyrillic_IO # CYRILLIC CAPITAL LETTER IO
@@ -551,8 +546,8 @@ include "%L"
 <Multi_key> <Cyrillic_shorti> <Cyrillic_a>	: "я"	Cyrillic_ya # CYRILLIC SMALL LETTER YA
 <Multi_key> <Cyrillic_je> <Cyrillic_a>		: "я"	Cyrillic_ya # CYRILLIC SMALL LETTER YA
 
-# Letters for Macedonian & Serbian cyrillic (with cyrillic Jj)
-# (conflicts with hook sequences)
+# Letters for Macedonian & Serbian Cyrillic (with Cyrillic Jj)
+# (conflicts with hook sequences, so commented out)
 # <Multi_key> <Cyrillic_DE> <Cyrillic_JE>		: "Ђ"	Serbian_DJE # CYRILLIC CAPITAL LETTER DJE
 # <Multi_key> <Cyrillic_de> <Cyrillic_je>		: "ђ"	Serbian_dje # CYRILLIC SMALL LETTER DJE
 # <Multi_key> <Cyrillic_GHE> <Cyrillic_JE>	: "Ѓ"	Macedonia_GJE # CYRILLIC CAPITAL LETTER GJE
@@ -1173,7 +1168,7 @@ include "%L"
 <dead_currency> <Cyrillic_er>			: "₽"	U20BD # RUBLE SIGN
 <Multi_key> <equal> <Cyrillic_er>		: "₽"	U20BD # RUBLE SIGN
 <Multi_key> <Cyrillic_er> <equal>		: "₽"	U20BD # RUBLE SIGN
-# Tugrik and tenge signs are both based on cyrillic Тт letter.
+# Tugrik and tenge signs are both based on Cyrillic Тт letter.
 # en_US.UTF-8 has <dead_currency> <T> for tugrik, so we'll do the same.
 <dead_currency> <Cyrillic_TE>			: "₮"	U20AE # TUGRIK SIGN
 <Multi_key> <equal> <Cyrillic_TE>		: "₮"	U20AE # TUGRIK SIGN
@@ -1182,7 +1177,7 @@ include "%L"
 <Multi_key> <equal> <Cyrillic_te>		: "₮"	U20AE # TUGRIK SIGN
 <Multi_key> <Cyrillic_te> <equal>		: "₮"	U20AE # TUGRIK SIGN
 # The following definitions clash with convention of using underscore
-# as a mnemonic for macron, but there is no Сс or Тт with macron in cyrillic
+# as a mnemonic for macron, but there is no Сс or Тт with macron in Cyrillic
 <Multi_key> <underscore> <Cyrillic_TE>	: "₸"	U20B8 # TENGE SIGN
 <Multi_key> <Cyrillic_TE> <underscore>	: "₸"	U20B8 # TENGE SIGN
 <Multi_key> <underscore> <Cyrillic_te>	: "₸"	U20B8 # TENGE SIGN

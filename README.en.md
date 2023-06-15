@@ -7,21 +7,46 @@ In other languages: **English (WIP)**, [Русский](README.ru.md)
 God kills a kitten. Stop the slaughter!</i>
 </p>
 
-- [What](#what)
+- [Introduction](#introduction)
 - [Installation](#installation)
 	- [Windows](#windows)
 	- [Linux](#linux)
 - [Usage](#usage)
 - [List of sequences](#list-of-sequences)
 - [Related projects](#related-projects)
-- [Important](#important)
+- [Important information](#important-information)
 - [License](#license)
 
-## What ##
+## Introduction ##
+
+This project is a table of [compose sequences](https://en.wikipedia.org/wiki/Compose_key) for Cyrillic alphabets, which allows to input hundreds of letters without installing several layouts.
+
+It works as follows: say, your keyboard lacks letter Ғ (Cyrillic Г with stroke). So, to type it, press <kbd>⎄ Compose</kbd> <kbd>Г</kbd> <kbd>-</kbd>. The <kbd>⎄ Compose</kbd> key, which initiates the sequence, can be mapped to <kbd>Caps Lock</kbd>, right <kbd>Alt</kbd>, or any other key, whichever fits your typing habits. No key holding needed.
+
+Default compose table in `en_US.UTF-8` and other layouts comprises mostly Latin letters, with some Greek, Cyrillic, and special symbols. This project greatly expands the coverage of Cyrillic letters, making it possible to type in many Cyrillic languages using standard keyboards and layout.
+
+More information about compose input is available in [Wikipedia](https://en.wikipedia.org/wiki/Compose_key). List of default combos in `en_US.UTF-8` layout (included in most Linux distributions and WinCompose app) can be seen [here](https://gitlab.freedesktop.org/xorg/lib/libx11/-/blob/master/nls/en_US.UTF-8/Compose.pre). It has sequences for many useful symbols (proper typographic quotes and dashes, diacritic marks, math symbols, etc.)
+
 ## Installation ##
+
 ### Windows ###
+
+1. Install [WinCompose](https://github.com/samhocevar/wincompose).
+2. Download [`.XCompose`](/.XCompose file).
+3. Save it into the user profile folder (usually `C:\Users\user_name\`).
+4. Restart WinCompose.
+5. Redefine the compose key in the app settings, if needed (right <kbd>Alt</kbd> by default).
+
 ### Linux ###
+
+1. Download [`.XCompose`](/.XCompose file) ("show hidden files" must be on).
+2. Save it into the user home folder (usually `/home/user_name/`); if you have a custom `.XCompose` file there, append the contents of the downloaded file.
+3. Choose the compose key (for example, in GNOME it is in `Settings > Keyboard > Special characters entry > Compose Key`).
+4. Restart your text editor/app.
+
 ## Usage ##
+
+TODO
 
 ## List of sequences ##
 
@@ -256,7 +281,7 @@ Some letters are still missing, though, so [they are included in our table too](
 
 TODO
 
-## Important ##
+## Important information ##
 
 [Queer Svit](https://queersvit.taplink.ws/) is an organization that helps queer and BAME people impacted by the war in Ukraine, and those whose lives are threated by rising authoritarianism in Russia and Belarus. We are a group of volunteers, providing financial assistance, housing, and transportation to LGBTQ+ and BAME people in need, along with guidance and connections to further resources.
 Any donation helps, and we are always grateful to people who spread the word about our cause. Thank you!

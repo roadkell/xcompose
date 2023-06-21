@@ -32,14 +32,14 @@ More information about compose input is available in [Wikipedia](https://en.wiki
 ### Windows ###
 
 1. Install [WinCompose](https://github.com/samhocevar/wincompose).
-2. Download [`.XCompose`](/.XCompose file).
+2. Download [`.XCompose`](/.XCompose) file.
 3. Save it into the user profile folder (usually `C:\Users\user_name\`).
 4. Restart WinCompose.
 5. Redefine the compose key in the app settings, if needed (right <kbd>Alt</kbd> by default).
 
 ### Linux ###
 
-1. Download [`.XCompose`](/.XCompose file) ("show hidden files" must be on).
+1. Download [`.XCompose`](/.XCompose) file ("show hidden files" must be on).
 2. Save it into the user home folder (usually `/home/user_name/`); if you have a custom `.XCompose` file there, append the contents of the downloaded file.
 3. Choose the compose key (for example, in GNOME it is in `Settings > Keyboard > Special characters entry > Compose Key`).
 4. Restart your text editor/app.

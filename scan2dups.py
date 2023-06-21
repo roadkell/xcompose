@@ -60,4 +60,4 @@ for key in entries.keys():
 
 print("Done.")
 print("%s entries total"%len(entries))
-print("%s unique glyphs"%len(values))
+print("%s unique characters"%len(values))

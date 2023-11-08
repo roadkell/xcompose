@@ -30,7 +30,7 @@
 # to type these symbols (unless they have custom-configured their layout).
 # This should be taken into account when proposing new compose sequences here.
 #
-# TODO: add Kildin Sámi letters
+# TODO: add Abkhaz digraphs Ӷә ӷә, Ӡә ӡә, Қә қә, Ҟә ҟә, Ҭә ҭә, Ҳә ҳә, Ҵә ҵә
 
 # ============================================================================ #
 
@@ -243,9 +243,6 @@ include "%L"
 <Multi_key> <Cyrillic_hardsign> <Cyrillic_yeru>	: "Ӏ"	U04C0 # CYRILLIC LETTER PALOCHKA
 <Multi_key> <Cyrillic_yeru> <Cyrillic_softsign>	: "Ӏ"	U04C0 # CYRILLIC LETTER PALOCHKA
 <Multi_key> <Cyrillic_yeru> <Cyrillic_hardsign>	: "Ӏ"	U04C0 # CYRILLIC LETTER PALOCHKA
-
-# TODO: Гә гә, Гў гў, Ҕь ҕь, Ҕә ҕә, Дә дә, Жә жә, Ӡә ӡә, Кә кә, Қә қә, Қь қь, Ҟь ҟь, Ҟә ҟә,
-# Тә тә, Ҭә ҭә, Ҳә ҳә, Цә цә, Ҵә ҵә, Шә шә, Џь џь
 
 # ============================================================================ #
 
@@ -552,6 +549,8 @@ include "%L"
 <Multi_key> <Cyrillic_je> <Cyrillic_en>	: "ԩ"	U0529 # CYRILLIC SMALL LETTER EN WITH LEFT HOOK
 
 # Letters with tails
+<Multi_key> <Cyrillic_SHORTI> <semicolon>	: "Ҋ"	U048A # CYRILLIC CAPITAL LETTER SHORT I WITH TAIL
+<Multi_key> <Cyrillic_shorti> <semicolon>	: "ҋ"	U048B # CYRILLIC SMALL LETTER SHORT I WITH TAIL
 <Multi_key> <Cyrillic_EL> <semicolon>	: "Ӆ"	U04C5 # CYRILLIC CAPITAL LETTER EL WITH TAIL
 <Multi_key> <Cyrillic_el> <semicolon>	: "ӆ"	U04C6 # CYRILLIC SMALL LETTER EL WITH TAIL
 <Multi_key> <Cyrillic_EM> <semicolon>	: "Ӎ"	U04CD # CYRILLIC CAPITAL LETTER EM WITH TAIL

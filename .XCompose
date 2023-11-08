@@ -5,7 +5,7 @@
 # 1022 sequences
 # 327 glyphs
 #
-# Mnemonics:
+# Conventions:
 #	'		acute (or upturn in Ґґ)
 #	,		descender or cedilla
 #	;		tail (as in Ӊӊ)
@@ -33,9 +33,9 @@
 # TODO: add Kildin Sámi letters
 # TODO: add Archi multigraphs
 
-include "%L"
-
 # ============================================================================ #
+
+include "%L"
 
 # Rotated letter lookalikes
 <Multi_key> <Cyrillic_E> <Cyrillic_E>		: "Є"	Ukrainian_IE # CYRILLIC CAPITAL LETTER UKRAINIAN IE
@@ -259,9 +259,13 @@ include "%L"
 # Letters with horizontal strokes
 # (sequences for ҒғҞҟҰұ with <slash> & <KP_Divide> prefixes are already defined in en_US.UTF-8)
 <dead_stroke> <Cyrillic_O>					: "Ө"	Cyrillic_O_bar # CYRILLIC CAPITAL LETTER BARRED O
+<Multi_key> <slash> <Cyrillic_O>			: "Ө"	Cyrillic_O_bar # CYRILLIC CAPITAL LETTER BARRED O
+<Multi_key> <KP_Divide> <Cyrillic_O>		: "Ө"	Cyrillic_O_bar # CYRILLIC CAPITAL LETTER BARRED O
 <Multi_key> <minus> <Cyrillic_O>			: "Ө"	Cyrillic_O_bar # CYRILLIC CAPITAL LETTER BARRED O
 <Multi_key> <Cyrillic_O> <minus>			: "Ө"	Cyrillic_O_bar # CYRILLIC CAPITAL LETTER BARRED O
 <dead_stroke> <Cyrillic_o>					: "ө"	Cyrillic_o_bar # CYRILLIC SMALL LETTER BARRED O
+<Multi_key> <slash> <Cyrillic_o>			: "ө"	Cyrillic_o_bar # CYRILLIC SMALL LETTER BARRED O
+<Multi_key> <KP_Divide> <Cyrillic_o>		: "ө"	Cyrillic_o_bar # CYRILLIC SMALL LETTER BARRED O
 <Multi_key> <minus> <Cyrillic_o>			: "ө"	Cyrillic_o_bar # CYRILLIC SMALL LETTER BARRED O
 <Multi_key> <Cyrillic_o> <minus>			: "ө"	Cyrillic_o_bar # CYRILLIC SMALL LETTER BARRED O
 <dead_stroke> <Cyrillic_GHE>				: "Ғ"	Cyrillic_GHE_bar # CYRILLIC CAPITAL LETTER GHE WITH STROKE
@@ -289,28 +293,44 @@ include "%L"
 <Multi_key> <Cyrillic_u_straight> <minus>	: "ұ"	Cyrillic_u_straight_bar # CYRILLIC SMALL LETTER STRAIGHT U WITH STROKE
 <Multi_key> <Cyrillic_u> <minus>			: "ұ"	Cyrillic_u_straight_bar # CYRILLIC SMALL LETTER STRAIGHT U WITH STROKE
 <dead_stroke> <Cyrillic_HA>					: "Ӿ"	U04FE # CYRILLIC CAPITAL LETTER HA WITH STROKE
+<Multi_key> <slash> <Cyrillic_HA>			: "Ӿ"	U04FE # CYRILLIC CAPITAL LETTER HA WITH STROKE
+<Multi_key> <KP_Divide> <Cyrillic_HA>		: "Ӿ"	U04FE # CYRILLIC CAPITAL LETTER HA WITH STROKE
 <Multi_key> <minus> <Cyrillic_HA>			: "Ӿ"	U04FE # CYRILLIC CAPITAL LETTER HA WITH STROKE
 <Multi_key> <Cyrillic_HA> <minus>			: "Ӿ"	U04FE # CYRILLIC CAPITAL LETTER HA WITH STROKE
 <dead_stroke> <Cyrillic_ha>					: "ӿ"	U04FF # CYRILLIC SMALL LETTER HA WITH STROKE
+<Multi_key> <slash> <Cyrillic_ha>			: "ӿ"	U04FF # CYRILLIC SMALL LETTER HA WITH STROKE
+<Multi_key> <KP_Divide> <Cyrillic_ha>		: "ӿ"	U04FF # CYRILLIC SMALL LETTER HA WITH STROKE
 <Multi_key> <minus> <Cyrillic_ha>			: "ӿ"	U04FF # CYRILLIC SMALL LETTER HA WITH STROKE
 <Multi_key> <Cyrillic_ha> <minus>			: "ӿ"	U04FF # CYRILLIC SMALL LETTER HA WITH STROKE
 <dead_stroke> <Cyrillic_SOFTSIGN>			: "Ҍ"	U048C # CYRILLIC CAPITAL LETTER SEMISOFT SIGN
+<Multi_key> <slash> <Cyrillic_SOFTSIGN>		: "Ҍ"	U048C # CYRILLIC CAPITAL LETTER SEMISOFT SIGN
+<Multi_key> <KP_Divide> <Cyrillic_SOFTSIGN>	: "Ҍ"	U048C # CYRILLIC CAPITAL LETTER SEMISOFT SIGN
 <Multi_key> <minus> <Cyrillic_SOFTSIGN>		: "Ҍ"	U048C # CYRILLIC CAPITAL LETTER SEMISOFT SIGN
 <Multi_key> <Cyrillic_SOFTSIGN> <minus>		: "Ҍ"	U048C # CYRILLIC CAPITAL LETTER SEMISOFT SIGN
 <dead_stroke> <Cyrillic_softsign>			: "ҍ"	U048D # CYRILLIC SMALL LETTER SEMISOFT SIGN
+<Multi_key> <slash> <Cyrillic_softsign>		: "ҍ"	U048D # CYRILLIC SMALL LETTER SEMISOFT SIGN
+<Multi_key> <KP_Divide> <Cyrillic_softsign>	: "ҍ"	U048D # CYRILLIC SMALL LETTER SEMISOFT SIGN
 <Multi_key> <minus> <Cyrillic_softsign>		: "ҍ"	U048D # CYRILLIC SMALL LETTER SEMISOFT SIGN
 <Multi_key> <Cyrillic_softsign> <minus>		: "ҍ"	U048D # CYRILLIC SMALL LETTER SEMISOFT SIGN
 <dead_stroke> <Cyrillic_IE>					: "Ҽ"	U04BC # CYRILLIC CAPITAL LETTER ABKHASIAN CHE
+<Multi_key> <slash> <Cyrillic_IE>			: "Ҽ"	U04BC # CYRILLIC CAPITAL LETTER ABKHASIAN CHE
+<Multi_key> <KP_Divide> <Cyrillic_IE>		: "Ҽ"	U04BC # CYRILLIC CAPITAL LETTER ABKHASIAN CHE
 <Multi_key> <minus> <Cyrillic_IE>			: "Ҽ"	U04BC # CYRILLIC CAPITAL LETTER ABKHASIAN CHE
 <Multi_key> <Cyrillic_IE> <minus>			: "Ҽ"	U04BC # CYRILLIC CAPITAL LETTER ABKHASIAN CHE
 <dead_stroke> <Cyrillic_ie>					: "ҽ"	U04BD # CYRILLIC SMALL LETTER ABKHASIAN CHE
+<Multi_key> <slash> <Cyrillic_ie>			: "ҽ"	U04BD # CYRILLIC SMALL LETTER ABKHASIAN CHE
+<Multi_key> <KP_Divide> <Cyrillic_ie>		: "ҽ"	U04BD # CYRILLIC SMALL LETTER ABKHASIAN CHE
 <Multi_key> <minus> <Cyrillic_ie>			: "ҽ"	U04BD # CYRILLIC SMALL LETTER ABKHASIAN CHE
 <Multi_key> <Cyrillic_ie> <minus>			: "ҽ"	U04BD # CYRILLIC SMALL LETTER ABKHASIAN CHE
 <dead_stroke> <Cyrillic_SHHA>						: "Ћ"	Serbian_TSHE # CYRILLIC CAPITAL LETTER TSHE
+<Multi_key> <slash> <Cyrillic_SHHA>					: "Ћ"	Serbian_TSHE # CYRILLIC CAPITAL LETTER TSHE
+<Multi_key> <KP_Divide> <Cyrillic_SHHA>				: "Ћ"	Serbian_TSHE # CYRILLIC CAPITAL LETTER TSHE
 <Multi_key> <minus> <Cyrillic_SHHA>					: "Ћ"	Serbian_TSHE # CYRILLIC CAPITAL LETTER TSHE
 <Multi_key> <Cyrillic_SHHA> <minus>					: "Ћ"	Serbian_TSHE # CYRILLIC CAPITAL LETTER TSHE
 <Multi_key> <minus> <Cyrillic_CHE> <Cyrillic_CHE>	: "Ћ"	Serbian_TSHE # CYRILLIC CAPITAL LETTER TSHE
 <dead_stroke> <Cyrillic_shha>						: "ћ"	Serbian_tshe # CYRILLIC SMALL LETTER TSHE
+<Multi_key> <slash> <Cyrillic_shha>					: "ћ"	Serbian_tshe # CYRILLIC SMALL LETTER TSHE
+<Multi_key> <KP_Divide> <Cyrillic_shha>				: "ћ"	Serbian_tshe # CYRILLIC SMALL LETTER TSHE
 <Multi_key> <minus> <Cyrillic_shha>					: "ћ"	Serbian_tshe # CYRILLIC SMALL LETTER TSHE
 <Multi_key> <Cyrillic_shha> <minus>					: "ћ"	Serbian_tshe # CYRILLIC SMALL LETTER TSHE
 <Multi_key> <minus> <Cyrillic_che> <Cyrillic_che>	: "ћ"	Serbian_tshe # CYRILLIC SMALL LETTER TSHE
@@ -523,10 +543,10 @@ include "%L"
 <Multi_key> <minus> <quotedbl> <Cyrillic_o>	: "ӫ"	U04EB # CYRILLIC SMALL LETTER BARRED O WITH DIAERESIS
 
 # Letters Ӛ (U+04DA CYRILLIC CAPITAL LETTER SCHWA WITH DIAERESIS) and ӛ (U+04DB
-# CYRILLIC SMALL LETTER SCHWA WITH DIAERESIS) from Khanty alphabet, can't be
+# CYRILLIC SMALL LETTER SCHWA WITH DIAERESIS) from Khanty alphabet can't be
 # decomposed completely, as the necessary sequence prefixes are already occupied
 # (also, composing algorithm sucks).
-# TODO: add sequences for Ӛӛ
+# TODO: add more sequences for Ӛӛ
 
 # ============================================================================ #
 
@@ -622,6 +642,12 @@ include "%L"
 <Multi_key> <Cyrillic_ie> <quotedbl>	: "ё"	Cyrillic_io # CYRILLIC SMALL LETTER IO
 <Multi_key> <diaeresis> <Cyrillic_ie>	: "ё"	Cyrillic_io # CYRILLIC SMALL LETTER IO
 <Multi_key> <Cyrillic_ie> <diaeresis>	: "ё"	Cyrillic_io # CYRILLIC SMALL LETTER IO
+<Multi_key> <Cyrillic_SCHWA> <quotedbl>		: "Ӛ"	U04DA # CYRILLIC CAPITAL LETTER SCHWA WITH DIAERESIS
+<Multi_key> <diaeresis> <Cyrillic_SCHWA>	: "Ӛ"	U04DA # CYRILLIC CAPITAL LETTER SCHWA WITH DIAERESIS
+<Multi_key> <Cyrillic_SCHWA> <diaeresis>	: "Ӛ"	U04DA # CYRILLIC CAPITAL LETTER SCHWA WITH DIAERESIS
+<Multi_key> <Cyrillic_schwa> <quotedbl>		: "ӛ"	U04DB # CYRILLIC SMALL LETTER SCHWA WITH DIAERESIS
+<Multi_key> <diaeresis> <Cyrillic_schwa>	: "ӛ"	U04DB # CYRILLIC SMALL LETTER SCHWA WITH DIAERESIS
+<Multi_key> <Cyrillic_schwa> <diaeresis>	: "ӛ"	U04DB # CYRILLIC SMALL LETTER SCHWA WITH DIAERESIS
 <Multi_key> <Cyrillic_ZHE> <quotedbl>	: "Ӝ"	U04DC # CYRILLIC CAPITAL LETTER ZHE WITH DIAERESIS
 <Multi_key> <diaeresis> <Cyrillic_ZHE>	: "Ӝ"	U04DC # CYRILLIC CAPITAL LETTER ZHE WITH DIAERESIS
 <Multi_key> <Cyrillic_ZHE> <diaeresis>	: "Ӝ"	U04DC # CYRILLIC CAPITAL LETTER ZHE WITH DIAERESIS
@@ -652,6 +678,12 @@ include "%L"
 <Multi_key> <Cyrillic_o> <quotedbl>		: "ӧ"	U04E7 # CYRILLIC SMALL LETTER O WITH DIAERESIS
 <Multi_key> <diaeresis> <Cyrillic_o>	: "ӧ"	U04E7 # CYRILLIC SMALL LETTER O WITH DIAERESIS
 <Multi_key> <Cyrillic_o> <diaeresis>	: "ӧ"	U04E7 # CYRILLIC SMALL LETTER O WITH DIAERESIS
+<Multi_key> <Cyrillic_O_bar> <quotedbl>		: "Ӫ"	U04EA # CYRILLIC CAPITAL LETTER BARRED O WITH DIAERESIS
+<Multi_key> <diaeresis> <Cyrillic_O_bar>	: "Ӫ"	U04EA # CYRILLIC CAPITAL LETTER BARRED O WITH DIAERESIS
+<Multi_key> <Cyrillic_O_bar> <diaeresis>	: "Ӫ"	U04EA # CYRILLIC CAPITAL LETTER BARRED O WITH DIAERESIS
+<Multi_key> <Cyrillic_o_bar> <quotedbl>		: "ӫ"	U04EB # CYRILLIC SMALL LETTER BARRED O WITH DIAERESIS
+<Multi_key> <diaeresis> <Cyrillic_o_bar>	: "ӫ"	U04EB # CYRILLIC SMALL LETTER BARRED O WITH DIAERESIS
+<Multi_key> <Cyrillic_o_bar> <diaeresis>	: "ӫ"	U04EB # CYRILLIC SMALL LETTER BARRED O WITH DIAERESIS
 <Multi_key> <Cyrillic_U> <quotedbl>		: "Ӱ"	U04F0 # CYRILLIC CAPITAL LETTER U WITH DIAERESIS
 <Multi_key> <diaeresis> <Cyrillic_U>	: "Ӱ"	U04F0 # CYRILLIC CAPITAL LETTER U WITH DIAERESIS
 <Multi_key> <Cyrillic_U> <diaeresis>	: "Ӱ"	U04F0 # CYRILLIC CAPITAL LETTER U WITH DIAERESIS
@@ -1177,17 +1209,26 @@ include "%L"
 <Multi_key> <equal> <Cyrillic_te>		: "₮"	U20AE # TUGRIK SIGN
 <Multi_key> <Cyrillic_te> <equal>		: "₮"	U20AE # TUGRIK SIGN
 # The following definitions clash with convention of using underscore
-# as a mnemonic for macron, but there is no Сс or Тт with macron in Cyrillic
+# as a replacement for macron, but there is no Сс or Тт with macron in Cyrillic
+# (<minus> has at least two examples of usage for currency signs in en_US.UTF-8)
+<Multi_key> <minus> <Cyrillic_TE>		: "₸"	U20B8 # TENGE SIGN
+<Multi_key> <Cyrillic_TE> <minus>		: "₸"	U20B8 # TENGE SIGN
 <Multi_key> <underscore> <Cyrillic_TE>	: "₸"	U20B8 # TENGE SIGN
 <Multi_key> <Cyrillic_TE> <underscore>	: "₸"	U20B8 # TENGE SIGN
+<Multi_key> <minus> <Cyrillic_te>		: "₸"	U20B8 # TENGE SIGN
+<Multi_key> <Cyrillic_te> <minus>		: "₸"	U20B8 # TENGE SIGN
 <Multi_key> <underscore> <Cyrillic_te>	: "₸"	U20B8 # TENGE SIGN
 <Multi_key> <Cyrillic_te> <underscore>	: "₸"	U20B8 # TENGE SIGN
 # Kyrgyz som was introduced into Unicode in 2021 and is still absent from most
 # fonts, as of 2023
 <dead_currency> <Cyrillic_ES>			: "⃀"	U20C0 # SOM SIGN
+<Multi_key> <minus> <Cyrillic_ES>		: "⃀"	U20C0 # SOM SIGN
+<Multi_key> <Cyrillic_ES> <minus>		: "⃀"	U20C0 # SOM SIGN
 <Multi_key> <underscore> <Cyrillic_ES>	: "⃀"	U20C0 # SOM SIGN
 <Multi_key> <Cyrillic_ES> <underscore>	: "⃀"	U20C0 # SOM SIGN
 <dead_currency> <Cyrillic_es>			: "⃀"	U20C0 # SOM SIGN
+<Multi_key> <minus> <Cyrillic_es>		: "⃀"	U20C0 # SOM SIGN
+<Multi_key> <Cyrillic_es> <minus>		: "⃀"	U20C0 # SOM SIGN
 <Multi_key> <underscore> <Cyrillic_es>	: "⃀"	U20C0 # SOM SIGN
 <Multi_key> <Cyrillic_es> <underscore>	: "⃀"	U20C0 # SOM SIGN
 

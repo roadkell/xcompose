@@ -31,7 +31,6 @@
 # This should be taken into account when proposing new compose sequences here.
 #
 # TODO: add Kildin Sámi letters
-# TODO: add Archi multigraphs
 
 # ============================================================================ #
 
@@ -124,6 +123,8 @@ include "%L"
 <Multi_key> <diaeresis> <Cyrillic_hardsign> <Ukrainian_i>	: "ӹ"	U04F9 # CYRILLIC SMALL LETTER YERU WITH DIAERESIS
 <Multi_key> <quotedbl> <Cyrillic_softsign> <Ukrainian_i>	: "ӹ"	U04F9 # CYRILLIC SMALL LETTER YERU WITH DIAERESIS
 <Multi_key> <quotedbl> <Cyrillic_hardsign> <Ukrainian_i>	: "ӹ"	U04F9 # CYRILLIC SMALL LETTER YERU WITH DIAERESIS
+
+# Digraphs with palochka
 <Multi_key> <Cyrillic_A> <bar>		: "АӀ"
 <Multi_key> <Cyrillic_A> <1>		: "АӀ"
 <Multi_key> <Cyrillic_a> <bar>		: "аӀ"
@@ -132,6 +133,14 @@ include "%L"
 <Multi_key> <Cyrillic_GHE> <1>		: "ГӀ"
 <Multi_key> <Cyrillic_ghe> <bar>	: "гӀ"
 <Multi_key> <Cyrillic_ghe> <1>		: "гӀ"
+<Multi_key> <Cyrillic_IE> <bar>		: "ЕӀ"
+<Multi_key> <Cyrillic_IE> <1>		: "ЕӀ"
+<Multi_key> <Cyrillic_ie> <bar>		: "еӀ"
+<Multi_key> <Cyrillic_ie> <1>		: "еӀ"
+<Multi_key> <Cyrillic_I> <bar>		: "ИӀ"
+<Multi_key> <Cyrillic_I> <1>		: "ИӀ"
+<Multi_key> <Cyrillic_i> <bar>		: "иӀ"
+<Multi_key> <Cyrillic_i> <1>		: "иӀ"
 <Multi_key> <Cyrillic_KA> <bar>		: "КӀ"
 <Multi_key> <Cyrillic_KA> <1>		: "КӀ"
 <Multi_key> <Cyrillic_ka> <bar>		: "кӀ"
@@ -184,12 +193,38 @@ include "%L"
 <Multi_key> <Cyrillic_YERU> <1>		: "ЫӀ"
 <Multi_key> <Cyrillic_yeru> <bar>	: "ыӀ"
 <Multi_key> <Cyrillic_yeru> <1>		: "ыӀ"
+<Multi_key> <Cyrillic_E> <bar>		: "ЭӀ"
+<Multi_key> <Cyrillic_E> <1>		: "ЭӀ"
+<Multi_key> <Cyrillic_e> <bar>		: "эӀ"
+<Multi_key> <Cyrillic_e> <1>		: "эӀ"
 <Multi_key> <bar> <Cyrillic_U>		: "Іу"
 <Multi_key> <1> <Cyrillic_U>		: "Іу"
 <Multi_key> <bar> <Cyrillic_u>		: "Іу"
 <Multi_key> <1> <Cyrillic_u>		: "Іу"
 
-# Palochka
+# Trigraphs
+<Multi_key> <Cyrillic_GHE> <Cyrillic_hardsign> <1>		: "ГъӀ"
+<Multi_key> <Cyrillic_GHE> <Cyrillic_hardsign> <bar>	: "ГъӀ"
+<Multi_key> <Cyrillic_ghe> <Cyrillic_hardsign> <1> 		: "гъӀ"
+<Multi_key> <Cyrillic_ghe> <Cyrillic_hardsign> <bar>	: "гъӀ"
+<Multi_key> <Cyrillic_KA> <Cyrillic_hardsign> <1> 		: "КъӀ"
+<Multi_key> <Cyrillic_KA> <Cyrillic_hardsign> <bar>		: "КъӀ"
+<Multi_key> <Cyrillic_ka> <Cyrillic_hardsign> <1> 		: "къӀ"
+<Multi_key> <Cyrillic_ka> <Cyrillic_hardsign> <bar>		: "къӀ"
+<Multi_key> <Cyrillic_HA> <Cyrillic_hardsign> <1> 		: "ХъӀ"
+<Multi_key> <Cyrillic_HA> <Cyrillic_hardsign> <bar> 	: "ХъӀ"
+<Multi_key> <Cyrillic_ha> <Cyrillic_hardsign> <1> 		: "хъӀ"
+<Multi_key> <Cyrillic_ha> <Cyrillic_hardsign> <bar> 	: "хъӀ"
+<Multi_key> <Cyrillic_HA> <Cyrillic_softsign> <1> 		: "ХьӀ"
+<Multi_key> <Cyrillic_HA> <Cyrillic_softsign> <bar> 	: "ХьӀ"
+<Multi_key> <Cyrillic_ha> <Cyrillic_softsign> <1> 		: "хьӀ"
+<Multi_key> <Cyrillic_ha> <Cyrillic_softsign> <bar> 	: "хьӀ"
+
+# Sequences for other multigraphs with palochka can't be fully defined
+# due to greedy compose algorithm, so they can be entered as
+# one of the sequences above + remaining letters.
+
+# Palochka separately
 <dead_abovedot> <Ukrainian_I>					: "Ӏ"	U04C0 # CYRILLIC LETTER PALOCHKA
 <Multi_key> <abovedot> <Ukrainian_I>			: "Ӏ"	U04C0 # CYRILLIC LETTER PALOCHKA
 <Multi_key> <Ukrainian_I> <abovedot>			: "Ӏ"	U04C0 # CYRILLIC LETTER PALOCHKA
@@ -208,6 +243,9 @@ include "%L"
 <Multi_key> <Cyrillic_hardsign> <Cyrillic_yeru>	: "Ӏ"	U04C0 # CYRILLIC LETTER PALOCHKA
 <Multi_key> <Cyrillic_yeru> <Cyrillic_softsign>	: "Ӏ"	U04C0 # CYRILLIC LETTER PALOCHKA
 <Multi_key> <Cyrillic_yeru> <Cyrillic_hardsign>	: "Ӏ"	U04C0 # CYRILLIC LETTER PALOCHKA
+
+# TODO: Гә гә, Гў гў, Ҕь ҕь, Ҕә ҕә, Дә дә, Жә жә, Ӡә ӡә, Кә кә, Қә қә, Қь қь, Ҟь ҟь, Ҟә ҟә,
+# Тә тә, Ҭә ҭә, Ҳә ҳә, Цә цә, Ҵә ҵә, Шә шә, Џь џь
 
 # ============================================================================ #
 
@@ -419,17 +457,9 @@ include "%L"
 <dead_belowcomma> <Cyrillic_TSE>	: "Џ"	Cyrillic_DZHE # CYRILLIC CAPITAL LETTER DZHE
 <Multi_key> <comma> <Cyrillic_TSE>	: "Џ"	Cyrillic_DZHE # CYRILLIC CAPITAL LETTER DZHE
 <Multi_key> <Cyrillic_TSE> <comma>	: "Џ"	Cyrillic_DZHE # CYRILLIC CAPITAL LETTER DZHE
-# <Multi_key> <exclam> <Cyrillic_SHA>	: "Џ"	Cyrillic_DZHE # CYRILLIC CAPITAL LETTER DZHE
-# <Multi_key> <bar> <Cyrillic_SHA>	: "Џ"	Cyrillic_DZHE # CYRILLIC CAPITAL LETTER DZHE
-# <Multi_key> <1> <Cyrillic_SHA>		: "Џ"	Cyrillic_DZHE # CYRILLIC CAPITAL LETTER DZHE
-# <Multi_key> <Cyrillic_SHA> <exclam>	: "Џ"	Cyrillic_DZHE # CYRILLIC CAPITAL LETTER DZHE
 <dead_belowcomma> <Cyrillic_tse>	: "џ"	Cyrillic_dzhe # CYRILLIC SMALL LETTER DZHE
 <Multi_key> <comma> <Cyrillic_tse>	: "џ"	Cyrillic_dzhe # CYRILLIC SMALL LETTER DZHE
 <Multi_key> <Cyrillic_tse> <comma>	: "џ"	Cyrillic_dzhe # CYRILLIC SMALL LETTER DZHE
-# <Multi_key> <exclam> <Cyrillic_sha>	: "џ"	Cyrillic_dzhe # CYRILLIC SMALL LETTER DZHE
-# <Multi_key> <bar> <Cyrillic_sha>	: "џ"	Cyrillic_dzhe # CYRILLIC SMALL LETTER DZHE
-# <Multi_key> <1> <Cyrillic_sha>		: "џ"	Cyrillic_dzhe # CYRILLIC SMALL LETTER DZHE
-# <Multi_key> <Cyrillic_sha> <exclam>	: "џ"	Cyrillic_dzhe # CYRILLIC SMALL LETTER DZHE
 <dead_belowcomma> <Cyrillic_IE>		: "Ҿ"	U04BE # CYRILLIC CAPITAL LETTER ABKHASIAN CHE WITH DESCENDER
 <Multi_key> <Cyrillic_IE> <comma>	: "Ҿ"	U04BE # CYRILLIC CAPITAL LETTER ABKHASIAN CHE WITH DESCENDER
 <Multi_key> <comma> <Cyrillic_IE>	: "Ҿ"	U04BE # CYRILLIC CAPITAL LETTER ABKHASIAN CHE WITH DESCENDER

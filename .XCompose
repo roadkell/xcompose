@@ -2,8 +2,8 @@
 #
 # https://github.com/roadkell/cyrillic-intl-compose
 #
-# 1022 sequences
-# 327 glyphs
+# 1094 sequences
+# 343 glyphs
 #
 # Conventions:
 #	'		acute (or upturn in Ґґ)
@@ -31,6 +31,7 @@
 # This should be taken into account when proposing new compose sequences here.
 #
 # TODO: add Abkhaz digraphs Ӷә ӷә, Ӡә ӡә, Қә қә, Ҟә ҟә, Ҭә ҭә, Ҳә ҳә, Ҵә ҵә
+# TODO: add Kurdish Soviet Latin letters
 
 # ============================================================================ #
 
@@ -47,12 +48,14 @@ include "%L"
 <Multi_key> <Cyrillic_ie> <Cyrillic_ie>		: "ә"	Cyrillic_schwa # CYRILLIC SMALL LETTER SCHWA
 <Multi_key> <Cyrillic_EF> <Cyrillic_EF>		: "Ө"	Cyrillic_O_bar # CYRILLIC CAPITAL LETTER BARRED O
 <Multi_key> <Cyrillic_ef> <Cyrillic_ef>		: "ө"	Cyrillic_o_bar # CYRILLIC SMALL LETTER BARRED O
+<Multi_key> <Cyrillic_GHE> <Cyrillic_GHE>	: "Ѕ"	U0405 # CYRILLIC CAPITAL LETTER DZE
+<Multi_key> <Cyrillic_ghe> <Cyrillic_ghe>	: "ѕ"	U0455 # CYRILLIC SMALL LETTER DZE
 <Multi_key> <Cyrillic_IO> <Cyrillic_IO>		: "Ӛ"	U04DA # CYRILLIC CAPITAL LETTER SCHWA WITH DIAERESIS
 <Multi_key> <Cyrillic_io> <Cyrillic_io>		: "ӛ"	U04DB # CYRILLIC SMALL LETTER SCHWA WITH DIAERESIS
 <Multi_key> <Cyrillic_ZE> <Cyrillic_ZE>		: "Ԑ"	U0510 # CYRILLIC CAPITAL LETTER REVERSED ZE
 <Multi_key> <Cyrillic_ze> <Cyrillic_ze>		: "ԑ"	U0511 # CYRILLIC SMALL LETTER REVERSED ZE
-<Multi_key> <Cyrillic_GHE> <Cyrillic_GHE>	: "Ѕ"	U0405 # CYRILLIC CAPITAL LETTER DZE
-<Multi_key> <Cyrillic_ghe> <Cyrillic_ghe>	: "ѕ"	U0455 # CYRILLIC SMALL LETTER DZE
+<Multi_key> <Cyrillic_ER> <Cyrillic_ER>		: "Ԛ"	U051A # CYRILLIC CAPITAL LETTER QA
+<Multi_key> <Cyrillic_er> <Cyrillic_er>		: "ԛ"	U051B # CYRILLIC SMALL LETTER QA
 <Multi_key> <Cyrillic_EM> <Cyrillic_EM>		: "Ԝ"	U051C # CYRILLIC CAPITAL LETTER WE
 <Multi_key> <Cyrillic_em> <Cyrillic_em>		: "ԝ"	U051D # CYRILLIC SMALL LETTER WE
 

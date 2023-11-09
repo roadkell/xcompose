@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-#
+
 # Forked from
 # https://github.com/kragen/xcompose/blob/master/scan4dups.py
 
+from __future__ import annotations
 import re
 import sys
 
@@ -12,7 +13,7 @@ values: set[str] = set()
 print("Parsing input...")
 
 for line in sys.stdin:
-	# print "((%s))"%line
+	# print("((%s))"%line)
 	startpos = 0
 	name = ''
 	# dups: list = []

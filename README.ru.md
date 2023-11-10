@@ -334,7 +334,7 @@ God kills a kitten. Stop the slaughter!</i>
 
 Compose-последовательности для кириллических букв с "обычными" диакритиками (акутом <kbd>´</kbd>, краткой <kbd>˘</kbd>, макроном <kbd>¯</kbd>, гачеком <kbd>ˇ</kbd> и др.) уже есть в составе Xorg (Linux) и WinCompose (Windows). Обычно они вводятся по схеме <kbd>⎄ Compose</kbd> <kbd>знак</kbd> <kbd>буква</kbd>. Списки комбинаций: [раз](https://gitlab.freedesktop.org/xorg/lib/libx11/-/blob/master/nls/en_US.UTF-8/Compose.pre#L1559), [два](https://gitlab.freedesktop.org/xorg/lib/libx11/-/blob/master/nls/en_US.UTF-8/Compose.pre#L4874).
 
-Но некоторых букв там всё равно не хватает, поэтому [они есть в нашей таблице](/.XCompose#L567).
+Но некоторых букв там всё равно не хватает, поэтому [они есть в нашей таблице](/.XCompose#L639).
 
 ## Похожие проекты ##
 

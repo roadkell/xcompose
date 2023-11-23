@@ -1,8 +1,8 @@
 # Compose Table for Cyrillic Alphabets / Compose-таблица для кириллических алфавитов
 #
-# https://github.com/roadkell/cyrillic-intl-compose
+# https://github.com/roadkell/xcompose
 #
-# 2298 sequences
+# 2284 sequences
 # 482 letters
 #
 # Conventions:
@@ -1768,8 +1768,6 @@ include "%L"
 <dead_acute> <Multi_key> <Cyrillic_er> <Cyrillic_er>		: "ԧ"	U0527 # CYRILLIC SMALL LETTER SHHA WITH DESCENDER
 <dead_belowcomma> <Multi_key> <Cyrillic_ER> <Cyrillic_ER>	: "Ԧ"	U0526 # CYRILLIC CAPITAL LETTER SHHA WITH DESCENDER
 <dead_belowcomma> <Multi_key> <Cyrillic_er> <Cyrillic_er>	: "ԧ"	U0527 # CYRILLIC SMALL LETTER SHHA WITH DESCENDER
-<Multi_key> <apostrophe> <Cyrillic_ER> <Cyrillic_ER>		: "Ԧ"	U0526 # CYRILLIC CAPITAL LETTER SHHA WITH DESCENDER
-<Multi_key> <apostrophe> <Cyrillic_er> <Cyrillic_er>		: "ԧ"	U0527 # CYRILLIC SMALL LETTER SHHA WITH DESCENDER
 
 <dead_diaeresis> <Multi_key> <Cyrillic_IE> <Cyrillic_IE>	: "Ӛ"	U04DA # CYRILLIC CAPITAL LETTER SCHWA WITH DIAERESIS
 <dead_diaeresis> <Multi_key> <Cyrillic_ie> <Cyrillic_ie>	: "ӛ"	U04DB # CYRILLIC SMALL LETTER SCHWA WITH DIAERESIS
@@ -1980,27 +1978,15 @@ include "%L"
 
 <dead_acute> <Multi_key> <Cyrillic_IE> <Cyrillic_IE>	: "Ә́" # CYRILLIC CAPITAL LETTER SCHWA plus COMBINING ACUTE ACCENT
 <dead_acute> <Multi_key> <Cyrillic_ie> <Cyrillic_ie>	: "ә́" # CYRILLIC SMALL LETTER SCHWA plus COMBINING ACUTE ACCENT
-<Multi_key> <acute> <Cyrillic_IE> <Cyrillic_IE>			: "Ә́" # CYRILLIC CAPITAL LETTER SCHWA plus COMBINING ACUTE ACCENT
-<Multi_key> <acute> <Cyrillic_ie> <Cyrillic_ie>			: "ә́" # CYRILLIC SMALL LETTER SCHWA plus COMBINING ACUTE ACCENT
-<Multi_key> <apostrophe> <Cyrillic_IE> <Cyrillic_IE>	: "Ә́" # CYRILLIC CAPITAL LETTER SCHWA plus COMBINING ACUTE ACCENT
-<Multi_key> <apostrophe> <Cyrillic_ie> <Cyrillic_ie>	: "ә́" # CYRILLIC SMALL LETTER SCHWA plus COMBINING ACUTE ACCENT
 
 <dead_macron> <Multi_key> <Cyrillic_IE> <Cyrillic_IE>	: "Ә̄"	# CYRILLIC CAPITAL LETTER SCHWA plus COMBINING MACRON
 <dead_macron> <Multi_key> <Cyrillic_ie> <Cyrillic_ie>	: "ә̄"	# CYRILLIC SMALL LETTER SCHWA plus COMBINING MACRON
-<Multi_key> <macron> <Cyrillic_IE> <Cyrillic_IE>		: "Ә̄"	# CYRILLIC CAPITAL LETTER SCHWA plus COMBINING MACRON
-<Multi_key> <macron> <Cyrillic_ie> <Cyrillic_ie>		: "ә̄"	# CYRILLIC SMALL LETTER SCHWA plus COMBINING MACRON
-<Multi_key> <underscore> <Cyrillic_IE> <Cyrillic_IE>	: "Ә̄"	# CYRILLIC CAPITAL LETTER SCHWA plus COMBINING MACRON
-<Multi_key> <underscore> <Cyrillic_ie> <Cyrillic_ie>	: "ә̄"	# CYRILLIC SMALL LETTER SCHWA plus COMBINING MACRON
 
 <dead_tilde> <Multi_key> <Cyrillic_IE> <Cyrillic_IE>	: "Ә̃"	# CYRILLIC CAPITAL LETTER SCHWA plus COMBINING TILDE
 <dead_tilde> <Multi_key> <Cyrillic_ie> <Cyrillic_ie>	: "ә̃"	# CYRILLIC SMALL LETTER SCHWA plus COMBINING TILDE
 
 <dead_acute> <Multi_key> <Cyrillic_E> <Cyrillic_E>		: "Є́" # CYRILLIC CAPITAL LETTER UKRAINIAN IE plus COMBINING ACUTE ACCENT
 <dead_acute> <Multi_key> <Cyrillic_e> <Cyrillic_e>		: "є́" # CYRILLIC SMALL LETTER UKRAINIAN IE plus COMBINING ACUTE ACCENT
-<Multi_key> <acute> <Cyrillic_E> <Cyrillic_E>			: "Є́" # CYRILLIC CAPITAL LETTER UKRAINIAN IE plus COMBINING ACUTE ACCENT
-<Multi_key> <acute> <Cyrillic_e> <Cyrillic_e>			: "є́" # CYRILLIC SMALL LETTER UKRAINIAN IE plus COMBINING ACUTE ACCENT
-<Multi_key> <apostrophe> <Cyrillic_E> <Cyrillic_E>		: "Є́" # CYRILLIC CAPITAL LETTER UKRAINIAN IE plus COMBINING ACUTE ACCENT
-<Multi_key> <apostrophe> <Cyrillic_e> <Cyrillic_e>		: "є́" # CYRILLIC SMALL LETTER UKRAINIAN IE plus COMBINING ACUTE ACCENT
 
 <dead_diaeresis> <Multi_key> <Cyrillic_E> <Cyrillic_E>	: "Є̈"	# CYRILLIC CAPITAL LETTER UKRAINIAN IE plus COMBINING DIAERESIS
 <dead_diaeresis> <Multi_key> <Cyrillic_e> <Cyrillic_e>	: "є̈"	# CYRILLIC SMALL LETTER UKRAINIAN IE plus COMBINING DIAERESIS

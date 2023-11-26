@@ -60,14 +60,13 @@ God kills a kitten. Stop the slaughter!</i>
 | гачек <kbd>ˇ</kbd>                     | меньше <kbd><</kbd>             | <kbd>⎄ Compose</kbd> <kbd><</kbd> <kbd>р</kbd>  | р̌         |
 | кратка <kbd>˘</kbd>                    | скобка <kbd>(</kbd>             | <kbd>⎄ Compose</kbd> <kbd>ж</kbd> <kbd>(</kbd>  | ӂ         |
 | седиль <kbd>¸</kbd> (или нижний вынос) | запятая <kbd>,</kbd>            | <kbd>⎄ Compose</kbd> <kbd>х</kbd> <kbd>,</kbd>  | ҳ         |
-| нижний вынос слева                     | запятая перед буквой            | <kbd>⎄ Compose</kbd> <kbd>,</kbd> <kbd>ч</kbd>  | ӌ         |
+| нижний вынос слева                     | точка с запятой <kbd>;</kbd>            | <kbd>⎄ Compose</kbd> <kbd>;</kbd> <kbd>ч</kbd>  | ӌ         |
 | хвостик <kbd>ˏ</kbd>                   | точка с запятой <kbd>;</kbd>    | <kbd>⎄ Compose</kbd> <kbd>м</kbd> <kbd>;</kbd>  | ӎ         |
 | горизонтальный штрих                   | дефис <kbd>-</kbd>              | <kbd>⎄ Compose</kbd> <kbd>о</kbd> <kbd>-</kbd>  | ө         |
 | вертикальный штрих                     | <kbd>1</kbd>                    | <kbd>⎄ Compose</kbd> <kbd>1</kbd> <kbd>ч</kbd>  | ҹ         |
 | диагональный штрих                     | обратный слэш <kbd>\\</kbd>     | <kbd>⎄ Compose</kbd> <kbd>р</kbd> <kbd>\\</kbd> | ҏ         |
 | штрих сверху слева                     | <kbd>7</kbd> перед буквой       | <kbd>⎄ Compose</kbd> <kbd>7</kbd> <kbd>к</kbd>  | ҡ         |
 | крюк <kbd> ̡</kbd>                      | <kbd>9</kbd>                    | <kbd>⎄ Compose</kbd> <kbd>л</kbd> <kbd>9</kbd>  | ԓ         |
-| крюк слева                             | <kbd>9</kbd> перед буквой       | <kbd>⎄ Compose</kbd> <kbd>9</kbd> <kbd>н</kbd>  | ԩ         |
 | крюк посередине                        | <kbd>5</kbd>                    | <kbd>⎄ Compose</kbd> <kbd>г</kbd> <kbd>5</kbd>  | ҕ         |
 
 Если буква имеет уникальное начертание, её можно получить, набрав похожую внешне букву дважды:
@@ -99,6 +98,10 @@ God kills a kitten. Stop the slaughter!</i>
 | ---------------------------------------------- | ----- |
 | <kbd>⎄ Compose</kbd> <kbd>а</kbd> <kbd>е</kbd> | ӕ     |
 | <kbd>⎄ Compose</kbd> <kbd>л</kbd> <kbd>ь</kbd> | љ     |
+| <kbd>⎄ Compose</kbd> <kbd>ъ</kbd> <kbd>к</kbd> | ҡ     |
+| <kbd>⎄ Compose</kbd> <kbd>л</kbd> <kbd>н</kbd> | ԩ     |
+
+(Строго говоря, ҡ и ԩ — не лигатуры, но сходство есть, поэтому можно).
 
 Мультиграфы с палочкой (буква <kbd>Ӏ</kbd> в алфавитах кавказских языков) можно ввести, набрав букву и единицу:
 

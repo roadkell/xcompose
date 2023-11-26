@@ -695,6 +695,8 @@ include "%L"
 <Multi_key> <Cyrillic_en> <cedilla>		: "ԩ"	U0529 # CYRILLIC SMALL LETTER EN WITH LEFT HOOK
 <Multi_key> <Cyrillic_EL> <Cyrillic_EN>	: "Ԩ"	U0528 # CYRILLIC CAPITAL LETTER EN WITH LEFT HOOK
 <Multi_key> <Cyrillic_el> <Cyrillic_en>	: "ԩ"	U0529 # CYRILLIC SMALL LETTER EN WITH LEFT HOOK
+<Multi_key> <Cyrillic_EN> <Cyrillic_EL>	: "Ԩ"	U0528 # CYRILLIC CAPITAL LETTER EN WITH LEFT HOOK
+<Multi_key> <Cyrillic_en> <Cyrillic_el>	: "ԩ"	U0529 # CYRILLIC SMALL LETTER EN WITH LEFT HOOK
 
 # Letters with middle hook
 <Multi_key> <5> <Cyrillic_GHE>	: "Ҕ"	U0494 # CYRILLIC CAPITAL LETTER GHE WITH MIDDLE HOOK

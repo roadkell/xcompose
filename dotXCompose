@@ -2672,6 +2672,12 @@ include "%L"
 <Multi_key> <equal> <Cyrillic_ghe>		: "₴"	U20B4 # HRYVNIA SIGN
 <Multi_key> <Cyrillic_GHE> <equal>		: "₴"	U20B4 # HRYVNIA SIGN
 <Multi_key> <Cyrillic_ghe> <equal>		: "₴"	U20B4 # HRYVNIA SIGN
+<dead_currency> <Cyrillic_EM>			: "₼"	U20BC # MANAT SIGN
+<dead_currency> <Cyrillic_em>			: "₼"	U20BC # MANAT SIGN
+<Multi_key> <bar> <Cyrillic_EM>			: "₼"	U20BC # MANAT SIGN
+<Multi_key> <bar> <Cyrillic_em>			: "₼"	U20BC # MANAT SIGN
+<Multi_key> <Cyrillic_EM> <bar>			: "₼"	U20BC # MANAT SIGN
+<Multi_key> <Cyrillic_em> <bar>			: "₼"	U20BC # MANAT SIGN
 <dead_currency> <Cyrillic_ER>			: "₽"	U20BD # RUBLE SIGN
 <dead_currency> <Cyrillic_er>			: "₽"	U20BD # RUBLE SIGN
 <Multi_key> <equal> <Cyrillic_ER>		: "₽"	U20BD # RUBLE SIGN

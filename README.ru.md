@@ -115,6 +115,7 @@ God kills a kitten. Stop the slaughter!</i>
 
 | Ввод                                           | Буква |
 | ---------------------------------------------- | ----- |
+| <kbd>⎄ Compose</kbd> <kbd>р</kbd> <kbd>=</kbd> | ₽     |
 | <kbd>⎄ Compose</kbd> <kbd>г</kbd> <kbd>=</kbd> | ₴     |
 | <kbd>⎄ Compose</kbd> <kbd>т</kbd> <kbd>_</kbd> | ₸     |
 

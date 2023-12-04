@@ -30,15 +30,17 @@
 #	о or *			ring above
 #	!				dot below
 #
-# Most Cyrillic keyboard layouts (ЙЦУКЕН-based) lack a substantial number
-# of symbols by default: `~@#$^&|[]{}'<> - thus leaving users with
-# .,"-_?!();:/\=+%* and forcing them to switch to English every time they need
-# to type these symbols (unless they have custom-configured their layout).
-# This should be accounted for when proposing new sequences.
+# Cyrillic ЙЦУКЕН-based keyboard layouts lack a number of symbols by default:
+#	`~@#$^&|[]{}'<>
+# thus leaving users with
+#	.,"-_?!();:/\=+%*№
+# and forcing them to switch to English every time to type those
+# (unless they have a custom layout). This should be accounted for
+# when proposing new sequences.
 #
-# Some combos here start with -< v- *, ,* !, ,! _` ~_
+# Some combos here start with -< v- *, ,* !, ,! _` ~_ pairs.
 # Although they don't clash with anything in en_US.UTF-8 yet, they still
-# are very generic and might cause conflicts in the future.
+# are somewhat generic and might cause conflicts in the future.
 #
 # TODO: add all superscript & subscript modifier letters
 # TODO: add Abkhaz digraphs: Ӷә ӷә, Ӡә ӡә, Қә қә, Ҟә ҟә, Ҭә ҭә, Ҳә ҳә, Ҵә ҵә
@@ -49,7 +51,9 @@
 
 include "%L"
 
-# Symbols that are not available in Cyrillic JCUKEN-based layouts
+# ============================================================================ #
+
+# Symbols not available in Cyrillic JCUKEN layout and its derivatives
 # [`~] / [ёЁ]
 <Multi_key> <space> <Cyrillic_io>		: "`"	grave # GRAVE ACCENT
 <Multi_key> <Cyrillic_io> <space>		: "`"	grave # GRAVE ACCENT
@@ -62,7 +66,7 @@ include "%L"
 <Multi_key> <space> <numerosign>		: "#"	numbersign # NUMBER SIGN
 <Multi_key> <numerosign> <space>		: "#"	numbersign # NUMBER SIGN
 # [4$] / [4;]
-<Multi_key> <space> <semicolon>			: "$"	dollar # DOLLAR SIGN
+<Multi_key> <space> <semicolon>			: "$":	dollar # DOLLAR SIGN
 # Override ogonek in en_US.UTF-8:
 <Multi_key> <semicolon> <space>			: "$"	dollar # DOLLAR SIGN
 # [6^] / [6:]
@@ -93,6 +97,16 @@ include "%L"
 # [.>] / [юЮ]
 <Multi_key> <space> <Cyrillic_YU>		: ">"	greater # GREATER-THAN
 <Multi_key> <Cyrillic_YU> <space>		: ">"	greater # GREATER-THAN
+
+# Punctuation marks for Cyrillic
+<Multi_key> <Cyrillic_be> <Cyrillic_be>	: "«"	guillemotleft # LEFT-POINTING DOUBLE ANGLE QUOTATION MARK
+<Multi_key> <Cyrillic_yu> <Cyrillic_yu>	: "»"	guillemotright # RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK
+<Multi_key> <Cyrillic_be> <Cyrillic_yu>	: "«»"
+<Multi_key> <Cyrillic_BE> <Cyrillic_BE>	: "„"	doublelowquotemark # DOUBLE LOW-9 QUOTATION MARK
+<Multi_key> <Cyrillic_YU> <Cyrillic_YU>	: "“"	leftdoublequotemark # LEFT DOUBLE QUOTATION MARK
+<Multi_key> <Cyrillic_BE> <Cyrillic_YU>	: "„“"
+
+# ============================================================================ #
 
 # Flipped look-alike letters
 <Multi_key> <Cyrillic_E> <Cyrillic_E>		: "Є"	Ukrainian_IE # CYRILLIC CAPITAL LETTER UKRAINIAN IE

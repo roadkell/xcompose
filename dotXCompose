@@ -2,7 +2,7 @@
 #
 # https://github.com/roadkell/xcompose
 #
-# 2463 sequences
+# 2311 sequences
 # 525 letters
 #
 # Conventions:
@@ -14,17 +14,17 @@
 #	_ or ¯			macron, or top left bar (Ъъ Ҡҡ), or line above/below (₸ ⃀)
 #	^ or >			circumflex
 #	< or v or м		háček/caron
-#	( or U or b		breve
+#	( or U			breve
 #	)				inverted breve
-#	, or ¸			descender, or cedilla (Ҙҙ Ҫҫ)
-#	; or ¸			descender to the left (Khakassian Che)
+#	, or ¸(cedilla)	descender, or cedilla (Ҙҙ Ҫҫ)
+#	; or ¸(cedilla)	descender to the left (Khakassian Che)
 #	; or /			tail (Ҋҋ Ӆӆ Ӎӎ Ӊӊ)
 #	- or /			horizontal stroke (Ғғ Ҟҟ Өө Ұұ Ӿӿ Ћћ Ҍҍ)
 #	| or 1			vertical stroke (Ҝҝ Ҹҹ), or upturn (Ґґ)
 #	\				diagonal stroke (Ԟԟ Ҏҏ)
 #	7 or _			top left bar (Ҡҡ Ъъ Ꙑꙑ)
 #	9				hook (Јј Ӻӻ Ӄӄ Ԓԓ Ӈӈ Ӽӽ Ђђ Ҽҽ)
-#	л or 9 (prefix)	left hook (Ԩԩ)
+#	л or ¸(cedilla)	left hook (Ԩԩ)
 #	5				middle hook (Ҕҕ Ԡԡ Ԣԣ Ҧҧ Ꚋꚋ)
 #	.				dot above
 #	о or *			ring above

@@ -2,8 +2,8 @@
 #
 # https://github.com/roadkell/xcompose
 #
-# 2303 sequences
-# 541 letters
+# 2315 sequences
+# 553 letters
 #
 # Conventions:
 #	' or ´			acute
@@ -50,10 +50,8 @@
 # - Abkhaz digraphs: Ӷә ӷә, Ӡә ӡә, Қә қә, Ҟә ҟә, Ҭә ҭә, Ҳә ҳә, Ҵә ҵә
 # - Kurdish Soviet Latin letters
 # - historical Komi letters from Molodtsov alphabet: Ԁԁ Ԃԃ Ԅԅ Ԇԇ Ԉԉ Ԋԋ Ԍԍ Ԏԏ
-# - historical Bashkir letters from Kulaev alphabet (some are absent from Unicode yet)
+# - historical Bashkir letters from Kulaev alphabet (some absent from Unicode yet)
 # - historical Abkhaz letters: https://ru.wikipedia.org/wiki/Абхазская_письменность
-# - letters with combining ogonek from archaic Lithuanian alphabet (Аа Дд Ээ Ее Іі Уу):
-#		https://en.wikipedia.org/wiki/A_with_ogonek_(Cyrillic)#/media/File:Lithuanian_Cyrilic_Alphabet,_Ju%C5%A1ka,_1867.jpg
 
 # ============================================================================ #
 
@@ -1152,6 +1150,45 @@ include "%L"
 <Multi_key> <9> <Cyrillic_shha>	: "һ̡"	# CYRILLIC SMALL LETTER SHHA plus COMBINING HOOK
 <Multi_key> <Cyrillic_SHHA> <9>	: "Һ̡"	# CYRILLIC CAPITAL LETTER SHHA plus COMBINING HOOK
 <Multi_key> <Cyrillic_shha> <9>	: "һ̡"	# CYRILLIC SMALL LETTER SHHA plus COMBINING HOOK
+
+# Letters with combining ogonek (archaic Lithuanian Cyrillic alphabet)
+# https://en.wikipedia.org/wiki/A_with_ogonek_(Cyrillic)
+<dead_ogonek> <Cyrillic_A>				: "А̨"	# CYRILLIC CAPITAL LETTER A plus COMBINING OGONEK
+<dead_ogonek> <Cyrillic_a>				: "а̨"	# CYRILLIC SMALL LETTER A plus COMBINING OGONEK
+# <Multi_key> <semicolon> <Cyrillic_A>	: "А̨"	# CYRILLIC CAPITAL LETTER A plus COMBINING OGONEK
+# <Multi_key> <semicolon> <Cyrillic_a>	: "а̨"	# CYRILLIC SMALL LETTER A plus COMBINING OGONEK
+# <Multi_key> <Cyrillic_A> <semicolon>	: "А̨"	# CYRILLIC CAPITAL LETTER A plus COMBINING OGONEK
+# <Multi_key> <Cyrillic_a> <semicolon>	: "а̨"	# CYRILLIC SMALL LETTER A plus COMBINING OGONEK
+<dead_ogonek> <Cyrillic_DE>				: "Д̨"	# CYRILLIC CAPITAL LETTER DE plus COMBINING OGONEK
+<dead_ogonek> <Cyrillic_de>				: "д̨"	# CYRILLIC SMALL LETTER DE plus COMBINING OGONEK
+# <Multi_key> <semicolon> <Cyrillic_DE>	: "Д̨"	# CYRILLIC CAPITAL LETTER DE plus COMBINING OGONEK
+# <Multi_key> <semicolon> <Cyrillic_de>	: "д̨"	# CYRILLIC SMALL LETTER DE plus COMBINING OGONEK
+# <Multi_key> <Cyrillic_DE> <semicolon>	: "Д̨"	# CYRILLIC CAPITAL LETTER DE plus COMBINING OGONEK
+# <Multi_key> <Cyrillic_de> <semicolon>	: "д̨"	# CYRILLIC SMALL LETTER DE plus COMBINING OGONEK
+<dead_ogonek> <Cyrillic_IE>				: "Е̨"	# CYRILLIC CAPITAL LETTER IE plus COMBINING OGONEK
+<dead_ogonek> <Cyrillic_ie>				: "е̨"	# CYRILLIC SMALL LETTER IE plus COMBINING OGONEK
+# <Multi_key> <semicolon> <Cyrillic_IE>	: "Е̨"	# CYRILLIC CAPITAL LETTER IE plus COMBINING OGONEK
+# <Multi_key> <semicolon> <Cyrillic_ie>	: "е̨"	# CYRILLIC SMALL LETTER IE plus COMBINING OGONEK
+# <Multi_key> <Cyrillic_IE> <semicolon>	: "Е̨"	# CYRILLIC CAPITAL LETTER IE plus COMBINING OGONEK
+# <Multi_key> <Cyrillic_ie> <semicolon>	: "е̨"	# CYRILLIC SMALL LETTER IE plus COMBINING OGONEK
+<dead_ogonek> <Ukrainian_I>				: "І̨"	# CYRILLIC CAPITAL LETTER BYELORUSSIAN-UKRAINIAN I plus COMBINING OGONEK
+<dead_ogonek> <Ukrainian_i>				: "і̨"	# CYRILLIC SMALL LETTER BYELORUSSIAN-UKRAINIAN I plus COMBINING OGONEK
+# <Multi_key> <semicolon> <Ukrainian_I>	: "І̨"	# CYRILLIC CAPITAL LETTER BYELORUSSIAN-UKRAINIAN I plus COMBINING OGONEK
+# <Multi_key> <semicolon> <Ukrainian_i>	: "і̨"	# CYRILLIC SMALL LETTER BYELORUSSIAN-UKRAINIAN I plus COMBINING OGONEK
+# <Multi_key> <Ukrainian_I> <semicolon>	: "І̨"	# CYRILLIC CAPITAL LETTER BYELORUSSIAN-UKRAINIAN I plus COMBINING OGONEK
+# <Multi_key> <Ukrainian_i> <semicolon>	: "і̨"	# CYRILLIC SMALL LETTER BYELORUSSIAN-UKRAINIAN I plus COMBINING OGONEK
+<dead_ogonek> <Cyrillic_U>				: "У̨"	# CYRILLIC CAPITAL LETTER U plus COMBINING OGONEK
+<dead_ogonek> <Cyrillic_u>				: "у̨"	# CYRILLIC SMALL LETTER U plus COMBINING OGONEK
+# <Multi_key> <semicolon> <Cyrillic_U>	: "У̨"	# CYRILLIC CAPITAL LETTER U plus COMBINING OGONEK
+# <Multi_key> <semicolon> <Cyrillic_u>	: "у̨"	# CYRILLIC SMALL LETTER U plus COMBINING OGONEK
+# <Multi_key> <Cyrillic_U> <semicolon>	: "У̨"	# CYRILLIC CAPITAL LETTER U plus COMBINING OGONEK
+# <Multi_key> <Cyrillic_u> <semicolon>	: "у̨"	# CYRILLIC SMALL LETTER U plus COMBINING OGONEK
+<dead_ogonek> <Cyrillic_E>				: "Э̨"	# CYRILLIC CAPITAL LETTER E plus COMBINING OGONEK
+<dead_ogonek> <Cyrillic_e>				: "э̨"	# CYRILLIC SMALL LETTER E plus COMBINING OGONEK
+# <Multi_key> <semicolon> <Cyrillic_E>	: "Э̨"	# CYRILLIC CAPITAL LETTER E plus COMBINING OGONEK
+# <Multi_key> <semicolon> <Cyrillic_e>	: "э̨"	# CYRILLIC SMALL LETTER E plus COMBINING OGONEK
+# <Multi_key> <Cyrillic_E> <semicolon>	: "Э̨"	# CYRILLIC CAPITAL LETTER E plus COMBINING OGONEK
+# <Multi_key> <Cyrillic_e> <semicolon>	: "э̨"	# CYRILLIC SMALL LETTER E plus COMBINING OGONEK
 
 # Letters with combining grave
 <dead_grave> <Cyrillic_KA>				: "К̀"	# CYRILLIC CAPITAL LETTER KA plus COMBINING GRAVE ACCENT

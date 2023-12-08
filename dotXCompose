@@ -2,14 +2,14 @@
 #
 # https://github.com/roadkell/xcompose
 #
-# 2219 sequences
-# 521 letters
+# 2303 sequences
+# 541 letters
 #
 # Conventions:
 #	' or ´			acute
 #	= or ˝			double acute (Ӳӳ)
 #	=				double stroke (₴ ₽ ₮)
-#	`				grave, or upturn (Ґґ)
+#	`				grave
 #	" or ¨			diaeresis
 #	_ or ¯			macron, or top left bar (Ъъ Ҡҡ), or line above/below (₸ ⃀)
 #	^ or >			circumflex
@@ -17,18 +17,21 @@
 #	( or U or u		breve
 #	)				inverted breve
 #	, or ¸(cedilla)	descender, or cedilla (Ҙҙ Ҫҫ)
-#	; or ¸(cedilla)	descender to the left (Khakassian Che)
 #	; or /			tail (Ҋҋ Ӆӆ Ӎӎ Ӊӊ)
 #	- or /			horizontal stroke (Ғғ Ҟҟ Өө Ұұ Ӿӿ Ћћ Ҍҍ)
-#	| or 1			vertical stroke (Ҝҝ Ҹҹ), or upturn (Ґґ)
+#	| or 1			vertical stroke (Ҝҝ Ҹҹ)
 #	\				diagonal stroke (Ԟԟ Ҏҏ)
 #	7 or _			top left bar (Ҡҡ Ъъ Ꙑꙑ)
 #	9				hook (Јј Ӻӻ Ӄӄ Ԓԓ Ӈӈ Ӽӽ Ђђ Ҽҽ)
-#	л or ¸(cedilla)	left hook (Ԩԩ)
 #	5				middle hook (Ҕҕ Ԡԡ Ԣԣ Ҧҧ Ꚋꚋ)
 #	.				dot above
 #	о or *			ring above
 #	!				dot below
+# One of a kind letters:
+#	` or postfix ' or | or 1	upturn (Ґґ)
+#	л or prefix 9				left hook (Ԩԩ)
+#	; or prefix ,				descender to the left (Khakassian Che)
+#	6							top hook (Ꚕꚕ)
 #
 # Cyrillic ЙЦУКЕН-based keyboard layouts lack a number of symbols by default:
 #	`~@#$^&|[]{}'<>
@@ -42,11 +45,15 @@
 # Although they don't clash with anything in en_US.UTF-8 yet, they still
 # are somewhat generic and might cause conflicts in the future.
 #
-# TODO: add all superscript & subscript modifier letters
-# TODO: add Abkhaz digraphs: Ӷә ӷә, Ӡә ӡә, Қә қә, Ҟә ҟә, Ҭә ҭә, Ҳә ҳә, Ҵә ҵә
-# TODO: add Kurdish Soviet Latin letters
-# TODO: add historical Komi letters from Molodtsov alphabet: Ԁԁ Ԃԃ Ԅԅ Ԇԇ Ԉԉ Ԋԋ Ԍԍ Ԏԏ
-# TODO: maybe add <Cyrillic_es> <minus> for Єє?
+# TODO:
+# - all superscript & subscript modifier letters
+# - Abkhaz digraphs: Ӷә ӷә, Ӡә ӡә, Қә қә, Ҟә ҟә, Ҭә ҭә, Ҳә ҳә, Ҵә ҵә
+# - Kurdish Soviet Latin letters
+# - historical Komi letters from Molodtsov alphabet: Ԁԁ Ԃԃ Ԅԅ Ԇԇ Ԉԉ Ԋԋ Ԍԍ Ԏԏ
+# - historical Bashkir letters from Kulaev alphabet (some are absent from Unicode yet)
+# - historical Abkhaz letters: https://ru.wikipedia.org/wiki/Абхазская_письменность
+# - letters with combining ogonek from archaic Lithuanian alphabet (Аа Дд Ээ Ее Іі Уу):
+#		https://en.wikipedia.org/wiki/A_with_ogonek_(Cyrillic)#/media/File:Lithuanian_Cyrilic_Alphabet,_Ju%C5%A1ka,_1867.jpg
 
 # ============================================================================ #
 
@@ -100,7 +107,7 @@ include "%L"
 <Multi_key> <Cyrillic_YU> <space>		: ">"	greater # GREATER-THAN
 
 # Punctuation marks for Cyrillic
-# Double YU could also be repurposed to type an archaic reversed YU (Ꙕꙕ)
+# Double YU could also be repurposed to type an archaic reversed YU (Ꙕꙕ).
 <Multi_key> <Cyrillic_be> <Cyrillic_be>	: "«"	guillemotleft # LEFT-POINTING DOUBLE ANGLE QUOTATION MARK
 <Multi_key> <Cyrillic_yu> <Cyrillic_yu>	: "»"	guillemotright # RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK
 <Multi_key> <Cyrillic_be> <Cyrillic_yu>	: "«»"
@@ -121,20 +128,26 @@ include "%L"
 <Multi_key> <Cyrillic_io> <Cyrillic_io>		: "ӛ"	U04DB # CYRILLIC SMALL LETTER SCHWA WITH DIAERESIS
 <Multi_key> <Cyrillic_EF> <Cyrillic_EF>		: "Ө"	Cyrillic_O_bar # CYRILLIC CAPITAL LETTER BARRED O
 <Multi_key> <Cyrillic_ef> <Cyrillic_ef>		: "ө"	Cyrillic_o_bar # CYRILLIC SMALL LETTER BARRED O
+# Double CHE could also be repurposed to type an archaic Abkhazian Cche
+# https://en.wikipedia.org/wiki/Abkhazian_Che#Cche
 <Multi_key> <Cyrillic_CHE> <Cyrillic_CHE>	: "Һ"	Cyrillic_SHHA # CYRILLIC CAPITAL LETTER SHHA
 <Multi_key> <Cyrillic_che> <Cyrillic_che>	: "һ"	Cyrillic_shha # CYRILLIC SMALL LETTER SHHA
-<Multi_key> <Cyrillic_EM> <Cyrillic_EM>		: "Ԝ"	U051C # CYRILLIC CAPITAL LETTER WE
-<Multi_key> <Cyrillic_em> <Cyrillic_em>		: "ԝ"	U051D # CYRILLIC SMALL LETTER WE
 <Multi_key> <Cyrillic_ZE> <Cyrillic_ZE>		: "Ԑ"	U0510 # CYRILLIC CAPITAL LETTER REVERSED ZE
 <Multi_key> <Cyrillic_ze> <Cyrillic_ze>		: "ԑ"	U0511 # CYRILLIC SMALL LETTER REVERSED ZE
+<Multi_key> <Cyrillic_EM> <Cyrillic_EM>		: "Ԝ"	U051C # CYRILLIC CAPITAL LETTER WE
+<Multi_key> <Cyrillic_em> <Cyrillic_em>		: "ԝ"	U051D # CYRILLIC SMALL LETTER WE
+<Multi_key> <Cyrillic_ZHE> <Cyrillic_ZHE>	: "Ӿ"	U04FE # CYRILLIC CAPITAL LETTER HA WITH STROKE
+<Multi_key> <Cyrillic_zhe> <Cyrillic_zhe>	: "ӿ"	U04FF # CYRILLIC SMALL LETTER HA WITH STROKE
+# Double EL could also be repurposed to type an archaic Ka with ascender
+# when it gets added to Unicode: https://en.wikipedia.org/wiki/Ka_with_ascender
 <Multi_key> <Cyrillic_EL> <Cyrillic_EL>		: "Ѵ"	U0474 # CYRILLIC CAPITAL LETTER IZHITSA
 <Multi_key> <Cyrillic_el> <Cyrillic_el>		: "ѵ"	U0475 # CYRILLIC SMALL LETTER IZHITSA
 
 # Latin-like letters (assuming QWERTY+ЙЦУКЕН layout)
-# Since users may have different keyboard layouts, we should also provide other
-# combos for these letters
-<Multi_key> <Cyrillic_SHORTI> <Cyrillic_SHORTI>	: "Ԛ"	U051A # CYRILLIC CAPITAL LETTER QA
-<Multi_key> <Cyrillic_shorti> <Cyrillic_shorti>	: "ԛ"	U051B # CYRILLIC SMALL LETTER QA
+# Since users may have different keyboard layouts, these shouldn't be the only
+# sequences for these letters.
+# <Multi_key> <Cyrillic_SHORTI> <Cyrillic_SHORTI>	: "Ԛ"	U051A # CYRILLIC CAPITAL LETTER QA
+# <Multi_key> <Cyrillic_shorti> <Cyrillic_shorti>	: "ԛ"	U051B # CYRILLIC SMALL LETTER QA
 <Multi_key> <Cyrillic_TSE> <Cyrillic_TSE>	: "Ԝ"	U051C # CYRILLIC CAPITAL LETTER WE
 <Multi_key> <Cyrillic_tse> <Cyrillic_tse>	: "ԝ"	U051D # CYRILLIC SMALL LETTER WE
 <Multi_key> <Cyrillic_EN> <Cyrillic_EN>		: "Ү"	Cyrillic_U_straight # CYRILLIC CAPITAL LETTER STRAIGHT U
@@ -145,12 +158,15 @@ include "%L"
 <Multi_key> <Cyrillic_yeru> <Cyrillic_yeru>	: "ѕ"	Macedonia_dse # CYRILLIC SMALL LETTER DZE
 <Multi_key> <Cyrillic_A> <Cyrillic_A>		: "Ғ"	Cyrillic_GHE_bar # CYRILLIC CAPITAL LETTER GHE WITH STROKE
 <Multi_key> <Cyrillic_a> <Cyrillic_a>		: "ғ"	Cyrillic_ghe_bar # CYRILLIC SMALL LETTER GHE WITH STROKE
+# Double ER could also be repurposed to type an archaic Komi De
 <Multi_key> <Cyrillic_ER> <Cyrillic_ER>		: "Һ"	Cyrillic_SHHA # CYRILLIC CAPITAL LETTER SHHA
 <Multi_key> <Cyrillic_er> <Cyrillic_er>		: "һ"	Cyrillic_shha # CYRILLIC SMALL LETTER SHHA
 <Multi_key> <Cyrillic_O> <Cyrillic_O>		: "Ј"	Cyrillic_JE # CYRILLIC CAPITAL LETTER JE
 <Multi_key> <Cyrillic_o> <Cyrillic_o>		: "ј"	Cyrillic_je # CYRILLIC SMALL LETTER JE
 <Multi_key> <Cyrillic_YA> <Cyrillic_YA>		: "Ӡ"	U04E0 # CYRILLIC CAPITAL LETTER ABKHASIAN DZE
 <Multi_key> <Cyrillic_ya> <Cyrillic_ya>		: "ӡ"	U04E1 # CYRILLIC SMALL LETTER ABKHASIAN DZE
+<Multi_key> <Cyrillic_VE> <Cyrillic_VE>		: "Ԁ"	U0500 # CYRILLIC CAPITAL LETTER KOMI DE
+<Multi_key> <Cyrillic_ve> <Cyrillic_ve>		: "ԁ"	U0501 # CYRILLIC SMALL LETTER KOMI DE
 
 # Number-like letters
 # <Multi_key> <Cyrillic_I> <1>		: "І"	Ukrainian_I # CYRILLIC CAPITAL LETTER BYELORUSSIAN-UKRAINIAN I
@@ -175,16 +191,16 @@ include "%L"
 <Multi_key> <3> <Cyrillic_ze>	: "ӡ"	U04E1 # CYRILLIC SMALL LETTER ABKHASIAN DZE
 
 # More double-letter sequences
-<Multi_key> <Cyrillic_GHE> <Cyrillic_GHE>	: "Ґ"	Ukrainian_GHE_WITH_UPTURN # CYRILLIC CAPITAL LETTER GHE WITH UPTURN
-<Multi_key> <Cyrillic_ghe> <Cyrillic_ghe>	: "ґ"	Ukrainian_ghe_with_upturn # CYRILLIC SMALL LETTER GHE WITH UPTURN
-<Multi_key> <Cyrillic_I> <Cyrillic_I>		: "І"	Ukrainian_I # CYRILLIC CAPITAL LETTER BYELORUSSIAN-UKRAINIAN I
-<Multi_key> <Cyrillic_i> <Cyrillic_i>		: "і"	Ukrainian_i # CYRILLIC SMALL LETTER BYELORUSSIAN-UKRAINIAN I
-<Multi_key> <Cyrillic_ES> <Cyrillic_ES>		: "Ѕ"	Macedonia_DSE # CYRILLIC CAPITAL LETTER DZE
-<Multi_key> <Cyrillic_es> <Cyrillic_es>		: "ѕ"	Macedonia_dse # CYRILLIC SMALL LETTER DZE
-<Multi_key> <Cyrillic_U> <Cyrillic_U>		: "Ү"	Cyrillic_U_straight # CYRILLIC CAPITAL LETTER STRAIGHT U
-<Multi_key> <Cyrillic_u> <Cyrillic_u>		: "ү"	Cyrillic_u_straight # CYRILLIC SMALL LETTER STRAIGHT U
-<Multi_key> <Cyrillic_HA> <Cyrillic_HA>		: "Һ"	Cyrillic_SHHA # CYRILLIC CAPITAL LETTER SHHA
-<Multi_key> <Cyrillic_ha> <Cyrillic_ha>		: "һ"	Cyrillic_shha # CYRILLIC SMALL LETTER SHHA
+<Multi_key> <Cyrillic_GHE> <Cyrillic_GHE>			: "Ґ"	Ukrainian_GHE_WITH_UPTURN # CYRILLIC CAPITAL LETTER GHE WITH UPTURN
+<Multi_key> <Cyrillic_ghe> <Cyrillic_ghe>			: "ґ"	Ukrainian_ghe_with_upturn # CYRILLIC SMALL LETTER GHE WITH UPTURN
+<Multi_key> <Cyrillic_I> <Cyrillic_I>				: "І"	Ukrainian_I # CYRILLIC CAPITAL LETTER BYELORUSSIAN-UKRAINIAN I
+<Multi_key> <Cyrillic_i> <Cyrillic_i>				: "і"	Ukrainian_i # CYRILLIC SMALL LETTER BYELORUSSIAN-UKRAINIAN I
+<Multi_key> <Cyrillic_SHORTI> <Cyrillic_SHORTI>		: "Ї"	Ukrainian_YI # CYRILLIC CAPITAL LETTER YI
+<Multi_key> <Cyrillic_shorti> <Cyrillic_shorti>		: "ї"	Ukrainian_yi # CYRILLIC SMALL LETTER YI
+<Multi_key> <Cyrillic_U> <Cyrillic_U>				: "Ү"	Cyrillic_U_straight # CYRILLIC CAPITAL LETTER STRAIGHT U
+<Multi_key> <Cyrillic_u> <Cyrillic_u>				: "ү"	Cyrillic_u_straight # CYRILLIC SMALL LETTER STRAIGHT U
+<Multi_key> <Cyrillic_HA> <Cyrillic_HA>				: "Һ"	Cyrillic_SHHA # CYRILLIC CAPITAL LETTER SHHA
+<Multi_key> <Cyrillic_ha> <Cyrillic_ha>				: "һ"	Cyrillic_shha # CYRILLIC SMALL LETTER SHHA
 <Multi_key> <Cyrillic_HARDSIGN> <Cyrillic_HARDSIGN>	: "Ѣ"	U0462 # CYRILLIC CAPITAL LETTER YAT
 <Multi_key> <Cyrillic_hardsign> <Cyrillic_hardsign>	: "ѣ"	U0463 # CYRILLIC SMALL LETTER YAT
 <Multi_key> <Cyrillic_SOFTSIGN> <Cyrillic_SOFTSIGN>	: "Ѣ"	U0462 # CYRILLIC CAPITAL LETTER YAT
@@ -211,6 +227,7 @@ include "%L"
 <Multi_key> <Cyrillic_ie> <bar>			: "ҿ"	U04BF # CYRILLIC SMALL LETTER ABKHASIAN CHE WITH DESCENDER
 <Multi_key> <bar> <Cyrillic_IE>			: "Ҿ"	U04BE # CYRILLIC CAPITAL LETTER ABKHASIAN CHE WITH DESCENDER
 <Multi_key> <bar> <Cyrillic_ie>			: "ҿ"	U04BF # CYRILLIC SMALL LETTER ABKHASIAN CHE WITH DESCENDER
+# In some italic fonts it looks like a Ce ligature, in most like Co or CQ
 <Multi_key> <Cyrillic_ES> <Cyrillic_O>	: "Ҩ"	U04A8 # CYRILLIC CAPITAL LETTER ABKHASIAN HA
 <Multi_key> <Cyrillic_es> <Cyrillic_o>	: "ҩ"	U04A9 # CYRILLIC SMALL LETTER ABKHASIAN HA
 
@@ -288,16 +305,18 @@ include "%L"
 <Multi_key> <Cyrillic_te> <Cyrillic_softsign>	: "ᲊ"	U1C8A # CYRILLIC SMALL LETTER TJE
 
 # Not strictly ligatures, but somewhat looking like ones
+<Multi_key> <Cyrillic_TE> <Cyrillic_KA>			: "Ҡ"	U04A0 # CYRILLIC CAPITAL LETTER BASHKIR KA
+<Multi_key> <Cyrillic_te> <Cyrillic_ka>			: "ҡ"	U04A1 # CYRILLIC SMALL LETTER BASHKIR KA
 <Multi_key> <Cyrillic_HARDSIGN> <Cyrillic_KA>	: "Ҡ"	U04A0 # CYRILLIC CAPITAL LETTER BASHKIR KA
 <Multi_key> <Cyrillic_hardsign> <Cyrillic_ka>	: "ҡ"	U04A1 # CYRILLIC SMALL LETTER BASHKIR KA
-<Multi_key> <Cyrillic_HARDSIGN> <Cyrillic_YERU>	: "Ꙑ"	UA650 # CYRILLIC CAPITAL LETTER YERU WITH BACK YER
-<Multi_key> <Cyrillic_hardsign> <Cyrillic_yeru>	: "ꙑ"	UA651 # CYRILLIC SMALL LETTER YERU WITH BACK YER
 <Multi_key> <Cyrillic_EL> <Cyrillic_EN>			: "Ԩ"	U0528 # CYRILLIC CAPITAL LETTER EN WITH LEFT HOOK
 <Multi_key> <Cyrillic_el> <Cyrillic_en>			: "ԩ"	U0529 # CYRILLIC SMALL LETTER EN WITH LEFT HOOK
 <Multi_key> <Cyrillic_EN> <Cyrillic_EL>			: "Ԩ"	U0528 # CYRILLIC CAPITAL LETTER EN WITH LEFT HOOK
 <Multi_key> <Cyrillic_en> <Cyrillic_el>			: "ԩ"	U0529 # CYRILLIC SMALL LETTER EN WITH LEFT HOOK
 <Multi_key> <Cyrillic_TE> <Cyrillic_SHHA>		: "Ћ"	Serbian_TSHE # CYRILLIC CAPITAL LETTER TSHE
 <Multi_key> <Cyrillic_te> <Cyrillic_shha>		: "ћ"	Serbian_tshe # CYRILLIC SMALL LETTER TSHE
+<Multi_key> <Cyrillic_HARDSIGN> <Cyrillic_YERU>	: "Ꙑ"	UA650 # CYRILLIC CAPITAL LETTER YERU WITH BACK YER
+<Multi_key> <Cyrillic_hardsign> <Cyrillic_yeru>	: "ꙑ"	UA651 # CYRILLIC SMALL LETTER YERU WITH BACK YER
 
 # Digraphs
 <Multi_key> <Cyrillic_SOFTSIGN> <Ukrainian_I>	: "Ы"	Cyrillic_YERU # CYRILLIC CAPITAL LETTER YERU
@@ -313,7 +332,7 @@ include "%L"
 <Multi_key> <Cyrillic_HARDSIGN> <1>				: "Ꙑ"	UA650 # CYRILLIC CAPITAL LETTER YERU WITH BACK YER
 <Multi_key> <Cyrillic_hardsign> <1>				: "ꙑ"	UA651 # CYRILLIC SMALL LETTER YERU WITH BACK YER
 
-# Digraphs with palochka (easier to type than sequences for palochka)
+# Digraphs with palochka (easier to type than separate sequences for palochka)
 <Multi_key> <Cyrillic_A> <1>		: "Аӏ"
 <Multi_key> <Cyrillic_a> <1>		: "аӏ"
 <Multi_key> <Cyrillic_GHE> <1>		: "Гӏ"
@@ -382,13 +401,36 @@ include "%L"
 # ============================================================================ #
 
 # Letters with upturn
-# Гг with acute/apostrophe is occupied by Ѓѓ
+# Гг with prefix apostrophe is occupied by Ѓѓ (Macedonian Gje) in en_US.UTF-8.
+<Multi_key> <Cyrillic_GHE> <apostrophe>	: "Ґ"	Ukrainian_GHE_WITH_UPTURN # CYRILLIC CAPITAL LETTER GHE WITH UPTURN
+<Multi_key> <Cyrillic_ghe> <apostrophe>	: "ґ"	Ukrainian_ghe_with_upturn # CYRILLIC SMALL LETTER GHE WITH UPTURN
 <dead_grave> <Cyrillic_GHE>				: "Ґ"	Ukrainian_GHE_WITH_UPTURN # CYRILLIC CAPITAL LETTER GHE WITH UPTURN
 <dead_grave> <Cyrillic_ghe>				: "ґ"	Ukrainian_ghe_with_upturn # CYRILLIC SMALL LETTER GHE WITH UPTURN
 <Multi_key> <grave> <Cyrillic_GHE>		: "Ґ"	Ukrainian_GHE_WITH_UPTURN # CYRILLIC CAPITAL LETTER GHE WITH UPTURN
 <Multi_key> <grave> <Cyrillic_ghe>		: "ґ"	Ukrainian_ghe_with_upturn # CYRILLIC SMALL LETTER GHE WITH UPTURN
 <Multi_key> <Cyrillic_GHE> <grave>		: "Ґ"	Ukrainian_GHE_WITH_UPTURN # CYRILLIC CAPITAL LETTER GHE WITH UPTURN
 <Multi_key> <Cyrillic_ghe> <grave>		: "ґ"	Ukrainian_ghe_with_upturn # CYRILLIC SMALL LETTER GHE WITH UPTURN
+<Multi_key> <Cyrillic_GHE> <bar>		: "Ґ"	Ukrainian_GHE_WITH_UPTURN # CYRILLIC CAPITAL LETTER GHE WITH UPTURN
+<Multi_key> <Cyrillic_ghe> <bar>		: "ґ"	Ukrainian_ghe_with_upturn # CYRILLIC SMALL LETTER GHE WITH UPTURN
+<Multi_key> <bar> <Cyrillic_GHE>		: "Ґ"	Ukrainian_GHE_WITH_UPTURN # CYRILLIC CAPITAL LETTER GHE WITH UPTURN
+<Multi_key> <bar> <Cyrillic_ghe>		: "ґ"	Ukrainian_ghe_with_upturn # CYRILLIC SMALL LETTER GHE WITH UPTURN
+<Multi_key> <1> <Cyrillic_GHE>			: "Ґ"	Ukrainian_GHE_WITH_UPTURN # CYRILLIC CAPITAL LETTER GHE WITH UPTURN
+<Multi_key> <1> <Cyrillic_ghe>			: "ґ"	Ukrainian_ghe_with_upturn # CYRILLIC SMALL LETTER GHE WITH UPTURN
+# Дд with postfix apostrophe is occupied by Д́д́
+<Multi_key> <apostrophe> <Cyrillic_DE>	: "Ꚁ"	UA680 # CYRILLIC CAPITAL LETTER DWE
+<Multi_key> <apostrophe> <Cyrillic_de>	: "ꚁ"	UA681 # CYRILLIC SMALL LETTER DWE
+<dead_grave> <Cyrillic_DE>				: "Ꚁ"	UA680 # CYRILLIC CAPITAL LETTER DWE
+<dead_grave> <Cyrillic_de>				: "ꚁ"	UA681 # CYRILLIC SMALL LETTER DWE
+<Multi_key> <grave> <Cyrillic_DE>		: "Ꚁ"	UA680 # CYRILLIC CAPITAL LETTER DWE
+<Multi_key> <grave> <Cyrillic_de>		: "ꚁ"	UA681 # CYRILLIC SMALL LETTER DWE
+<Multi_key> <Cyrillic_DE> <grave>		: "Ꚁ"	UA680 # CYRILLIC CAPITAL LETTER DWE
+<Multi_key> <Cyrillic_de> <grave>		: "ꚁ"	UA681 # CYRILLIC SMALL LETTER DWE
+<Multi_key> <Cyrillic_DE> <bar>			: "Ꚁ"	UA680 # CYRILLIC CAPITAL LETTER DWE
+<Multi_key> <Cyrillic_de> <bar>			: "ꚁ"	UA681 # CYRILLIC SMALL LETTER DWE
+<Multi_key> <bar> <Cyrillic_DE>			: "Ꚁ"	UA680 # CYRILLIC CAPITAL LETTER DWE
+<Multi_key> <bar> <Cyrillic_de>			: "ꚁ"	UA681 # CYRILLIC SMALL LETTER DWE
+<Multi_key> <1> <Cyrillic_DE>			: "Ꚁ"	UA680 # CYRILLIC CAPITAL LETTER DWE
+<Multi_key> <1> <Cyrillic_de>			: "ꚁ"	UA681 # CYRILLIC SMALL LETTER DWE
 
 # Letters with top left bar
 <dead_macron> <Cyrillic_SOFTSIGN>				: "Ъ"	Cyrillic_HARDSIGN # CYRILLIC CAPITAL LETTER HARD SIGN
@@ -427,14 +469,14 @@ include "%L"
 <Multi_key> <Cyrillic_ka> <underscore>			: "ҡ"	U04A1 # CYRILLIC SMALL LETTER BASHKIR KA
 <Multi_key> <Cyrillic_KA> <7>					: "Ҡ"	U04A0 # CYRILLIC CAPITAL LETTER BASHKIR KA
 <Multi_key> <Cyrillic_ka> <7>					: "ҡ"	U04A1 # CYRILLIC SMALL LETTER BASHKIR KA
-# Ыы with macron is occupied by Ы̄ы̄ (Ыы plus combining macron)
+# Ыы with macron is occupied by Ы̄ы̄
 <Multi_key> <7> <Cyrillic_YERU>					: "Ꙑ"	UA650 # CYRILLIC CAPITAL LETTER YERU WITH BACK YER
 <Multi_key> <7> <Cyrillic_yeru>					: "ꙑ"	UA651 # CYRILLIC SMALL LETTER YERU WITH BACK YER
 <Multi_key> <Cyrillic_YERU> <7>					: "Ꙑ"	UA650 # CYRILLIC CAPITAL LETTER YERU WITH BACK YER
 <Multi_key> <Cyrillic_yeru> <7>					: "ꙑ"	UA651 # CYRILLIC SMALL LETTER YERU WITH BACK YER
 
 # Letters with horizontal stroke
-# Sequences for ҒғҞҟҰұ with <slash> & <KP_Divide> prefixes are already defined in en_US.UTF-8
+# Sequences for ҒғҞҟҰұ with <slash> & <KP_Divide> prefixes are already defined in en_US.UTF-8.
 <dead_stroke> <Cyrillic_GHE>				: "Ғ"	Cyrillic_GHE_bar # CYRILLIC CAPITAL LETTER GHE WITH STROKE
 <dead_stroke> <Cyrillic_ghe>				: "ғ"	Cyrillic_ghe_bar # CYRILLIC SMALL LETTER GHE WITH STROKE
 <Multi_key> <minus> <Cyrillic_GHE>			: "Ғ"	Cyrillic_GHE_bar # CYRILLIC CAPITAL LETTER GHE WITH STROKE
@@ -499,14 +541,18 @@ include "%L"
 <Multi_key> <minus> <Cyrillic_shha>			: "ћ"	Serbian_tshe # CYRILLIC SMALL LETTER TSHE
 <Multi_key> <Cyrillic_SHHA> <minus>			: "Ћ"	Serbian_TSHE # CYRILLIC CAPITAL LETTER TSHE
 <Multi_key> <Cyrillic_shha> <minus>			: "ћ"	Serbian_tshe # CYRILLIC SMALL LETTER TSHE
+<dead_stroke> <Cyrillic_ES>					: "Є"	Ukrainian_IE # CYRILLIC CAPITAL LETTER UKRAINIAN IE
+<dead_stroke> <Cyrillic_es>					: "є"	Ukrainian_ie # CYRILLIC SMALL LETTER UKRAINIAN IE
+<Multi_key> <slash> <Cyrillic_ES>			: "Є"	Ukrainian_IE # CYRILLIC CAPITAL LETTER UKRAINIAN IE
+<Multi_key> <slash> <Cyrillic_es>			: "є"	Ukrainian_ie # CYRILLIC SMALL LETTER UKRAINIAN IE
+<Multi_key> <KP_Divide> <Cyrillic_ES>		: "Є"	Ukrainian_IE # CYRILLIC CAPITAL LETTER UKRAINIAN IE
+<Multi_key> <KP_Divide> <Cyrillic_es>		: "є"	Ukrainian_ie # CYRILLIC SMALL LETTER UKRAINIAN IE
+<Multi_key> <minus> <Cyrillic_ES>			: "Є"	Ukrainian_IE # CYRILLIC CAPITAL LETTER UKRAINIAN IE
+<Multi_key> <minus> <Cyrillic_es>			: "є"	Ukrainian_ie # CYRILLIC SMALL LETTER UKRAINIAN IE
+<Multi_key> <Cyrillic_ES> <minus>			: "Є"	Ukrainian_IE # CYRILLIC CAPITAL LETTER UKRAINIAN IE
+<Multi_key> <Cyrillic_es> <minus>			: "є"	Ukrainian_ie # CYRILLIC SMALL LETTER UKRAINIAN IE
 
 # Letters with vertical stroke
-<Multi_key> <Cyrillic_GHE> <bar>	: "Ґ"	Ukrainian_GHE_WITH_UPTURN # CYRILLIC CAPITAL LETTER GHE WITH UPTURN
-<Multi_key> <Cyrillic_ghe> <bar>	: "ґ"	Ukrainian_ghe_with_upturn # CYRILLIC SMALL LETTER GHE WITH UPTURN
-<Multi_key> <bar> <Cyrillic_GHE>	: "Ґ"	Ukrainian_GHE_WITH_UPTURN # CYRILLIC CAPITAL LETTER GHE WITH UPTURN
-<Multi_key> <bar> <Cyrillic_ghe>	: "ґ"	Ukrainian_ghe_with_upturn # CYRILLIC SMALL LETTER GHE WITH UPTURN
-<Multi_key> <1> <Cyrillic_GHE>		: "Ґ"	Ukrainian_GHE_WITH_UPTURN # CYRILLIC CAPITAL LETTER GHE WITH UPTURN
-<Multi_key> <1> <Cyrillic_ghe>		: "ґ"	Ukrainian_ghe_with_upturn # CYRILLIC SMALL LETTER GHE WITH UPTURN
 <Multi_key> <Cyrillic_KA> <bar>		: "Ҝ"	Cyrillic_KA_vertstroke # CYRILLIC CAPITAL LETTER KA WITH VERTICAL STROKE
 <Multi_key> <Cyrillic_ka> <bar>		: "ҝ"	Cyrillic_ka_vertstroke # CYRILLIC SMALL LETTER KA WITH VERTICAL STROKE
 <Multi_key> <bar> <Cyrillic_KA>		: "Ҝ"	Cyrillic_KA_vertstroke # CYRILLIC CAPITAL LETTER KA WITH VERTICAL STROKE
@@ -545,8 +591,6 @@ include "%L"
 <Multi_key> <cedilla> <Cyrillic_ze>	: "ҙ"	U0499 # CYRILLIC SMALL LETTER ZE WITH DESCENDER
 <Multi_key> <Cyrillic_ZE> <comma>	: "Ҙ"	U0498 # CYRILLIC CAPITAL LETTER ZE WITH DESCENDER
 <Multi_key> <Cyrillic_ze> <comma>	: "ҙ"	U0499 # CYRILLIC SMALL LETTER ZE WITH DESCENDER
-# <Multi_key> <Cyrillic_ZE> <cedilla>	: "Ҙ"	U0498 # CYRILLIC CAPITAL LETTER ZE WITH DESCENDER
-# <Multi_key> <Cyrillic_ze> <cedilla>	: "ҙ"	U0499 # CYRILLIC SMALL LETTER ZE WITH DESCENDER
 <dead_belowcomma> <Cyrillic_ES>		: "Ҫ"	U04AA # CYRILLIC CAPITAL LETTER ES WITH DESCENDER
 <dead_belowcomma> <Cyrillic_es>		: "ҫ"	U04AB # CYRILLIC SMALL LETTER ES WITH DESCENDER
 <dead_cedilla> <Cyrillic_ES>		: "Ҫ"	U04AA # CYRILLIC CAPITAL LETTER ES WITH DESCENDER
@@ -557,8 +601,6 @@ include "%L"
 <Multi_key> <cedilla> <Cyrillic_es>	: "ҫ"	U04AB # CYRILLIC SMALL LETTER ES WITH DESCENDER
 <Multi_key> <Cyrillic_ES> <comma>	: "Ҫ"	U04AA # CYRILLIC CAPITAL LETTER ES WITH DESCENDER
 <Multi_key> <Cyrillic_es> <comma>	: "ҫ"	U04AB # CYRILLIC SMALL LETTER ES WITH DESCENDER
-# <Multi_key> <Cyrillic_ES> <cedilla>	: "Ҫ"	U04AA # CYRILLIC CAPITAL LETTER ES WITH DESCENDER
-# <Multi_key> <Cyrillic_es> <cedilla>	: "ҫ"	U04AB # CYRILLIC SMALL LETTER ES WITH DESCENDER
 
 # Letters with descender to the right
 <dead_belowcomma> <Cyrillic_DZHE>	: "Ц"	Cyrillic_TSE # CYRILLIC CAPITAL LETTER TSE
@@ -635,25 +677,29 @@ include "%L"
 <Multi_key> <Cyrillic_shha> <comma>	: "ԧ"	U0527 # CYRILLIC SMALL LETTER SHHA WITH DESCENDER
 <dead_belowcomma> <Cyrillic_CHE>	: "Ҷ"	Cyrillic_CHE_descender # CYRILLIC CAPITAL LETTER CHE WITH DESCENDER
 <dead_belowcomma> <Cyrillic_che>	: "ҷ"	Cyrillic_che_descender # CYRILLIC SMALL LETTER CHE WITH DESCENDER
-<Multi_key> <comma> <Cyrillic_CHE>	: "Ҷ"	Cyrillic_CHE_descender # CYRILLIC CAPITAL LETTER CHE WITH DESCENDER
-<Multi_key> <comma> <Cyrillic_che>	: "ҷ"	Cyrillic_che_descender # CYRILLIC SMALL LETTER CHE WITH DESCENDER
+# Чч with prefix comma is occupied by Khakassian Che
+# <Multi_key> <comma> <Cyrillic_CHE>	: "Ҷ"	Cyrillic_CHE_descender # CYRILLIC CAPITAL LETTER CHE WITH DESCENDER
+# <Multi_key> <comma> <Cyrillic_che>	: "ҷ"	Cyrillic_che_descender # CYRILLIC SMALL LETTER CHE WITH DESCENDER
 <Multi_key> <Cyrillic_CHE> <comma>	: "Ҷ"	Cyrillic_CHE_descender # CYRILLIC CAPITAL LETTER CHE WITH DESCENDER
 <Multi_key> <Cyrillic_che> <comma>	: "ҷ"	Cyrillic_che_descender # CYRILLIC SMALL LETTER CHE WITH DESCENDER
 
-# Letters with descender to the left
-# Чч with comma is occupied by Ҷҷ
+# Letter with descender to the left
+# Чч with postfix comma is occupied by Ҷҷ.
+# In true italic fonts the descender looks like comma below.
+# Cedilla is justified by the fact that Khakassian Che was formerly written as Çç.
 <dead_cedilla> <Cyrillic_CHE>			: "Ӌ"	U04CB # CYRILLIC CAPITAL LETTER KHAKASSIAN CHE
 <dead_cedilla> <Cyrillic_che>			: "ӌ"	U04CC # CYRILLIC SMALL LETTER KHAKASSIAN CHE
+<Multi_key> <comma> <Cyrillic_CHE>		: "Ӌ"	U04CB # CYRILLIC CAPITAL LETTER KHAKASSIAN CHE
+<Multi_key> <comma> <Cyrillic_che>		: "ӌ"	U04CC # CYRILLIC SMALL LETTER KHAKASSIAN CHE
 <Multi_key> <cedilla> <Cyrillic_CHE>	: "Ӌ"	U04CB # CYRILLIC CAPITAL LETTER KHAKASSIAN CHE
 <Multi_key> <cedilla> <Cyrillic_che>	: "ӌ"	U04CC # CYRILLIC SMALL LETTER KHAKASSIAN CHE
 <Multi_key> <semicolon> <Cyrillic_CHE>	: "Ӌ"	U04CB # CYRILLIC CAPITAL LETTER KHAKASSIAN CHE
 <Multi_key> <semicolon> <Cyrillic_che>	: "ӌ"	U04CC # CYRILLIC SMALL LETTER KHAKASSIAN CHE
-# <Multi_key> <Cyrillic_CHE> <cedilla>	: "Ӌ"	U04CB # CYRILLIC CAPITAL LETTER KHAKASSIAN CHE
-# <Multi_key> <Cyrillic_che> <cedilla>	: "ӌ"	U04CC # CYRILLIC SMALL LETTER KHAKASSIAN CHE
 <Multi_key> <Cyrillic_CHE> <semicolon>	: "Ӌ"	U04CB # CYRILLIC CAPITAL LETTER KHAKASSIAN CHE
 <Multi_key> <Cyrillic_che> <semicolon>	: "ӌ"	U04CC # CYRILLIC SMALL LETTER KHAKASSIAN CHE
 
 # Letters with middle descender
+# Lowercase џ in true italic fonts looks like lowercase и with comma below.
 <dead_cedilla> <Cyrillic_TSE>			: "Џ"	Cyrillic_DZHE # CYRILLIC CAPITAL LETTER DZHE
 <dead_cedilla> <Cyrillic_tse>			: "џ"	Cyrillic_dzhe # CYRILLIC SMALL LETTER DZHE
 <dead_belowcomma> <Cyrillic_TSE>		: "Џ"	Cyrillic_DZHE # CYRILLIC CAPITAL LETTER DZHE
@@ -670,6 +716,7 @@ include "%L"
 <Multi_key> <Cyrillic_tse> <comma>		: "џ"	Cyrillic_dzhe # CYRILLIC SMALL LETTER DZHE
 <Multi_key> <Cyrillic_TSE> <semicolon>	: "Џ"	Cyrillic_DZHE # CYRILLIC CAPITAL LETTER DZHE
 <Multi_key> <Cyrillic_tse> <semicolon>	: "џ"	Cyrillic_dzhe # CYRILLIC SMALL LETTER DZHE
+# In true italic fonts the descender looks like comma below, ogonek, or cedilla
 <dead_cedilla> <U04BC>					: "Ҿ"	U04BE # CYRILLIC CAPITAL LETTER ABKHASIAN CHE WITH DESCENDER
 <dead_cedilla> <U04BD>					: "ҿ"	U04BF # CYRILLIC SMALL LETTER ABKHASIAN CHE WITH DESCENDER
 <dead_belowcomma> <U04BC>				: "Ҿ"	U04BE # CYRILLIC CAPITAL LETTER ABKHASIAN CHE WITH DESCENDER
@@ -712,12 +759,8 @@ include "%L"
 <Multi_key> <Ukrainian_i> <9>		: "ј"	Cyrillic_je # CYRILLIC SMALL LETTER JE
 <dead_hook> <Cyrillic_KA>			: "Ӄ"	U04C3 # CYRILLIC CAPITAL LETTER KA WITH HOOK
 <dead_hook> <Cyrillic_ka>			: "ӄ"	U04C4 # CYRILLIC SMALL LETTER KA WITH HOOK
-# <Multi_key> <5> <Cyrillic_KA>		: "Ӄ"	U04C3 # CYRILLIC CAPITAL LETTER KA WITH HOOK
-# <Multi_key> <5> <Cyrillic_ka>		: "ӄ"	U04C4 # CYRILLIC SMALL LETTER KA WITH HOOK
 <Multi_key> <9> <Cyrillic_KA>		: "Ӄ"	U04C3 # CYRILLIC CAPITAL LETTER KA WITH HOOK
 <Multi_key> <9> <Cyrillic_ka>		: "ӄ"	U04C4 # CYRILLIC SMALL LETTER KA WITH HOOK
-# <Multi_key> <Cyrillic_KA> <5>		: "Ӄ"	U04C3 # CYRILLIC CAPITAL LETTER KA WITH HOOK
-# <Multi_key> <Cyrillic_ka> <5>		: "ӄ"	U04C4 # CYRILLIC SMALL LETTER KA WITH HOOK
 <Multi_key> <Cyrillic_KA> <9>		: "Ӄ"	U04C3 # CYRILLIC CAPITAL LETTER KA WITH HOOK
 <Multi_key> <Cyrillic_ka> <9>		: "ӄ"	U04C4 # CYRILLIC SMALL LETTER KA WITH HOOK
 <dead_hook> <Cyrillic_EL>			: "Ԓ"	U0512 # CYRILLIC CAPITAL LETTER EL WITH HOOK
@@ -728,8 +771,9 @@ include "%L"
 <Multi_key> <Cyrillic_el> <9>		: "ԓ"	U0513 # CYRILLIC SMALL LETTER EL WITH HOOK
 <dead_hook> <Cyrillic_EN>			: "Ӈ"	U04C7 # CYRILLIC CAPITAL LETTER EN WITH HOOK
 <dead_hook> <Cyrillic_en>			: "ӈ"	U04C8 # CYRILLIC SMALL LETTER EN WITH HOOK
-<Multi_key> <9> <Cyrillic_EN>		: "Ӈ"	U04C7 # CYRILLIC CAPITAL LETTER EN WITH HOOK
-<Multi_key> <9> <Cyrillic_en>		: "ӈ"	U04C8 # CYRILLIC SMALL LETTER EN WITH HOOK
+# Нн with prefix 9 is occupied by Ԩԩ
+# <Multi_key> <9> <Cyrillic_EN>		: "Ӈ"	U04C7 # CYRILLIC CAPITAL LETTER EN WITH HOOK
+# <Multi_key> <9> <Cyrillic_en>		: "ӈ"	U04C8 # CYRILLIC SMALL LETTER EN WITH HOOK
 <Multi_key> <Cyrillic_EN> <9>		: "Ӈ"	U04C7 # CYRILLIC CAPITAL LETTER EN WITH HOOK
 <Multi_key> <Cyrillic_en> <9>		: "ӈ"	U04C8 # CYRILLIC SMALL LETTER EN WITH HOOK
 <dead_hook> <Cyrillic_HA>			: "Ӽ"	U04FC # CYRILLIC CAPITAL LETTER HA WITH HOOK
@@ -763,13 +807,30 @@ include "%L"
 <Multi_key> <Cyrillic_GHE_bar> <9>	: "Ӻ"	U04FA # CYRILLIC CAPITAL LETTER GHE WITH STROKE AND HOOK
 <Multi_key> <Cyrillic_ghe_bar> <9>	: "ӻ"	U04FB # CYRILLIC SMALL LETTER GHE WITH STROKE AND HOOK
 
-# Letters with left hook
-<dead_cedilla> <Cyrillic_EN>			: "Ԩ"	U0528 # CYRILLIC CAPITAL LETTER EN WITH LEFT HOOK
-<dead_cedilla> <Cyrillic_en>			: "ԩ"	U0529 # CYRILLIC SMALL LETTER EN WITH LEFT HOOK
-<Multi_key> <cedilla> <Cyrillic_EN>		: "Ԩ"	U0528 # CYRILLIC CAPITAL LETTER EN WITH LEFT HOOK
-<Multi_key> <cedilla> <Cyrillic_en>		: "ԩ"	U0529 # CYRILLIC SMALL LETTER EN WITH LEFT HOOK
+# Letter with left hook
+<Multi_key> <9> <Cyrillic_EN>		: "Ԩ"	U0528 # CYRILLIC CAPITAL LETTER EN WITH LEFT HOOK
+<Multi_key> <9> <Cyrillic_en>		: "ԩ"	U0529 # CYRILLIC SMALL LETTER EN WITH LEFT HOOK
+# <dead_cedilla> <Cyrillic_EN>		: "Ԩ"	U0528 # CYRILLIC CAPITAL LETTER EN WITH LEFT HOOK
+# <dead_cedilla> <Cyrillic_en>		: "ԩ"	U0529 # CYRILLIC SMALL LETTER EN WITH LEFT HOOK
+# <Multi_key> <cedilla> <Cyrillic_EN>	: "Ԩ"	U0528 # CYRILLIC CAPITAL LETTER EN WITH LEFT HOOK
+# <Multi_key> <cedilla> <Cyrillic_en>	: "ԩ"	U0529 # CYRILLIC SMALL LETTER EN WITH LEFT HOOK
 # <Multi_key> <Cyrillic_EN> <cedilla>		: "Ԩ"	U0528 # CYRILLIC CAPITAL LETTER EN WITH LEFT HOOK
 # <Multi_key> <Cyrillic_en> <cedilla>		: "ԩ"	U0529 # CYRILLIC SMALL LETTER EN WITH LEFT HOOK
+
+# Letter with retroflex hook
+<dead_hook> <Cyrillic_TE>		: "Ꚍ"	UA68C # CYRILLIC CAPITAL LETTER TWE
+<dead_hook> <Cyrillic_te>		: "ꚍ"	UA68D # CYRILLIC SMALL LETTER TWE
+<Multi_key> <9> <Cyrillic_TE>	: "Ꚍ"	UA68C # CYRILLIC CAPITAL LETTER TWE
+<Multi_key> <9> <Cyrillic_te>	: "ꚍ"	UA68D # CYRILLIC SMALL LETTER TWE
+<Multi_key> <Cyrillic_TE> <9>	: "Ꚍ"	UA68C # CYRILLIC CAPITAL LETTER TWE
+<Multi_key> <Cyrillic_te> <9>	: "ꚍ"	UA68D # CYRILLIC SMALL LETTER TWE
+
+# Letter with top hook
+# Һһ with <dead_hook> is occupied by Һ̡һ̡ (both are archaic letters).
+<Multi_key> <6> <Cyrillic_SHHA>	: "Ꚕ"	UA694 # CYRILLIC CAPITAL LETTER HWE
+<Multi_key> <6> <Cyrillic_shha>	: "ꚕ"	UA695 # CYRILLIC SMALL LETTER HWE
+<Multi_key> <Cyrillic_SHHA> <6>	: "Ꚕ"	UA694 # CYRILLIC CAPITAL LETTER HWE
+<Multi_key> <Cyrillic_shha> <6>	: "ꚕ"	UA695 # CYRILLIC SMALL LETTER HWE
 
 # Letters with middle hook
 <Multi_key> <5> <Cyrillic_GHE>	: "Ҕ"	U0494 # CYRILLIC CAPITAL LETTER GHE WITH MIDDLE HOOK
@@ -792,6 +853,15 @@ include "%L"
 <Multi_key> <5> <Cyrillic_te>	: "ꚋ"	UA68B # CYRILLIC SMALL LETTER TE WITH MIDDLE HOOK
 <Multi_key> <Cyrillic_TE> <5>	: "Ꚋ"	UA68A # CYRILLIC CAPITAL LETTER TE WITH MIDDLE HOOK
 <Multi_key> <Cyrillic_te> <5>	: "ꚋ"	UA68B # CYRILLIC SMALL LETTER TE WITH MIDDLE HOOK
+# These letters look like having a middle hook in some fonts, so we duplicate them here
+<Multi_key> <5> <Cyrillic_KA>	: "Ӄ"	U04C3 # CYRILLIC CAPITAL LETTER KA WITH HOOK
+<Multi_key> <5> <Cyrillic_ka>	: "ӄ"	U04C4 # CYRILLIC SMALL LETTER KA WITH HOOK
+<Multi_key> <Cyrillic_KA> <5>	: "Ӄ"	U04C3 # CYRILLIC CAPITAL LETTER KA WITH HOOK
+<Multi_key> <Cyrillic_ka> <5>	: "ӄ"	U04C4 # CYRILLIC SMALL LETTER KA WITH HOOK
+<Multi_key> <5> <Serbian_TSHE>	: "Ђ"	Serbian_DJE # CYRILLIC CAPITAL LETTER DJE
+<Multi_key> <5> <Serbian_tshe>	: "ђ"	Serbian_dje # CYRILLIC SMALL LETTER DJE
+<Multi_key> <Serbian_TSHE> <5>	: "Ђ"	Serbian_DJE # CYRILLIC CAPITAL LETTER DJE
+<Multi_key> <Serbian_tshe> <5>	: "ђ"	Serbian_dje # CYRILLIC SMALL LETTER DJE
 
 # Letters with tail
 <Multi_key> <semicolon> <Cyrillic_SHORTI>	: "Ҋ"	U048A # CYRILLIC CAPITAL LETTER SHORT I WITH TAIL
@@ -869,6 +939,12 @@ include "%L"
 
 # ============================================================================ #
 
+# Small caps
+<dead_caron> <Cyrillic_EL>				: "ᴫ"	U1D2B # CYRILLIC LETTER SMALL CAPITAL EL
+<dead_caron> <Cyrillic_el>				: "ᴫ"	U1D2B # CYRILLIC LETTER SMALL CAPITAL EL
+<Multi_key> <underscore> <Cyrillic_EL>	: "ᴫ"	U1D2B # CYRILLIC LETTER SMALL CAPITAL EL
+<Multi_key> <underscore> <Cyrillic_el>	: "ᴫ"	U1D2B # CYRILLIC LETTER SMALL CAPITAL EL
+
 # Superscripts
 <dead_circumflex> <Cyrillic_EN>					: "ᵸ"	U1D78 # MODIFIER LETTER CYRILLIC EN
 <dead_circumflex> <Cyrillic_en>					: "ᵸ"	U1D78 # MODIFIER LETTER CYRILLIC EN
@@ -901,12 +977,6 @@ include "%L"
 <Multi_key> <Cyrillic_SOFTSIGN> <greater>		: "ꚝ"	UA69D # MODIFIER LETTER CYRILLIC SOFT SIGN
 <Multi_key> <Cyrillic_softsign> <greater>		: "ꚝ"	UA69D # MODIFIER LETTER CYRILLIC SOFT SIGN
 
-# Small caps
-<dead_caron> <Cyrillic_EL>				: "ᴫ"	U1D2B # CYRILLIC LETTER SMALL CAPITAL EL
-<dead_caron> <Cyrillic_el>				: "ᴫ"	U1D2B # CYRILLIC LETTER SMALL CAPITAL EL
-<Multi_key> <underscore> <Cyrillic_EL>	: "ᴫ"	U1D2B # CYRILLIC LETTER SMALL CAPITAL EL
-<Multi_key> <underscore> <Cyrillic_el>	: "ᴫ"	U1D2B # CYRILLIC LETTER SMALL CAPITAL EL
-
 # ============================================================================ #
 
 # Filling the gaps in definitions in en_US.UTF-8
@@ -914,14 +984,15 @@ include "%L"
 # Letters with acute
 <Multi_key> <Cyrillic_GHE> <acute>		: "Ѓ"	Macedonia_GJE # CYRILLIC CAPITAL LETTER GJE
 <Multi_key> <Cyrillic_ghe> <acute>		: "ѓ"	Macedonia_gje # CYRILLIC SMALL LETTER GJE
-<Multi_key> <Cyrillic_GHE> <apostrophe>	: "Ѓ"	Macedonia_GJE # CYRILLIC CAPITAL LETTER GJE
-<Multi_key> <Cyrillic_ghe> <apostrophe>	: "ѓ"	Macedonia_gje # CYRILLIC SMALL LETTER GJE
+# Гг with postfix apostrophe is occupied by Ґґ
+# <Multi_key> <Cyrillic_GHE> <apostrophe>	: "Ѓ"	Macedonia_GJE # CYRILLIC CAPITAL LETTER GJE
+# <Multi_key> <Cyrillic_ghe> <apostrophe>	: "ѓ"	Macedonia_gje # CYRILLIC SMALL LETTER GJE
 <Multi_key> <Cyrillic_KA> <acute>		: "Ќ"	Macedonia_KJE # CYRILLIC CAPITAL LETTER KJE
 <Multi_key> <Cyrillic_ka> <acute>		: "ќ"	Macedonia_kje # CYRILLIC SMALL LETTER KJE
 <Multi_key> <Cyrillic_KA> <apostrophe>	: "Ќ"	Macedonia_KJE # CYRILLIC CAPITAL LETTER KJE
 <Multi_key> <Cyrillic_ka> <apostrophe>	: "ќ"	Macedonia_kje # CYRILLIC SMALL LETTER KJE
 
-# Letters with double acute
+# Letter with double acute
 <Multi_key> <Cyrillic_U> <equal>		: "Ӳ"	U04F2 # CYRILLIC CAPITAL LETTER U WITH DOUBLE ACUTE
 <Multi_key> <Cyrillic_u> <equal>		: "ӳ"	U04F3 # CYRILLIC SMALL LETTER U WITH DOUBLE ACUTE
 <Multi_key> <Cyrillic_U> <doubleacute>	: "Ӳ"	U04F2 # CYRILLIC CAPITAL LETTER U WITH DOUBLE ACUTE
@@ -1050,9 +1121,9 @@ include "%L"
 # ============================================================================ #
 
 # Letters with combining diacritics
-# Some letters are further decomposed in "multiple diacritics" section
+# Some letters are further decomposed in "multiple diacritics" section.
 
-# Letters with combining cedilla
+# Letter with combining cedilla
 # https://en.wikipedia.org/wiki/Ge_with_cedilla
 <dead_cedilla> <Cyrillic_GHE>			: "Г̧"	# CYRILLIC CAPITAL LETTER GHE plus COMBINING CEDILLA
 <dead_cedilla> <Cyrillic_ghe>			: "г̧"	# CYRILLIC SMALL LETTER GHE plus COMBINING CEDILLA
@@ -1061,21 +1132,34 @@ include "%L"
 
 # Letters with combining hook
 # https://en.wikipedia.org/wiki/Ge_with_hook
-# https://en.wikipedia.org/wiki/Che_with_hook
 <dead_hook> <Cyrillic_GHE>		: "Г̡"	# CYRILLIC CAPITAL LETTER GHE plus COMBINING HOOK
 <dead_hook> <Cyrillic_ghe>		: "г̡"	# CYRILLIC SMALL LETTER GHE plus COMBINING HOOK
 <Multi_key> <9> <Cyrillic_GHE>	: "Г̡"	# CYRILLIC CAPITAL LETTER GHE plus COMBINING HOOK
 <Multi_key> <9> <Cyrillic_ghe>	: "г̡"	# CYRILLIC SMALL LETTER GHE plus COMBINING HOOK
 <Multi_key> <Cyrillic_GHE> <9>	: "Г̡"	# CYRILLIC CAPITAL LETTER GHE plus COMBINING HOOK
 <Multi_key> <Cyrillic_ghe> <9>	: "г̡"	# CYRILLIC SMALL LETTER GHE plus COMBINING HOOK
+# https://en.wikipedia.org/wiki/Che_with_hook
 <dead_hook> <Cyrillic_CHE>		: "Ч̡"	# CYRILLIC CAPITAL LETTER CHE plus COMBINING HOOK
 <dead_hook> <Cyrillic_che>		: "ч̡"	# CYRILLIC SMALL LETTER CHE plus COMBINING HOOK
 <Multi_key> <9> <Cyrillic_CHE>	: "Ч̡"	# CYRILLIC CAPITAL LETTER CHE plus COMBINING HOOK
 <Multi_key> <9> <Cyrillic_che>	: "ч̡"	# CYRILLIC SMALL LETTER CHE plus COMBINING HOOK
 <Multi_key> <Cyrillic_CHE> <9>	: "Ч̡"	# CYRILLIC CAPITAL LETTER CHE plus COMBINING HOOK
 <Multi_key> <Cyrillic_che> <9>	: "ч̡"	# CYRILLIC SMALL LETTER CHE plus COMBINING HOOK
+# https://en.wikipedia.org/wiki/Shha_with_hook
+<dead_hook> <Cyrillic_SHHA>		: "Һ̡"	# CYRILLIC CAPITAL LETTER SHHA plus COMBINING HOOK
+<dead_hook> <Cyrillic_shha>		: "һ̡"	# CYRILLIC SMALL LETTER SHHA plus COMBINING HOOK
+<Multi_key> <9> <Cyrillic_SHHA>	: "Һ̡"	# CYRILLIC CAPITAL LETTER SHHA plus COMBINING HOOK
+<Multi_key> <9> <Cyrillic_shha>	: "һ̡"	# CYRILLIC SMALL LETTER SHHA plus COMBINING HOOK
+<Multi_key> <Cyrillic_SHHA> <9>	: "Һ̡"	# CYRILLIC CAPITAL LETTER SHHA plus COMBINING HOOK
+<Multi_key> <Cyrillic_shha> <9>	: "һ̡"	# CYRILLIC SMALL LETTER SHHA plus COMBINING HOOK
 
 # Letters with combining grave
+<dead_grave> <Cyrillic_KA>				: "К̀"	# CYRILLIC CAPITAL LETTER KA plus COMBINING GRAVE ACCENT
+<dead_grave> <Cyrillic_ka>				: "к̀"	# CYRILLIC SMALL LETTER KA plus COMBINING GRAVE ACCENT
+<Multi_key> <grave> <Cyrillic_KA>		: "К̀"	# CYRILLIC CAPITAL LETTER KA plus COMBINING GRAVE ACCENT
+<Multi_key> <grave> <Cyrillic_ka>		: "к̀"	# CYRILLIC SMALL LETTER KA plus COMBINING GRAVE ACCENT
+<Multi_key> <Cyrillic_KA> <grave>		: "К̀"	# CYRILLIC CAPITAL LETTER KA plus COMBINING GRAVE ACCENT
+<Multi_key> <Cyrillic_ka> <grave>		: "к̀"	# CYRILLIC SMALL LETTER KA plus COMBINING GRAVE ACCENT
 <dead_grave> <Cyrillic_HARDSIGN>		: "Ъ̀"	# CYRILLIC CAPITAL LETTER HARD SIGN plus COMBINING GRAVE ACCENT
 <dead_grave> <Cyrillic_hardsign>		: "ъ̀"	# CYRILLIC SMALL LETTER HARD SIGN plus COMBINING GRAVE ACCENT
 <Multi_key> <grave> <Cyrillic_HARDSIGN>	: "Ъ̀"	# CYRILLIC CAPITAL LETTER HARD SIGN plus COMBINING GRAVE ACCENT
@@ -1110,8 +1194,9 @@ include "%L"
 <dead_acute> <Cyrillic_de>				: "д́" # CYRILLIC SMALL LETTER DE plus COMBINING ACUTE ACCENT
 <Multi_key> <acute> <Cyrillic_DE>		: "Д́" # CYRILLIC CAPITAL LETTER DE plus COMBINING ACUTE ACCENT
 <Multi_key> <acute> <Cyrillic_de>		: "д́" # CYRILLIC SMALL LETTER DE plus COMBINING ACUTE ACCENT
-<Multi_key> <apostrophe> <Cyrillic_DE>	: "Д́" # CYRILLIC CAPITAL LETTER DE plus COMBINING ACUTE ACCENT
-<Multi_key> <apostrophe> <Cyrillic_de>	: "д́" # CYRILLIC SMALL LETTER DE plus COMBINING ACUTE ACCENT
+# Дд with prefix apostrophe is occupied by Ꚁꚁ
+# <Multi_key> <apostrophe> <Cyrillic_DE>	: "Д́" # CYRILLIC CAPITAL LETTER DE plus COMBINING ACUTE ACCENT
+# <Multi_key> <apostrophe> <Cyrillic_de>	: "д́" # CYRILLIC SMALL LETTER DE plus COMBINING ACUTE ACCENT
 <Multi_key> <Cyrillic_DE> <acute>		: "Д́" # CYRILLIC CAPITAL LETTER DE plus COMBINING ACUTE ACCENT
 <Multi_key> <Cyrillic_de> <acute>		: "д́" # CYRILLIC SMALL LETTER DE plus COMBINING ACUTE ACCENT
 <Multi_key> <Cyrillic_DE> <apostrophe>	: "Д́" # CYRILLIC CAPITAL LETTER DE plus COMBINING ACUTE ACCENT
@@ -1323,6 +1408,14 @@ include "%L"
 <Multi_key> <underscore> <Cyrillic_schwa>	: "ә̄"	# CYRILLIC SMALL LETTER SCHWA plus COMBINING MACRON
 <Multi_key> <Cyrillic_SCHWA> <underscore>	: "Ә̄"	# CYRILLIC CAPITAL LETTER SCHWA plus COMBINING MACRON
 <Multi_key> <Cyrillic_schwa> <underscore>	: "ә̄"	# CYRILLIC SMALL LETTER SCHWA plus COMBINING MACRON
+<dead_macron> <Cyrillic_GHE>			: "Г̄"	# CYRILLIC CAPITAL LETTER GHE plus COMBINING MACRON
+<dead_macron> <Cyrillic_ghe>			: "г̄"	# CYRILLIC SMALL LETTER GHE plus COMBINING MACRON
+<Multi_key> <macron> <Cyrillic_GHE>		: "Г̄"	# CYRILLIC CAPITAL LETTER GHE plus COMBINING MACRON
+<Multi_key> <macron> <Cyrillic_ghe>		: "г̄"	# CYRILLIC SMALL LETTER GHE plus COMBINING MACRON
+<Multi_key> <underscore> <Cyrillic_GHE>	: "Г̄"	# CYRILLIC CAPITAL LETTER GHE plus COMBINING MACRON
+<Multi_key> <underscore> <Cyrillic_ghe>	: "г̄"	# CYRILLIC SMALL LETTER GHE plus COMBINING MACRON
+<Multi_key> <Cyrillic_GHE> <underscore>	: "Г̄"	# CYRILLIC CAPITAL LETTER GHE plus COMBINING MACRON
+<Multi_key> <Cyrillic_ghe> <underscore>	: "г̄"	# CYRILLIC SMALL LETTER GHE plus COMBINING MACRON
 <dead_macron> <Cyrillic_IO>				: "Ё̄"	# CYRILLIC CAPITAL LETTER IO plus COMBINING MACRON
 <dead_macron> <Cyrillic_io>				: "ё̄"	# CYRILLIC SMALL LETTER IO plus COMBINING MACRON
 <Multi_key> <macron> <Cyrillic_IO>		: "Ё̄"	# CYRILLIC CAPITAL LETTER IO plus COMBINING MACRON
@@ -1442,6 +1535,18 @@ include "%L"
 <Multi_key> <parenleft> <Cyrillic_o_bar>	: "ө̆"	# CYRILLIC SMALL LETTER BARRED O plus COMBINING BREVE
 <Multi_key> <Cyrillic_O_bar> <parenleft>	: "Ө̆"	# CYRILLIC CAPITAL LETTER BARRED O plus COMBINING BREVE
 <Multi_key> <Cyrillic_o_bar> <parenleft>	: "ө̆"	# CYRILLIC SMALL LETTER BARRED O plus COMBINING BREVE
+<dead_breve> <Cyrillic_SHA>				: "Ш̆"	# CYRILLIC CAPITAL LETTER SHA plus COMBINING BREVE
+<dead_breve> <Cyrillic_sha>				: "ш̆"	# CYRILLIC SMALL LETTER SHA plus COMBINING BREVE
+<Multi_key> <U> <Cyrillic_SHA>			: "Ш̆"	# CYRILLIC CAPITAL LETTER SHA plus COMBINING BREVE
+<Multi_key> <U> <Cyrillic_sha>			: "ш̆"	# CYRILLIC SMALL LETTER SHA plus COMBINING BREVE
+<Multi_key> <u> <Cyrillic_SHA>			: "Ш̆"	# CYRILLIC CAPITAL LETTER SHA plus COMBINING BREVE
+<Multi_key> <u> <Cyrillic_sha>			: "ш̆"	# CYRILLIC SMALL LETTER SHA plus COMBINING BREVE
+# <Multi_key> <b> <Cyrillic_SHA>			: "Ш̆"	# CYRILLIC CAPITAL LETTER SHA plus COMBINING BREVE
+# <Multi_key> <b> <Cyrillic_sha>			: "ш̆"	# CYRILLIC SMALL LETTER SHA plus COMBINING BREVE
+<Multi_key> <parenleft> <Cyrillic_SHA>	: "Ш̆"	# CYRILLIC CAPITAL LETTER SHA plus COMBINING BREVE
+<Multi_key> <parenleft> <Cyrillic_sha>	: "ш̆"	# CYRILLIC SMALL LETTER SHA plus COMBINING BREVE
+<Multi_key> <Cyrillic_SHA> <parenleft>	: "Ш̆"	# CYRILLIC CAPITAL LETTER SHA plus COMBINING BREVE
+<Multi_key> <Cyrillic_sha> <parenleft>	: "ш̆"	# CYRILLIC SMALL LETTER SHA plus COMBINING BREVE
 <dead_breve> <Cyrillic_YERU>			: "Ы̆"	# CYRILLIC CAPITAL LETTER YERU plus COMBINING BREVE
 <dead_breve> <Cyrillic_yeru>			: "ы̆"	# CYRILLIC SMALL LETTER YERU plus COMBINING BREVE
 <Multi_key> <U> <Cyrillic_YERU>			: "Ы̆"	# CYRILLIC CAPITAL LETTER YERU plus COMBINING BREVE
@@ -1580,6 +1685,16 @@ include "%L"
 <Multi_key> <Cyrillic_pe> <diaeresis>	: "п̈"	# CYRILLIC SMALL LETTER PE plus COMBINING DIAERESIS
 <Multi_key> <Cyrillic_PE> <quotedbl>	: "П̈"	# CYRILLIC CAPITAL LETTER PE plus COMBINING DIAERESIS
 <Multi_key> <Cyrillic_pe> <quotedbl>	: "п̈"	# CYRILLIC SMALL LETTER PE plus COMBINING DIAERESIS
+<dead_diaeresis> <Cyrillic_ES>			: "С̈"	# CYRILLIC CAPITAL LETTER ES plus COMBINING DIAERESIS
+<dead_diaeresis> <Cyrillic_es>			: "с̈"	# CYRILLIC SMALL LETTER ES plus COMBINING DIAERESIS
+<Multi_key> <diaeresis> <Cyrillic_ES>	: "С̈"	# CYRILLIC CAPITAL LETTER ES plus COMBINING DIAERESIS
+<Multi_key> <diaeresis> <Cyrillic_es>	: "с̈"	# CYRILLIC SMALL LETTER ES plus COMBINING DIAERESIS
+<Multi_key> <quotedbl> <Cyrillic_ES>	: "С̈"	# CYRILLIC CAPITAL LETTER ES plus COMBINING DIAERESIS
+<Multi_key> <quotedbl> <Cyrillic_es>	: "с̈"	# CYRILLIC SMALL LETTER ES plus COMBINING DIAERESIS
+<Multi_key> <Cyrillic_ES> <diaeresis>	: "С̈"	# CYRILLIC CAPITAL LETTER ES plus COMBINING DIAERESIS
+<Multi_key> <Cyrillic_es> <diaeresis>	: "с̈"	# CYRILLIC SMALL LETTER ES plus COMBINING DIAERESIS
+<Multi_key> <Cyrillic_ES> <quotedbl>	: "С̈"	# CYRILLIC CAPITAL LETTER ES plus COMBINING DIAERESIS
+<Multi_key> <Cyrillic_es> <quotedbl>	: "с̈"	# CYRILLIC SMALL LETTER ES plus COMBINING DIAERESIS
 <dead_diaeresis> <Cyrillic_TE>			: "Т̈"	# CYRILLIC CAPITAL LETTER TE plus COMBINING DIAERESIS
 <dead_diaeresis> <Cyrillic_te>			: "т̈"	# CYRILLIC SMALL LETTER TE plus COMBINING DIAERESIS
 <Multi_key> <diaeresis> <Cyrillic_TE>	: "Т̈"	# CYRILLIC CAPITAL LETTER TE plus COMBINING DIAERESIS
@@ -1810,6 +1925,10 @@ include "%L"
 <Multi_key> <Cyrillic_ha> <parenright>	: "х̑" # CYRILLIC SMALL LETTER HA plus COMBINING INVERTED BREVE
 
 # Letters with combining dot below
+<dead_belowdot> <Cyrillic_BE>			: "Б̣"	# CYRILLIC CAPITAL LETTER BE plus COMBINING DOT BELOW
+<dead_belowdot> <Cyrillic_be>			: "б̣"	# CYRILLIC SMALL LETTER BE plus COMBINING DOT BELOW
+<Multi_key> <exclam> <Cyrillic_BE>		: "Б̣"	# CYRILLIC CAPITAL LETTER BE plus COMBINING DOT BELOW
+<Multi_key> <exclam> <Cyrillic_be>		: "б̣"	# CYRILLIC SMALL LETTER BE plus COMBINING DOT BELOW
 <dead_belowdot> <Cyrillic_GHE>			: "Г̣"	# CYRILLIC CAPITAL LETTER GHE plus COMBINING DOT BELOW
 <dead_belowdot> <Cyrillic_ghe>			: "г̣"	# CYRILLIC SMALL LETTER GHE plus COMBINING DOT BELOW
 <Multi_key> <exclam> <Cyrillic_GHE>		: "Г̣"	# CYRILLIC CAPITAL LETTER GHE plus COMBINING DOT BELOW
@@ -2626,22 +2745,14 @@ include "%L"
 <Multi_key> <equal> <Cyrillic_te>		: "₮"	U20AE # TUGRIK SIGN
 <Multi_key> <Cyrillic_TE> <equal>		: "₮"	U20AE # TUGRIK SIGN
 <Multi_key> <Cyrillic_te> <equal>		: "₮"	U20AE # TUGRIK SIGN
-# <Multi_key> <minus> <Cyrillic_TE>		: "₸"	U20B8 # TENGE SIGN
-# <Multi_key> <minus> <Cyrillic_te>		: "₸"	U20B8 # TENGE SIGN
-# <Multi_key> <Cyrillic_TE> <minus>		: "₸"	U20B8 # TENGE SIGN
-# <Multi_key> <Cyrillic_te> <minus>		: "₸"	U20B8 # TENGE SIGN
 <Multi_key> <underscore> <Cyrillic_TE>	: "₸"	U20B8 # TENGE SIGN
 <Multi_key> <underscore> <Cyrillic_te>	: "₸"	U20B8 # TENGE SIGN
 <Multi_key> <Cyrillic_TE> <underscore>	: "₸"	U20B8 # TENGE SIGN
 <Multi_key> <Cyrillic_te> <underscore>	: "₸"	U20B8 # TENGE SIGN
 <dead_currency> <Cyrillic_ES>			: "⃀"	U20C0 # SOM SIGN
 <dead_currency> <Cyrillic_es>			: "⃀"	U20C0 # SOM SIGN
-# <Multi_key> <minus> <Cyrillic_ES>		: "⃀"	U20C0 # SOM SIGN
-# <Multi_key> <minus> <Cyrillic_es>		: "⃀"	U20C0 # SOM SIGN
 <Multi_key> <underscore> <Cyrillic_ES>	: "⃀"	U20C0 # SOM SIGN
 <Multi_key> <underscore> <Cyrillic_es>	: "⃀"	U20C0 # SOM SIGN
-# <Multi_key> <Cyrillic_ES> <minus>		: "⃀"	U20C0 # SOM SIGN
-# <Multi_key> <Cyrillic_es> <minus>		: "⃀"	U20C0 # SOM SIGN
 <Multi_key> <Cyrillic_ES> <underscore>	: "⃀"	U20C0 # SOM SIGN
 <Multi_key> <Cyrillic_es> <underscore>	: "⃀"	U20C0 # SOM SIGN
 

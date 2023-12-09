@@ -2,7 +2,7 @@
 #
 # https://github.com/roadkell/xcompose
 #
-# 2315 sequences
+# 2287 sequences
 # 553 letters
 #
 # Conventions:
@@ -30,7 +30,7 @@
 #	= or ˝						double acute (Ӳӳ)
 #	` or postfix ' or | or 1	upturn (Ґґ)
 #	л or prefix 9				left hook (Ԩԩ)
-#	; or prefix ,				descender to the left (Khakassian Che)
+#	; or prefix ,				descender to the left (Ӌӌ - Khakassian Che)
 #	6							top hook (Ꚕꚕ)
 #
 # Cyrillic ЙЦУКЕН-based keyboard layouts lack a number of symbols by default:
@@ -675,7 +675,7 @@ include "%L"
 <Multi_key> <Cyrillic_shha> <comma>	: "ԧ"	U0527 # CYRILLIC SMALL LETTER SHHA WITH DESCENDER
 <dead_belowcomma> <Cyrillic_CHE>	: "Ҷ"	Cyrillic_CHE_descender # CYRILLIC CAPITAL LETTER CHE WITH DESCENDER
 <dead_belowcomma> <Cyrillic_che>	: "ҷ"	Cyrillic_che_descender # CYRILLIC SMALL LETTER CHE WITH DESCENDER
-# Чч with prefix comma is occupied by Khakassian Che
+# Чч with prefix comma is occupied by Ӌӌ (Khakassian Che)
 # <Multi_key> <comma> <Cyrillic_CHE>	: "Ҷ"	Cyrillic_CHE_descender # CYRILLIC CAPITAL LETTER CHE WITH DESCENDER
 # <Multi_key> <comma> <Cyrillic_che>	: "ҷ"	Cyrillic_che_descender # CYRILLIC SMALL LETTER CHE WITH DESCENDER
 <Multi_key> <Cyrillic_CHE> <comma>	: "Ҷ"	Cyrillic_CHE_descender # CYRILLIC CAPITAL LETTER CHE WITH DESCENDER
@@ -2064,14 +2064,14 @@ include "%L"
 <Multi_key> <quotedbl> <Cyrillic_SOFTSIGN> <Ukrainian_I>		: "Ӹ"	U04F8 # CYRILLIC CAPITAL LETTER YERU WITH DIAERESIS
 <Multi_key> <quotedbl> <Cyrillic_softsign> <Ukrainian_i>		: "ӹ"	U04F9 # CYRILLIC SMALL LETTER YERU WITH DIAERESIS
 # Ԧԧ
-<dead_acute> <Multi_key> <Cyrillic_CHE> <Cyrillic_CHE>		: "Ԧ"	U0526 # CYRILLIC CAPITAL LETTER SHHA WITH DESCENDER
-<dead_acute> <Multi_key> <Cyrillic_che> <Cyrillic_che>		: "ԧ"	U0527 # CYRILLIC SMALL LETTER SHHA WITH DESCENDER
-<dead_belowcomma> <Multi_key> <Cyrillic_CHE> <Cyrillic_CHE>	: "Ԧ"	U0526 # CYRILLIC CAPITAL LETTER SHHA WITH DESCENDER
-<dead_belowcomma> <Multi_key> <Cyrillic_che> <Cyrillic_che>	: "ԧ"	U0527 # CYRILLIC SMALL LETTER SHHA WITH DESCENDER
-<Multi_key> <apostrophe> <Cyrillic_CHE> <Cyrillic_CHE>		: "Ԧ"	U0526 # CYRILLIC CAPITAL LETTER SHHA WITH DESCENDER
-<Multi_key> <apostrophe> <Cyrillic_che> <Cyrillic_che>		: "ԧ"	U0527 # CYRILLIC SMALL LETTER SHHA WITH DESCENDER
-<dead_acute> <Multi_key> <Cyrillic_ER> <Cyrillic_ER>		: "Ԧ"	U0526 # CYRILLIC CAPITAL LETTER SHHA WITH DESCENDER
-<dead_acute> <Multi_key> <Cyrillic_er> <Cyrillic_er>		: "ԧ"	U0527 # CYRILLIC SMALL LETTER SHHA WITH DESCENDER
+# <dead_acute> <Multi_key> <Cyrillic_CHE> <Cyrillic_CHE>		: "Ԧ"	U0526 # CYRILLIC CAPITAL LETTER SHHA WITH DESCENDER
+# <dead_acute> <Multi_key> <Cyrillic_che> <Cyrillic_che>		: "ԧ"	U0527 # CYRILLIC SMALL LETTER SHHA WITH DESCENDER
+# <dead_belowcomma> <Multi_key> <Cyrillic_CHE> <Cyrillic_CHE>	: "Ԧ"	U0526 # CYRILLIC CAPITAL LETTER SHHA WITH DESCENDER
+# <dead_belowcomma> <Multi_key> <Cyrillic_che> <Cyrillic_che>	: "ԧ"	U0527 # CYRILLIC SMALL LETTER SHHA WITH DESCENDER
+# <Multi_key> <apostrophe> <Cyrillic_CHE> <Cyrillic_CHE>		: "Ԧ"	U0526 # CYRILLIC CAPITAL LETTER SHHA WITH DESCENDER
+# <Multi_key> <apostrophe> <Cyrillic_che> <Cyrillic_che>		: "ԧ"	U0527 # CYRILLIC SMALL LETTER SHHA WITH DESCENDER
+# <dead_acute> <Multi_key> <Cyrillic_ER> <Cyrillic_ER>		: "Ԧ"	U0526 # CYRILLIC CAPITAL LETTER SHHA WITH DESCENDER
+# <dead_acute> <Multi_key> <Cyrillic_er> <Cyrillic_er>		: "ԧ"	U0527 # CYRILLIC SMALL LETTER SHHA WITH DESCENDER
 <dead_belowcomma> <Multi_key> <Cyrillic_ER> <Cyrillic_ER>	: "Ԧ"	U0526 # CYRILLIC CAPITAL LETTER SHHA WITH DESCENDER
 <dead_belowcomma> <Multi_key> <Cyrillic_er> <Cyrillic_er>	: "ԧ"	U0527 # CYRILLIC SMALL LETTER SHHA WITH DESCENDER
 # Ӛӛ
@@ -2085,24 +2085,24 @@ include "%L"
 <dead_diaeresis> <Multi_key> <Cyrillic_ef> <Cyrillic_ef>	: "ӫ"	U04EB # CYRILLIC SMALL LETTER BARRED O WITH DIAERESIS
 <dead_diaeresis> <dead_stroke> <Cyrillic_O>			: "Ӫ"	U04EA # CYRILLIC CAPITAL LETTER BARRED O WITH DIAERESIS
 <dead_diaeresis> <dead_stroke> <Cyrillic_o>			: "ӫ"	U04EB # CYRILLIC SMALL LETTER BARRED O WITH DIAERESIS
-<dead_stroke> <dead_diaeresis> <Cyrillic_O>			: "Ӫ"	U04EA # CYRILLIC CAPITAL LETTER BARRED O WITH DIAERESIS
-<dead_stroke> <dead_diaeresis> <Cyrillic_o>			: "ӫ"	U04EB # CYRILLIC SMALL LETTER BARRED O WITH DIAERESIS
+# <dead_stroke> <dead_diaeresis> <Cyrillic_O>			: "Ӫ"	U04EA # CYRILLIC CAPITAL LETTER BARRED O WITH DIAERESIS
+# <dead_stroke> <dead_diaeresis> <Cyrillic_o>			: "ӫ"	U04EB # CYRILLIC SMALL LETTER BARRED O WITH DIAERESIS
 <dead_diaeresis> <Multi_key> <minus> <Cyrillic_O>	: "Ӫ"	U04EA # CYRILLIC CAPITAL LETTER BARRED O WITH DIAERESIS
 <dead_diaeresis> <Multi_key> <minus> <Cyrillic_o>	: "ӫ"	U04EB # CYRILLIC SMALL LETTER BARRED O WITH DIAERESIS
-<dead_stroke> <Multi_key> <diaeresis> <Cyrillic_O>	: "Ӫ"	U04EA # CYRILLIC CAPITAL LETTER BARRED O WITH DIAERESIS
-<dead_stroke> <Multi_key> <diaeresis> <Cyrillic_o>	: "ӫ"	U04EB # CYRILLIC SMALL LETTER BARRED O WITH DIAERESIS
-<dead_stroke> <Multi_key> <quotedbl> <Cyrillic_O>	: "Ӫ"	U04EA # CYRILLIC CAPITAL LETTER BARRED O WITH DIAERESIS
-<dead_stroke> <Multi_key> <quotedbl> <Cyrillic_o>	: "ӫ"	U04EB # CYRILLIC SMALL LETTER BARRED O WITH DIAERESIS
-<Multi_key> <minus> <dead_diaeresis> <Cyrillic_O>	: "Ӫ"	U04EA # CYRILLIC CAPITAL LETTER BARRED O WITH DIAERESIS
-<Multi_key> <minus> <dead_diaeresis> <Cyrillic_o>	: "ӫ"	U04EB # CYRILLIC SMALL LETTER BARRED O WITH DIAERESIS
+# <dead_stroke> <Multi_key> <diaeresis> <Cyrillic_O>	: "Ӫ"	U04EA # CYRILLIC CAPITAL LETTER BARRED O WITH DIAERESIS
+# <dead_stroke> <Multi_key> <diaeresis> <Cyrillic_o>	: "ӫ"	U04EB # CYRILLIC SMALL LETTER BARRED O WITH DIAERESIS
+# <dead_stroke> <Multi_key> <quotedbl> <Cyrillic_O>	: "Ӫ"	U04EA # CYRILLIC CAPITAL LETTER BARRED O WITH DIAERESIS
+# <dead_stroke> <Multi_key> <quotedbl> <Cyrillic_o>	: "ӫ"	U04EB # CYRILLIC SMALL LETTER BARRED O WITH DIAERESIS
+# <Multi_key> <minus> <dead_diaeresis> <Cyrillic_O>	: "Ӫ"	U04EA # CYRILLIC CAPITAL LETTER BARRED O WITH DIAERESIS
+# <Multi_key> <minus> <dead_diaeresis> <Cyrillic_o>	: "ӫ"	U04EB # CYRILLIC SMALL LETTER BARRED O WITH DIAERESIS
 <Multi_key> <diaeresis> <dead_stroke> <Cyrillic_O>	: "Ӫ"	U04EA # CYRILLIC CAPITAL LETTER BARRED O WITH DIAERESIS
 <Multi_key> <diaeresis> <dead_stroke> <Cyrillic_o>	: "ӫ"	U04EB # CYRILLIC SMALL LETTER BARRED O WITH DIAERESIS
 <Multi_key> <quotedbl> <dead_stroke> <Cyrillic_O>	: "Ӫ"	U04EA # CYRILLIC CAPITAL LETTER BARRED O WITH DIAERESIS
 <Multi_key> <quotedbl> <dead_stroke> <Cyrillic_o>	: "ӫ"	U04EB # CYRILLIC SMALL LETTER BARRED O WITH DIAERESIS
-<Multi_key> <minus> <diaeresis> <Cyrillic_O>		: "Ӫ"	U04EA # CYRILLIC CAPITAL LETTER BARRED O WITH DIAERESIS
-<Multi_key> <minus> <diaeresis> <Cyrillic_o>		: "ӫ"	U04EB # CYRILLIC SMALL LETTER BARRED O WITH DIAERESIS
-<Multi_key> <minus> <quotedbl> <Cyrillic_O>			: "Ӫ"	U04EA # CYRILLIC CAPITAL LETTER BARRED O WITH DIAERESIS
-<Multi_key> <minus> <quotedbl> <Cyrillic_o>			: "ӫ"	U04EB # CYRILLIC SMALL LETTER BARRED O WITH DIAERESIS
+# <Multi_key> <minus> <diaeresis> <Cyrillic_O>		: "Ӫ"	U04EA # CYRILLIC CAPITAL LETTER BARRED O WITH DIAERESIS
+# <Multi_key> <minus> <diaeresis> <Cyrillic_o>		: "ӫ"	U04EB # CYRILLIC SMALL LETTER BARRED O WITH DIAERESIS
+# <Multi_key> <minus> <quotedbl> <Cyrillic_O>			: "Ӫ"	U04EA # CYRILLIC CAPITAL LETTER BARRED O WITH DIAERESIS
+# <Multi_key> <minus> <quotedbl> <Cyrillic_o>			: "ӫ"	U04EB # CYRILLIC SMALL LETTER BARRED O WITH DIAERESIS
 <Multi_key> <diaeresis> <minus> <Cyrillic_O>		: "Ӫ"	U04EA # CYRILLIC CAPITAL LETTER BARRED O WITH DIAERESIS
 <Multi_key> <diaeresis> <minus> <Cyrillic_o>		: "ӫ"	U04EB # CYRILLIC SMALL LETTER BARRED O WITH DIAERESIS
 <Multi_key> <quotedbl> <minus> <Cyrillic_O>			: "Ӫ"	U04EA # CYRILLIC CAPITAL LETTER BARRED O WITH DIAERESIS
@@ -2131,20 +2131,20 @@ include "%L"
 # Ҋҋ
 <dead_breve> <dead_belowcomma> <Cyrillic_I>			: "Ҋ"	U048A # CYRILLIC CAPITAL LETTER SHORT I WITH TAIL
 <dead_breve> <dead_belowcomma> <Cyrillic_i>			: "ҋ"	U048B # CYRILLIC SMALL LETTER SHORT I WITH TAIL
-<dead_belowcomma> <dead_breve> <Cyrillic_I>			: "Ҋ"	U048A # CYRILLIC CAPITAL LETTER SHORT I WITH TAIL
-<dead_belowcomma> <dead_breve> <Cyrillic_i>			: "ҋ"	U048B # CYRILLIC SMALL LETTER SHORT I WITH TAIL
+# <dead_belowcomma> <dead_breve> <Cyrillic_I>			: "Ҋ"	U048A # CYRILLIC CAPITAL LETTER SHORT I WITH TAIL
+# <dead_belowcomma> <dead_breve> <Cyrillic_i>			: "ҋ"	U048B # CYRILLIC SMALL LETTER SHORT I WITH TAIL
 <dead_breve> <Multi_key> <semicolon> <Cyrillic_I>		: "Ҋ"	U048A # CYRILLIC CAPITAL LETTER SHORT I WITH TAIL
 <dead_breve> <Multi_key> <semicolon> <Cyrillic_i>		: "ҋ"	U048B # CYRILLIC SMALL LETTER SHORT I WITH TAIL
-<dead_belowcomma> <Multi_key> <parenleft> <Cyrillic_I>	: "Ҋ"	U048A # CYRILLIC CAPITAL LETTER SHORT I WITH TAIL
-<dead_belowcomma> <Multi_key> <parenleft> <Cyrillic_i>	: "ҋ"	U048B # CYRILLIC SMALL LETTER SHORT I WITH TAIL
+# <dead_belowcomma> <Multi_key> <parenleft> <Cyrillic_I>	: "Ҋ"	U048A # CYRILLIC CAPITAL LETTER SHORT I WITH TAIL
+# <dead_belowcomma> <Multi_key> <parenleft> <Cyrillic_i>	: "ҋ"	U048B # CYRILLIC SMALL LETTER SHORT I WITH TAIL
 <Multi_key> <parenleft> <dead_belowcomma> <Cyrillic_I>	: "Ҋ"	U048A # CYRILLIC CAPITAL LETTER SHORT I WITH TAIL
 <Multi_key> <parenleft> <dead_belowcomma> <Cyrillic_i>	: "ҋ"	U048B # CYRILLIC SMALL LETTER SHORT I WITH TAIL
-<Multi_key> <semicolon> <dead_breve> <Cyrillic_I>		: "Ҋ"	U048A # CYRILLIC CAPITAL LETTER SHORT I WITH TAIL
-<Multi_key> <semicolon> <dead_breve> <Cyrillic_i>		: "ҋ"	U048B # CYRILLIC SMALL LETTER SHORT I WITH TAIL
+# <Multi_key> <semicolon> <dead_breve> <Cyrillic_I>		: "Ҋ"	U048A # CYRILLIC CAPITAL LETTER SHORT I WITH TAIL
+# <Multi_key> <semicolon> <dead_breve> <Cyrillic_i>		: "ҋ"	U048B # CYRILLIC SMALL LETTER SHORT I WITH TAIL
 <Multi_key> <parenleft> <semicolon> <Cyrillic_I>		: "Ҋ"	U048A # CYRILLIC CAPITAL LETTER SHORT I WITH TAIL
 <Multi_key> <parenleft> <semicolon> <Cyrillic_i>		: "ҋ"	U048B # CYRILLIC SMALL LETTER SHORT I WITH TAIL
-<Multi_key> <semicolon> <parenleft> <Cyrillic_I>		: "Ҋ"	U048A # CYRILLIC CAPITAL LETTER SHORT I WITH TAIL
-<Multi_key> <semicolon> <parenleft> <Cyrillic_i>		: "ҋ"	U048B # CYRILLIC SMALL LETTER SHORT I WITH TAIL
+# <Multi_key> <semicolon> <parenleft> <Cyrillic_I>		: "Ҋ"	U048A # CYRILLIC CAPITAL LETTER SHORT I WITH TAIL
+# <Multi_key> <semicolon> <parenleft> <Cyrillic_i>		: "ҋ"	U048B # CYRILLIC SMALL LETTER SHORT I WITH TAIL
 # Ұұ
 <dead_stroke> <Multi_key> <Cyrillic_U> <Cyrillic_U>		: "Ұ"	Cyrillic_U_straight_bar # CYRILLIC CAPITAL LETTER STRAIGHT U WITH STROKE
 <dead_stroke> <Multi_key> <Cyrillic_u> <Cyrillic_u>		: "ұ"	Cyrillic_u_straight_bar # CYRILLIC SMALL LETTER STRAIGHT U WITH STROKE
@@ -2437,47 +2437,25 @@ include "%L"
 # Ъ̀ъ̀
 <dead_grave> <dead_macron> <Cyrillic_SOFTSIGN>				: "Ъ̀"	# CYRILLIC CAPITAL LETTER HARD SIGN plus COMBINING GRAVE ACCENT
 <dead_grave> <dead_macron> <Cyrillic_softsign>				: "ъ̀"	# CYRILLIC SMALL LETTER HARD SIGN plus COMBINING GRAVE ACCENT
-# <dead_macron> <dead_grave> <Cyrillic_SOFTSIGN>			: "Ъ̀"	# CYRILLIC CAPITAL LETTER HARD SIGN plus COMBINING GRAVE ACCENT
-# <dead_macron> <dead_grave> <Cyrillic_softsign>			: "ъ̀"	# CYRILLIC SMALL LETTER HARD SIGN plus COMBINING GRAVE ACCENT
 <dead_grave> <Multi_key> <macron> <Cyrillic_SOFTSIGN>		: "Ъ̀"	# CYRILLIC CAPITAL LETTER HARD SIGN plus COMBINING GRAVE ACCENT
 <dead_grave> <Multi_key> <macron> <Cyrillic_softsign>		: "ъ̀"	# CYRILLIC SMALL LETTER HARD SIGN plus COMBINING GRAVE ACCENT
 <dead_grave> <Multi_key> <underscore> <Cyrillic_SOFTSIGN>	: "Ъ̀"	# CYRILLIC CAPITAL LETTER HARD SIGN plus COMBINING GRAVE ACCENT
 <dead_grave> <Multi_key> <underscore> <Cyrillic_softsign>	: "ъ̀"	# CYRILLIC SMALL LETTER HARD SIGN plus COMBINING GRAVE ACCENT
-# <dead_macron> <Multi_key> <grave> <Cyrillic_SOFTSIGN>		: "Ъ̀"	# CYRILLIC CAPITAL LETTER HARD SIGN plus COMBINING GRAVE ACCENT
-# <dead_macron> <Multi_key> <grave> <Cyrillic_softsign>		: "ъ̀"	# CYRILLIC SMALL LETTER HARD SIGN plus COMBINING GRAVE ACCENT
 <Multi_key> <grave> <dead_macron> <Cyrillic_SOFTSIGN>		: "Ъ̀"	# CYRILLIC CAPITAL LETTER HARD SIGN plus COMBINING GRAVE ACCENT
 <Multi_key> <grave> <dead_macron> <Cyrillic_softsign>		: "ъ̀"	# CYRILLIC SMALL LETTER HARD SIGN plus COMBINING GRAVE ACCENT
-# <Multi_key> <macron> <dead_grave> <Cyrillic_SOFTSIGN>		: "Ъ̀"	# CYRILLIC CAPITAL LETTER HARD SIGN plus COMBINING GRAVE ACCENT
-# <Multi_key> <macron> <dead_grave> <Cyrillic_softsign>		: "ъ̀"	# CYRILLIC SMALL LETTER HARD SIGN plus COMBINING GRAVE ACCENT
-# <Multi_key> <underscore> <dead_grave> <Cyrillic_SOFTSIGN>	: "Ъ̀"	# CYRILLIC CAPITAL LETTER HARD SIGN plus COMBINING GRAVE ACCENT
-# <Multi_key> <underscore> <dead_grave> <Cyrillic_softsign>	: "ъ̀"	# CYRILLIC SMALL LETTER HARD SIGN plus COMBINING GRAVE ACCENT
 <Multi_key> <grave> <macron> <Cyrillic_SOFTSIGN>			: "Ъ̀"	# CYRILLIC CAPITAL LETTER HARD SIGN plus COMBINING GRAVE ACCENT
 <Multi_key> <grave> <macron> <Cyrillic_softsign>			: "ъ̀"	# CYRILLIC SMALL LETTER HARD SIGN plus COMBINING GRAVE ACCENT
-# <Multi_key> <macron> <grave> <Cyrillic_SOFTSIGN>			: "Ъ̀"	# CYRILLIC CAPITAL LETTER HARD SIGN plus COMBINING GRAVE ACCENT
-# <Multi_key> <macron> <grave> <Cyrillic_softsign>			: "ъ̀"	# CYRILLIC SMALL LETTER HARD SIGN plus COMBINING GRAVE ACCENT
-# <Multi_key> <underscore> <grave> <Cyrillic_SOFTSIGN>		: "Ъ̀"	# CYRILLIC CAPITAL LETTER HARD SIGN plus COMBINING GRAVE ACCENT
-# <Multi_key> <underscore> <grave> <Cyrillic_softsign>		: "ъ̀"	# CYRILLIC SMALL LETTER HARD SIGN plus COMBINING GRAVE ACCENT
 # Ї́ї́
 <dead_acute> <dead_diaeresis> <Ukrainian_I>				: "Ї́"	# CYRILLIC CAPITAL LETTER YI plus COMBINING ACUTE ACCENT
 <dead_acute> <dead_diaeresis> <Ukrainian_i>				: "ї́"	# CYRILLIC SMALL LETTER YI plus COMBINING ACUTE ACCENT
-# <dead_diaeresis> <dead_acute> <Ukrainian_I>			: "Ї́"	# CYRILLIC CAPITAL LETTER YI plus COMBINING ACUTE ACCENT
-# <dead_diaeresis> <dead_acute> <Ukrainian_i>			: "ї́"	# CYRILLIC SMALL LETTER YI plus COMBINING ACUTE ACCENT
 <dead_acute> <Multi_key> <diaeresis> <Ukrainian_I>		: "Ї́"	# CYRILLIC CAPITAL LETTER YI plus COMBINING ACUTE ACCENT
 <dead_acute> <Multi_key> <diaeresis> <Ukrainian_i>		: "ї́"	# CYRILLIC SMALL LETTER YI plus COMBINING ACUTE ACCENT
 <dead_acute> <Multi_key> <quotedbl> <Ukrainian_I>		: "Ї́"	# CYRILLIC CAPITAL LETTER YI plus COMBINING ACUTE ACCENT
 <dead_acute> <Multi_key> <quotedbl> <Ukrainian_i>		: "ї́"	# CYRILLIC SMALL LETTER YI plus COMBINING ACUTE ACCENT
-# <dead_diaeresis> <Multi_key> <acute> <Ukrainian_I>		: "Ї́"	# CYRILLIC CAPITAL LETTER YI plus COMBINING ACUTE ACCENT
-# <dead_diaeresis> <Multi_key> <acute> <Ukrainian_i>		: "ї́"	# CYRILLIC SMALL LETTER YI plus COMBINING ACUTE ACCENT
-# <dead_diaeresis> <Multi_key> <apostrophe> <Ukrainian_I>	: "Ї́"	# CYRILLIC CAPITAL LETTER YI plus COMBINING ACUTE ACCENT
-# <dead_diaeresis> <Multi_key> <apostrophe> <Ukrainian_i>	: "ї́"	# CYRILLIC SMALL LETTER YI plus COMBINING ACUTE ACCENT
 <Multi_key> <acute> <dead_diaeresis> <Ukrainian_I>		: "Ї́"	# CYRILLIC CAPITAL LETTER YI plus COMBINING ACUTE ACCENT
 <Multi_key> <acute> <dead_diaeresis> <Ukrainian_i>		: "ї́"	# CYRILLIC SMALL LETTER YI plus COMBINING ACUTE ACCENT
 <Multi_key> <apostrophe> <dead_diaeresis> <Ukrainian_I>	: "Ї́"	# CYRILLIC CAPITAL LETTER YI plus COMBINING ACUTE ACCENT
 <Multi_key> <apostrophe> <dead_diaeresis> <Ukrainian_i>	: "ї́"	# CYRILLIC SMALL LETTER YI plus COMBINING ACUTE ACCENT
-# <Multi_key> <diaeresis> <dead_acute> <Ukrainian_I>		: "Ї́"	# CYRILLIC CAPITAL LETTER YI plus COMBINING ACUTE ACCENT
-# <Multi_key> <diaeresis> <dead_acute> <Ukrainian_i>		: "ї́"	# CYRILLIC SMALL LETTER YI plus COMBINING ACUTE ACCENT
-# <Multi_key> <quotedbl> <dead_acute> <Ukrainian_I>		: "Ї́"	# CYRILLIC CAPITAL LETTER YI plus COMBINING ACUTE ACCENT
-# <Multi_key> <quotedbl> <dead_acute> <Ukrainian_i>		: "ї́"	# CYRILLIC SMALL LETTER YI plus COMBINING ACUTE ACCENT
 <Multi_key> <acute> <diaeresis> <Ukrainian_I>			: "Ї́"	# CYRILLIC CAPITAL LETTER YI plus COMBINING ACUTE ACCENT
 <Multi_key> <acute> <diaeresis> <Ukrainian_i>			: "ї́"	# CYRILLIC SMALL LETTER YI plus COMBINING ACUTE ACCENT
 <Multi_key> <acute> <quotedbl> <Ukrainian_I>			: "Ї́"	# CYRILLIC CAPITAL LETTER YI plus COMBINING ACUTE ACCENT
@@ -2488,12 +2466,6 @@ include "%L"
 <Multi_key> <apostrophe> <quotedbl> <Ukrainian_i>		: "ї́"	# CYRILLIC SMALL LETTER YI plus COMBINING ACUTE ACCENT
 <dead_acute> <dead_diaeresis> <Multi_key> <Cyrillic_I> <Cyrillic_I>	: "Ї́"	# CYRILLIC CAPITAL LETTER YI plus COMBINING ACUTE ACCENT
 <dead_acute> <dead_diaeresis> <Multi_key> <Cyrillic_i> <Cyrillic_i>	: "ї́"	# CYRILLIC SMALL LETTER YI plus COMBINING ACUTE ACCENT
-# <dead_diaeresis> <dead_acute> <Multi_key> <Cyrillic_I> <Cyrillic_I>	: "Ї́"	# CYRILLIC CAPITAL LETTER YI plus COMBINING ACUTE ACCENT
-# <dead_diaeresis> <dead_acute> <Multi_key> <Cyrillic_i> <Cyrillic_i>	: "ї́"	# CYRILLIC SMALL LETTER YI plus COMBINING ACUTE ACCENT
-# <dead_diaeresis> <Multi_key> <acute> <Cyrillic_I> <Cyrillic_I>		: "Ї́"	# CYRILLIC CAPITAL LETTER YI plus COMBINING ACUTE ACCENT
-# <dead_diaeresis> <Multi_key> <acute> <Cyrillic_i> <Cyrillic_i>		: "ї́"	# CYRILLIC SMALL LETTER YI plus COMBINING ACUTE ACCENT
-# <dead_diaeresis> <Multi_key> <apostrophe> <Cyrillic_I> <Cyrillic_I>	: "Ї́"	# CYRILLIC CAPITAL LETTER YI plus COMBINING ACUTE ACCENT
-# <dead_diaeresis> <Multi_key> <apostrophe> <Cyrillic_i> <Cyrillic_i>	: "ї́"	# CYRILLIC SMALL LETTER YI plus COMBINING ACUTE ACCENT
 <dead_acute> <Multi_key> <diaeresis> <Cyrillic_I> <Cyrillic_I>		: "Ї́"	# CYRILLIC CAPITAL LETTER YI plus COMBINING ACUTE ACCENT
 <dead_acute> <Multi_key> <diaeresis> <Cyrillic_i> <Cyrillic_i>		: "ї́"	# CYRILLIC SMALL LETTER YI plus COMBINING ACUTE ACCENT
 <dead_acute> <Multi_key> <quotedbl> <Cyrillic_I> <Cyrillic_I>		: "Ї́"	# CYRILLIC CAPITAL LETTER YI plus COMBINING ACUTE ACCENT
@@ -2512,12 +2484,6 @@ include "%L"
 <Multi_key> <apostrophe> <quotedbl> <Cyrillic_i> <Cyrillic_i>		: "ї́"	# CYRILLIC SMALL LETTER YI plus COMBINING ACUTE ACCENT
 <dead_acute> <dead_diaeresis> <Multi_key> <Cyrillic_SHA> <Cyrillic_SHA>	: "Ї́"	# CYRILLIC CAPITAL LETTER YI plus COMBINING ACUTE ACCENT
 <dead_acute> <dead_diaeresis> <Multi_key> <Cyrillic_sha> <Cyrillic_sha>	: "ї́"	# CYRILLIC SMALL LETTER YI plus COMBINING ACUTE ACCENT
-# <dead_diaeresis> <dead_acute> <Multi_key> <Cyrillic_SHA> <Cyrillic_SHA>	: "Ї́"	# CYRILLIC CAPITAL LETTER YI plus COMBINING ACUTE ACCENT
-# <dead_diaeresis> <dead_acute> <Multi_key> <Cyrillic_sha> <Cyrillic_sha>	: "ї́"	# CYRILLIC SMALL LETTER YI plus COMBINING ACUTE ACCENT
-# <dead_diaeresis> <Multi_key> <acute> <Cyrillic_SHA> <Cyrillic_SHA>		: "Ї́"	# CYRILLIC CAPITAL LETTER YI plus COMBINING ACUTE ACCENT
-# <dead_diaeresis> <Multi_key> <acute> <Cyrillic_sha> <Cyrillic_sha>		: "ї́"	# CYRILLIC SMALL LETTER YI plus COMBINING ACUTE ACCENT
-# <dead_diaeresis> <Multi_key> <apostrophe> <Cyrillic_SHA> <Cyrillic_SHA>	: "Ї́"	# CYRILLIC CAPITAL LETTER YI plus COMBINING ACUTE ACCENT
-# <dead_diaeresis> <Multi_key> <apostrophe> <Cyrillic_sha> <Cyrillic_sha>	: "ї́"	# CYRILLIC SMALL LETTER YI plus COMBINING ACUTE ACCENT
 <dead_acute> <Multi_key> <diaeresis> <Cyrillic_SHA> <Cyrillic_SHA>		: "Ї́"	# CYRILLIC CAPITAL LETTER YI plus COMBINING ACUTE ACCENT
 <dead_acute> <Multi_key> <diaeresis> <Cyrillic_sha> <Cyrillic_sha>		: "ї́"	# CYRILLIC SMALL LETTER YI plus COMBINING ACUTE ACCENT
 <dead_acute> <Multi_key> <quotedbl> <Cyrillic_SHA> <Cyrillic_SHA>		: "Ї́"	# CYRILLIC CAPITAL LETTER YI plus COMBINING ACUTE ACCENT
@@ -2537,16 +2503,10 @@ include "%L"
 # Ӱ́ӱ́
 <dead_acute> <dead_diaeresis> <Cyrillic_U>				: "Ӱ́"	# CYRILLIC CAPITAL LETTER U WITH DIAERESIS plus COMBINING ACUTE ACCENT
 <dead_acute> <dead_diaeresis> <Cyrillic_u>				: "ӱ́"	# CYRILLIC SMALL LETTER U WITH DIAERESIS plus COMBINING ACUTE ACCENT
-# <dead_diaeresis> <dead_acute> <Cyrillic_U>			: "Ӱ́"	# CYRILLIC CAPITAL LETTER U WITH DIAERESIS plus COMBINING ACUTE ACCENT
-# <dead_diaeresis> <dead_acute> <Cyrillic_u>			: "ӱ́"	# CYRILLIC SMALL LETTER U WITH DIAERESIS plus COMBINING ACUTE ACCENT
 <dead_acute> <Multi_key> <diaeresis> <Cyrillic_U>		: "Ӱ́"	# CYRILLIC CAPITAL LETTER U WITH DIAERESIS plus COMBINING ACUTE ACCENT
 <dead_acute> <Multi_key> <diaeresis> <Cyrillic_u>		: "ӱ́"	# CYRILLIC SMALL LETTER U WITH DIAERESIS plus COMBINING ACUTE ACCENT
 <dead_acute> <Multi_key> <quotedbl> <Cyrillic_U>		: "Ӱ́"	# CYRILLIC CAPITAL LETTER U WITH DIAERESIS plus COMBINING ACUTE ACCENT
 <dead_acute> <Multi_key> <quotedbl> <Cyrillic_u>		: "ӱ́"	# CYRILLIC SMALL LETTER U WITH DIAERESIS plus COMBINING ACUTE ACCENT
-# <dead_diaeresis> <Multi_key> <acute> <Cyrillic_U>		: "Ӱ́"	# CYRILLIC CAPITAL LETTER U WITH DIAERESIS plus COMBINING ACUTE ACCENT
-# <dead_diaeresis> <Multi_key> <acute> <Cyrillic_u>		: "ӱ́"	# CYRILLIC SMALL LETTER U WITH DIAERESIS plus COMBINING ACUTE ACCENT
-# <dead_diaeresis> <Multi_key> <apostrophe> <Cyrillic_U>	: "Ӱ́"	# CYRILLIC CAPITAL LETTER U WITH DIAERESIS plus COMBINING ACUTE ACCENT
-# <dead_diaeresis> <Multi_key> <apostrophe> <Cyrillic_u>	: "ӱ́"	# CYRILLIC SMALL LETTER U WITH DIAERESIS plus COMBINING ACUTE ACCENT
 <Multi_key> <acute> <dead_diaeresis> <Cyrillic_U>		: "Ӱ́"	# CYRILLIC CAPITAL LETTER U WITH DIAERESIS plus COMBINING ACUTE ACCENT
 <Multi_key> <acute> <dead_diaeresis> <Cyrillic_u>		: "ӱ́"	# CYRILLIC SMALL LETTER U WITH DIAERESIS plus COMBINING ACUTE ACCENT
 <Multi_key> <apostrophe> <dead_diaeresis> <Cyrillic_U>	: "Ӱ́"	# CYRILLIC CAPITAL LETTER U WITH DIAERESIS plus COMBINING ACUTE ACCENT
@@ -2562,16 +2522,10 @@ include "%L"
 # Ӭ́ӭ́
 <dead_acute> <dead_diaeresis> <Cyrillic_E>				: "Ӭ́"	# CYRILLIC CAPITAL LETTER E WITH DIAERESIS plus COMBINING ACUTE ACCENT
 <dead_acute> <dead_diaeresis> <Cyrillic_e>				: "ӭ́"	# CYRILLIC SMALL LETTER E WITH DIAERESIS plus COMBINING ACUTE ACCENT
-# <dead_diaeresis> <dead_acute> <Cyrillic_E>			: "Ӭ́"	# CYRILLIC CAPITAL LETTER E WITH DIAERESIS plus COMBINING ACUTE ACCENT
-# <dead_diaeresis> <dead_acute> <Cyrillic_e>			: "ӭ́"	# CYRILLIC SMALL LETTER E WITH DIAERESIS plus COMBINING ACUTE ACCENT
 <dead_acute> <Multi_key> <diaeresis> <Cyrillic_E>		: "Ӭ́"	# CYRILLIC CAPITAL LETTER E WITH DIAERESIS plus COMBINING ACUTE ACCENT
 <dead_acute> <Multi_key> <diaeresis> <Cyrillic_e>		: "ӭ́"	# CYRILLIC SMALL LETTER E WITH DIAERESIS plus COMBINING ACUTE ACCENT
 <dead_acute> <Multi_key> <quotedbl> <Cyrillic_E>		: "Ӭ́"	# CYRILLIC CAPITAL LETTER E WITH DIAERESIS plus COMBINING ACUTE ACCENT
 <dead_acute> <Multi_key> <quotedbl> <Cyrillic_e>		: "ӭ́"	# CYRILLIC SMALL LETTER E WITH DIAERESIS plus COMBINING ACUTE ACCENT
-# <dead_diaeresis> <Multi_key> <acute> <Cyrillic_E>		: "Ӭ́"	# CYRILLIC CAPITAL LETTER E WITH DIAERESIS plus COMBINING ACUTE ACCENT
-# <dead_diaeresis> <Multi_key> <acute> <Cyrillic_e>		: "ӭ́"	# CYRILLIC SMALL LETTER E WITH DIAERESIS plus COMBINING ACUTE ACCENT
-# <dead_diaeresis> <Multi_key> <apostrophe> <Cyrillic_E>	: "Ӭ́"	# CYRILLIC CAPITAL LETTER E WITH DIAERESIS plus COMBINING ACUTE ACCENT
-# <dead_diaeresis> <Multi_key> <apostrophe> <Cyrillic_e>	: "ӭ́"	# CYRILLIC SMALL LETTER E WITH DIAERESIS plus COMBINING ACUTE ACCENT
 <Multi_key> <acute> <dead_diaeresis> <Cyrillic_E>		: "Ӭ́"	# CYRILLIC CAPITAL LETTER E WITH DIAERESIS plus COMBINING ACUTE ACCENT
 <Multi_key> <acute> <dead_diaeresis> <Cyrillic_e>		: "ӭ́"	# CYRILLIC SMALL LETTER E WITH DIAERESIS plus COMBINING ACUTE ACCENT
 <Multi_key> <apostrophe> <dead_diaeresis> <Cyrillic_E>	: "Ӭ́"	# CYRILLIC CAPITAL LETTER E WITH DIAERESIS plus COMBINING ACUTE ACCENT

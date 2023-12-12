@@ -2,7 +2,7 @@
 #
 # https://github.com/roadkell/xcompose
 #
-# 2287 sequences
+# 2221 sequences
 # 553 letters
 #
 # Conventions:
@@ -12,8 +12,8 @@
 #	" or ¨			diaeresis
 #	_ or ¯			macron, or top left bar (Ъъ Ҡҡ), or line above/below (₸ ⃀)
 #	^ or >			circumflex
-#	< or v or м		háček/caron
-#	( or U or u		breve
+#	< or м			háček/caron
+#	(				breve
 #	)				inverted breve
 #	, or ¸(cedilla)	descender, or cedilla (Ҙҙ Ҫҫ)
 #	; or /			tail (Ҋҋ Ӆӆ Ӎӎ Ӊӊ)
@@ -125,8 +125,6 @@ include "%L"
 <Multi_key> <Cyrillic_ie> <Cyrillic_ie>		: "ә"	Cyrillic_schwa # CYRILLIC SMALL LETTER SCHWA
 <Multi_key> <Cyrillic_IO> <Cyrillic_IO>		: "Ӛ"	U04DA # CYRILLIC CAPITAL LETTER SCHWA WITH DIAERESIS
 <Multi_key> <Cyrillic_io> <Cyrillic_io>		: "ӛ"	U04DB # CYRILLIC SMALL LETTER SCHWA WITH DIAERESIS
-<Multi_key> <Cyrillic_EF> <Cyrillic_EF>		: "Ө"	Cyrillic_O_bar # CYRILLIC CAPITAL LETTER BARRED O
-<Multi_key> <Cyrillic_ef> <Cyrillic_ef>		: "ө"	Cyrillic_o_bar # CYRILLIC SMALL LETTER BARRED O
 # Double CHE could also be repurposed to type historical Abkhazian Cche
 # https://en.wikipedia.org/wiki/Abkhazian_Che#Cche
 <Multi_key> <Cyrillic_CHE> <Cyrillic_CHE>	: "Һ"	Cyrillic_SHHA # CYRILLIC CAPITAL LETTER SHHA
@@ -137,6 +135,8 @@ include "%L"
 <Multi_key> <Cyrillic_em> <Cyrillic_em>		: "ԝ"	U051D # CYRILLIC SMALL LETTER WE
 <Multi_key> <Cyrillic_ZHE> <Cyrillic_ZHE>	: "Ӿ"	U04FE # CYRILLIC CAPITAL LETTER HA WITH STROKE
 <Multi_key> <Cyrillic_zhe> <Cyrillic_zhe>	: "ӿ"	U04FF # CYRILLIC SMALL LETTER HA WITH STROKE
+<Multi_key> <Cyrillic_EF> <Cyrillic_EF>		: "Ѳ"	U0472 # CYRILLIC CAPITAL LETTER FITA
+<Multi_key> <Cyrillic_ef> <Cyrillic_ef>		: "ѳ"	U0473 # CYRILLIC SMALL LETTER FITA
 # Double EL could also be repurposed to type historical Ka with ascender
 # when it gets added to Unicode: https://en.wikipedia.org/wiki/Ka_with_ascender
 <Multi_key> <Cyrillic_EL> <Cyrillic_EL>		: "Ѵ"	U0474 # CYRILLIC CAPITAL LETTER IZHITSA
@@ -145,6 +145,7 @@ include "%L"
 # Latin-like letters (assuming QWERTY+ЙЦУКЕН layout)
 # Since users may have different keyboard layouts, these shouldn't be the only
 # sequences for these letters.
+# ЙЙ йй are occupied by Ї ї
 # <Multi_key> <Cyrillic_SHORTI> <Cyrillic_SHORTI>	: "Ԛ"	U051A # CYRILLIC CAPITAL LETTER QA
 # <Multi_key> <Cyrillic_shorti> <Cyrillic_shorti>	: "ԛ"	U051B # CYRILLIC SMALL LETTER QA
 <Multi_key> <Cyrillic_TSE> <Cyrillic_TSE>	: "Ԝ"	U051C # CYRILLIC CAPITAL LETTER WE
@@ -168,10 +169,11 @@ include "%L"
 <Multi_key> <Cyrillic_ve> <Cyrillic_ve>		: "ԁ"	U0501 # CYRILLIC SMALL LETTER KOMI DE
 
 # Number-like letters
+# И1 и1 are occupied by Иӏ иӏ
 # <Multi_key> <Cyrillic_I> <1>		: "І"	Ukrainian_I # CYRILLIC CAPITAL LETTER BYELORUSSIAN-UKRAINIAN I
 # <Multi_key> <Cyrillic_i> <1>		: "і"	Ukrainian_i # CYRILLIC SMALL LETTER BYELORUSSIAN-UKRAINIAN I
-# <Multi_key> <1> <Cyrillic_I>		: "І"	Ukrainian_I # CYRILLIC CAPITAL LETTER BYELORUSSIAN-UKRAINIAN I
-# <Multi_key> <1> <Cyrillic_i>		: "і"	Ukrainian_i # CYRILLIC SMALL LETTER BYELORUSSIAN-UKRAINIAN I
+<Multi_key> <1> <Cyrillic_I>		: "І"	Ukrainian_I # CYRILLIC CAPITAL LETTER BYELORUSSIAN-UKRAINIAN I
+<Multi_key> <1> <Cyrillic_i>		: "і"	Ukrainian_i # CYRILLIC SMALL LETTER BYELORUSSIAN-UKRAINIAN I
 <Multi_key> <Cyrillic_SHORTI> <1>	: "Ї"	Ukrainian_YI # CYRILLIC CAPITAL LETTER YI
 <Multi_key> <Cyrillic_shorti> <1>	: "ї"	Ukrainian_yi # CYRILLIC SMALL LETTER YI
 <Multi_key> <1> <Cyrillic_SHORTI>	: "Ї"	Ukrainian_YI # CYRILLIC CAPITAL LETTER YI

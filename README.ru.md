@@ -90,7 +90,7 @@ God kills a kitten. Stop the slaughter!</i>
 
 | Ввод                                           | Буква |
 | ---------------------------------------------- | ----- |
-| <kbd>⎄ Compose</kbd> <kbd>й</kbd> <kbd>й</kbd> | ԛ     |
+| <kbd>⎄ Compose</kbd> <kbd>р</kbd> <kbd>р</kbd> | һ     |
 | <kbd>⎄ Compose</kbd> <kbd>ш</kbd> <kbd>ш</kbd> | і     |
 | <kbd>⎄ Compose</kbd> <kbd>н</kbd> <kbd>н</kbd> | ү     |
 

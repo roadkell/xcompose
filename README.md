@@ -9,6 +9,7 @@ God kills a kitten. Stop the slaughter!</i>
 - [Как установить](#как-установить)
   - [Windows](#windows)
   - [Linux](#linux)
+  - [Android](#android)
 - [Как пользоваться](#как-пользоваться)
 - [Зачем](#зачем)
 - [Список комбинаций](#список-комбинаций)
@@ -41,31 +42,38 @@ God kills a kitten. Stop the slaughter!</i>
 3. Выбрать и назначить compose-клавишу (например, в GNOME это `Настройки > Клавиатура > Ввод специальных символов > Compose Key`)
 4. Перезапустить приложение, в котором вы набираете текст
 
+### Android ###
+
+1. Установить [AnySoftKeyboard](https://anysoftkeyboard.github.io/) ([Google Play](https://play.google.com/store/apps/details?id=com.menny.android.anysoftkeyboard), [F-Droid](https://f-droid.org/en/packages/com.menny.android.anysoftkeyboard/))
+2. Установить русскую раскладку к ней ([Google Play](https://play.google.com/store/apps/details?id=com.anysoftkeyboard.languagepack.russian2), [F-Droid](https://f-droid.org/packages/com.anysoftkeyboard.languagepack.russian2/))
+3. Зайти в `Настройки -> Язык и ввод -> AnySoftKeyboard -> Языки раскладок` и выбрать `Русский`
+4. В настройках клавиатуры включить раскладку `Кириллица (Кириллические символы при длительном нажатии)`
+
 ## Как пользоваться ##
 
 Буквы с диакритическими знаками вводятся по схеме <kbd>⎄ Compose</kbd> <kbd>буква</kbd> <kbd>знак</kbd>. Можно и наоборот: <kbd>⎄ Compose</kbd> <kbd>знак</kbd> <kbd>буква</kbd>. Например чтобы ввести букву **ѓ**, нужно набрать <kbd>⎄ Compose</kbd> <kbd>г</kbd> <kbd>´</kbd> (т.е. если клавиша <kbd>⎄ Compose</kbd> назначена на <kbd>правый Alt</kbd>, то комбинация будет выглядеть как <kbd>правый Alt</kbd> <kbd>г</kbd> <kbd>´</kbd>).
 
 Поскольку многих "правильных" типографских диакритиков (умлаута <kbd>¨</kbd>, седили <kbd>¸</kbd>, макрона <kbd>¯</kbd> и др.) на клавиатуре нет, вместо них можно вводить более доступные символы:
 
-| Диакритический знак                    | Чем заменить                    | Пример комбинации                               | Результат |
-| -------------------------------------- | ------------------------------- | ----------------------------------------------- | --------- |
-| акут <kbd>´</kbd>                      | апостроф <kbd>'</kbd>           | <kbd>⎄ Compose</kbd> <kbd>к</kbd> <kbd>'</kbd>  | ќ         |
-| двойной акут <kbd>˝</kbd>              | равенство <kbd>=</kbd>          | <kbd>⎄ Compose</kbd> <kbd>у</kbd> <kbd>=</kbd>  | ӳ         |
-| гравис <kbd>\`</kbd>                   | обратный апостроф <kbd>\`</kbd> | <kbd>⎄ Compose</kbd> <kbd>е</kbd> <kbd>`</kbd>  | ѐ         |
-| умлаут <kbd>¨</kbd>                    | кавычки <kbd>"</kbd>            | <kbd>⎄ Compose</kbd> <kbd>и</kbd> <kbd>"</kbd>  | ӥ         |
-| макрон <kbd>¯</kbd>                    | подчёркивание <kbd>_</kbd>      | <kbd>⎄ Compose</kbd> <kbd>у</kbd> <kbd>_</kbd>  | ӯ         |
-| гачек <kbd>ˇ</kbd>                     | меньше <kbd><</kbd>             | <kbd>⎄ Compose</kbd> <kbd><</kbd> <kbd>р</kbd>  | р̌         |
-| кратка <kbd>˘</kbd>                    | скобка <kbd>(</kbd>             | <kbd>⎄ Compose</kbd> <kbd>ж</kbd> <kbd>(</kbd>  | ӂ         |
-| седиль <kbd>¸</kbd> (или нижний вынос) | запятая <kbd>,</kbd>            | <kbd>⎄ Compose</kbd> <kbd>х</kbd> <kbd>,</kbd>  | ҳ         |
-| нижний вынос слева                     | запятая перед буквой <kbd>,</kbd>            | <kbd>⎄ Compose</kbd> <kbd>,</kbd> <kbd>ч</kbd>  | ӌ         |
-| хвостик <kbd>ˏ</kbd>                   | точка с запятой <kbd>;</kbd>    | <kbd>⎄ Compose</kbd> <kbd>м</kbd> <kbd>;</kbd>  | ӎ         |
-| горизонтальный штрих                   | дефис <kbd>-</kbd>              | <kbd>⎄ Compose</kbd> <kbd>о</kbd> <kbd>-</kbd>  | ө         |
-| вертикальный штрих                     | <kbd>1</kbd>                    | <kbd>⎄ Compose</kbd> <kbd>1</kbd> <kbd>ч</kbd>  | ҹ         |
-| диагональный штрих                     | обратный слэш <kbd>\\</kbd>     | <kbd>⎄ Compose</kbd> <kbd>р</kbd> <kbd>\\</kbd> | ҏ         |
-| штрих сверху слева                     | <kbd>7</kbd> перед буквой       | <kbd>⎄ Compose</kbd> <kbd>7</kbd> <kbd>к</kbd>  | ҡ         |
-| крюк <kbd> ̡</kbd>                      | <kbd>9</kbd>                    | <kbd>⎄ Compose</kbd> <kbd>л</kbd> <kbd>9</kbd>  | ԓ         |
-| крюк слева                             | <kbd>9</kbd> перед буквой       | <kbd>⎄ Compose</kbd> <kbd>9</kbd> <kbd>н</kbd>  | ԩ         |
-| крюк посередине                        | <kbd>5</kbd>                    | <kbd>⎄ Compose</kbd> <kbd>г</kbd> <kbd>5</kbd>  | ҕ         |
+| Диакритический знак                    | Чем заменить                      | Пример комбинации                               | Результат |
+| -------------------------------------- | --------------------------------- | ----------------------------------------------- | --------- |
+| акут <kbd>´</kbd>                      | апостроф <kbd>'</kbd>             | <kbd>⎄ Compose</kbd> <kbd>к</kbd> <kbd>'</kbd>  | ќ         |
+| двойной акут <kbd>˝</kbd>              | равенство <kbd>=</kbd>            | <kbd>⎄ Compose</kbd> <kbd>у</kbd> <kbd>=</kbd>  | ӳ         |
+| гравис <kbd>\`</kbd>                   | обратный апостроф <kbd>\`</kbd>   | <kbd>⎄ Compose</kbd> <kbd>е</kbd> <kbd>`</kbd>  | ѐ         |
+| умлаут <kbd>¨</kbd>                    | кавычки <kbd>"</kbd>              | <kbd>⎄ Compose</kbd> <kbd>и</kbd> <kbd>"</kbd>  | ӥ         |
+| макрон <kbd>¯</kbd>                    | подчёркивание <kbd>_</kbd>        | <kbd>⎄ Compose</kbd> <kbd>у</kbd> <kbd>_</kbd>  | ӯ         |
+| гачек <kbd>ˇ</kbd>                     | меньше <kbd><</kbd>               | <kbd>⎄ Compose</kbd> <kbd><</kbd> <kbd>р</kbd>  | р̌         |
+| кратка <kbd>˘</kbd>                    | скобка <kbd>(</kbd>               | <kbd>⎄ Compose</kbd> <kbd>ж</kbd> <kbd>(</kbd>  | ӂ         |
+| седиль <kbd>¸</kbd> (или нижний вынос) | запятая <kbd>,</kbd>              | <kbd>⎄ Compose</kbd> <kbd>х</kbd> <kbd>,</kbd>  | ҳ         |
+| нижний вынос слева                     | запятая перед буквой <kbd>,</kbd> | <kbd>⎄ Compose</kbd> <kbd>,</kbd> <kbd>ч</kbd>  | ӌ         |
+| хвостик <kbd>ˏ</kbd>                   | точка с запятой <kbd>;</kbd>      | <kbd>⎄ Compose</kbd> <kbd>м</kbd> <kbd>;</kbd>  | ӎ         |
+| горизонтальный штрих                   | дефис <kbd>-</kbd>                | <kbd>⎄ Compose</kbd> <kbd>о</kbd> <kbd>-</kbd>  | ө         |
+| вертикальный штрих                     | <kbd>1</kbd>                      | <kbd>⎄ Compose</kbd> <kbd>1</kbd> <kbd>ч</kbd>  | ҹ         |
+| диагональный штрих                     | обратный слэш <kbd>\\</kbd>       | <kbd>⎄ Compose</kbd> <kbd>р</kbd> <kbd>\\</kbd> | ҏ         |
+| штрих сверху слева                     | <kbd>7</kbd> перед буквой         | <kbd>⎄ Compose</kbd> <kbd>7</kbd> <kbd>к</kbd>  | ҡ         |
+| крюк <kbd> ̡</kbd>                      | <kbd>9</kbd>                      | <kbd>⎄ Compose</kbd> <kbd>л</kbd> <kbd>9</kbd>  | ԓ         |
+| крюк слева                             | <kbd>9</kbd> перед буквой         | <kbd>⎄ Compose</kbd> <kbd>9</kbd> <kbd>н</kbd>  | ԩ         |
+| крюк посередине                        | <kbd>5</kbd>                      | <kbd>⎄ Compose</kbd> <kbd>г</kbd> <kbd>5</kbd>  | ҕ         |
 
 Если буква имеет уникальное начертание, её можно получить, набрав похожую внешне букву дважды:
 
@@ -103,10 +111,10 @@ God kills a kitten. Stop the slaughter!</i>
 
 Мультиграфы с палочкой (буква <kbd>Ӏ</kbd> в алфавитах кавказских языков) можно ввести, набрав букву и единицу:
 
-| Ввод                                                         | Буква |
-| ------------------------------------------------------------ | ----- |
-| <kbd>⎄ Compose</kbd> <kbd>а</kbd> <kbd>1</kbd>               | аӏ    |
-| <kbd>⎄ Compose</kbd> <kbd>г</kbd> <kbd>ъ</kbd> <kbd>1</kbd>  | гъӏ   |
+| Ввод                                                        | Буква |
+| ----------------------------------------------------------- | ----- |
+| <kbd>⎄ Compose</kbd> <kbd>а</kbd> <kbd>1</kbd>              | аӏ    |
+| <kbd>⎄ Compose</kbd> <kbd>г</kbd> <kbd>ъ</kbd> <kbd>1</kbd> | гъӏ   |
 
 Знаки валют — это буква и знак равенства (иногда подчёркивания):
 
@@ -118,19 +126,19 @@ God kills a kitten. Stop the slaughter!</i>
 
 Знаки, отсутствующие в раскладке ЙЦУКЕН (``~@#$^&[]{}|'`<>``), можно ввести с тех же клавиш, что и в QWERTY, по схеме <kbd>⎄ Compose</kbd> <kbd>символ</kbd> <kbd>пробел</kbd>. Можно и наборот: <kbd>⎄ Compose</kbd> <kbd>пробел</kbd> <kbd>символ</kbd>. Например:
 
-| Ввод                                                      | Знак |
-| --------------------------------------------------------- | ---- |
+| Ввод                                                        | Знак |
+| ----------------------------------------------------------- | ---- |
 | <kbd>⎄ Compose</kbd> <kbd>Shift + 2</kbd> <kbd>пробел</kbd> | @    |
 | <kbd>⎄ Compose</kbd> <kbd>пробел</kbd> <kbd>Shift + 4</kbd> | $    |
-| <kbd>⎄ Compose</kbd> <kbd>э</kbd> <kbd>пробел</kbd>       | '    |
+| <kbd>⎄ Compose</kbd> <kbd>э</kbd> <kbd>пробел</kbd>         | '    |
 
 В стандартной таблице уже есть длинное тире и некоторые другие типографские и прочие символы:
 
 | Ввод                                                        | Знак |
 | ----------------------------------------------------------- | ---- |
 | <kbd>⎄ Compose</kbd> <kbd>-</kbd> <kbd>-</kbd> <kbd>-</kbd> | —    |
-| <kbd>⎄ Compose</kbd> <kbd>*</kbd> <kbd>0</kbd> | °    |
-| <kbd>⎄ Compose</kbd> <kbd>=</kbd> <kbd>С</kbd> | €    |
+| <kbd>⎄ Compose</kbd> <kbd>*</kbd> <kbd>0</kbd>              | °    |
+| <kbd>⎄ Compose</kbd> <kbd>=</kbd> <kbd>С</kbd>              | €    |
 
 Мы дополнили их типографскими кавычками на буквах Б и Ю (там же, где и в QWERTY):
 

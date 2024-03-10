@@ -39,7 +39,7 @@ God kills a kitten. Stop the slaughter!</i>
 
 1. Скачать файл [`dotXCompose`](/dotXCompose)
 2. Сохранить его в домашней папке пользователя (обычно это `/home/имя_пользователя/`) под именем `.XCompose` (включите показ скрытых файлов); если у вас уже установлен собственный `.XCompose`-файл, добавьте к нему содержимое скачанного файла
-3. Выбрать и назначить compose-клавишу (например, в GNOME это `Настройки > Клавиатура > Ввод специальных символов > Compose Key`)
+3. Выбрать и назначить compose-клавишу (например, в GNOME это `Настройки -> Клавиатура -> Ввод специальных символов -> Compose Key`)
 4. Перезапустить приложение, в котором вы набираете текст
 
 ### Android ###
@@ -394,11 +394,17 @@ God kills a kitten. Stop the slaughter!</i>
 
 ## Важное ##
 
-[Квiр Свiт](https://queersvit.taplink.ws/) — организация, которая помогает квир- и небелым людям, пострадавшим от войны в Украине, и тем, чьим жизням угрожает растущий авторитаризм в России и Беларуси. Мы — группа волонтеров, предоставляющих финансовую помощь, жилье и транспорт нуждающимся ЛГБТК+ и небелым людям, а также рекомендации и связи с дополнительными ресурсами.
-Каждый донат важен, и мы всегда благодарны людям, которые распространяют информацию о нашем деле. Спасибо!
+[Queer Svit](https://queersvit.org/) — независимая команда волонтёров со всего мира. С вашей поддержкой мы помогаем ЛГБТК+ сообществу и небелым* людям из Украины, России, Беларуси и других стран региона ВЕЦА. Мы помогаем людям, пострадавшим от войны и/или политических репрессий, оказываем поддержку при переезде — проводим консультации, приобретаем билеты, находим бесплатное жильё и предоставляем гуманитарную помощь.
 
-[Queer Svit](https://queersvit.taplink.ws/) is an organization that helps queer and BAME people impacted by the war in Ukraine, and those whose lives are threated by rising authoritarianism in Russia and Belarus. We are a group of volunteers, providing financial assistance, housing, and transportation to LGBTQ+ and BAME people in need, along with guidance and connections to further resources.
-Any donation helps, and we are always grateful to people who spread the word about our cause. Thank you!
+Война, как и всякая катастрофа, сильнее всего бьет по наиболее уязвимым членам общества. Так, маргинализированные группы (включая ЛГБТК+ и небелых* людей) находятся в большей опасности, но об их проблемах общество почти не слышит. Но так как наша команда и состоит из квир- и небелых* людей, мы не понаслышке знаем о трудностях, с которыми сталкиваются наши бенефициары, и хорошо понимаем, как им помочь.
+
+Ваши пожертвования имеют значение; Queer Svit существует в значительной степени за счет небольших пожертвований индивидуальных жертвователей. Мы благодарны за любую помощь — спасибо!
+
+[Queer Svit](https://queersvit.org/) is a black queer-run independent team of volunteers from all over the world. With your support we help LGBTQ+ and BAME people affected by the war and/or political repressions get to safety by providing consultations, purchasing tickets, finding free accommodation and providing humanitarian aid.
+
+‌‌Just like any other catastrophe, war affects the most those who are most vulnerable, including LGBTQ+ and BAME people while at the same time their troubles are often rendered invisible. But because our own team comprises LGBTQ+ and BAME people we see the specific challenges our beneficiaries face and understand how to help them.
+
+‌Your donations make a difference; Queer Svit is run in large part on small donations from individual donors. We are grateful for any and all help to continue our work — thank you!
 
 ## Лицензия ##
 

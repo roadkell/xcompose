@@ -53,8 +53,12 @@
 # are somewhat generic and might cause conflicts in the future.
 #
 # TODO:
-#	all superscript & subscript modifier letters (incl. Cyrillic Extended-D block)
-#	Abkhaz digraphs: Ӷә ӷә, Ӡә ӡә, Қә қә, Ҟә ҟә, Ҭә ҭә, Ҳә ҳә, Ҵә ҵә
+#	add ʼ (U+02BC MODIFIER LETTER APOSTROPHE)
+#	add Yazghulami letters: Г˚г˚, Ғ˚ғ˚, К˚к˚, Х˚х˚, Х̌˚х̌˚, ɣɤ, ɣ̌ɤ̌, Δδ, Θθ
+#	add Wakhi letters: Ҷ̈ҷ̈
+#	add: ӿ̊
+#	add all superscript & subscript modifier letters (incl. Cyrillic Extended-D block)
+#	add Abkhaz digraphs: Ӷә ӷә, Ӡә ӡә, Қә қә, Ҟә ҟә, Ҭә ҭә, Ҳә ҳә, Ҵә ҵә
 #
 # On letters with descenders and hooks:
 # https://www.unicode.org/L2/L2005/05215-cyrillic-fdbk.pdf
@@ -746,8 +750,8 @@ include "%L"
 <Multi_key> <9> <Cyrillic_el>		: "ԓ"	U0513 # CYRILLIC SMALL LETTER EL WITH HOOK
 <Multi_key> <Cyrillic_EL> <9>		: "Ԓ"	U0512 # CYRILLIC CAPITAL LETTER EL WITH HOOK
 <Multi_key> <Cyrillic_el> <9>		: "ԓ"	U0513 # CYRILLIC SMALL LETTER EL WITH HOOK
-# <dead_hook> <Cyrillic_EN>			: "Ӈ"	U04C7 # CYRILLIC CAPITAL LETTER EN WITH HOOK
-# <dead_hook> <Cyrillic_en>			: "ӈ"	U04C8 # CYRILLIC SMALL LETTER EN WITH HOOK
+<dead_hook> <Cyrillic_EN>			: "Ӈ"	U04C7 # CYRILLIC CAPITAL LETTER EN WITH HOOK
+<dead_hook> <Cyrillic_en>			: "ӈ"	U04C8 # CYRILLIC SMALL LETTER EN WITH HOOK
 # Нн with prefix 9 is occupied by Ԩԩ
 # <Multi_key> <9> <Cyrillic_EN>		: "Ӈ"	U04C7 # CYRILLIC CAPITAL LETTER EN WITH HOOK
 # <Multi_key> <9> <Cyrillic_en>		: "ӈ"	U04C8 # CYRILLIC SMALL LETTER EN WITH HOOK
@@ -786,8 +790,6 @@ include "%L"
 <Multi_key> <Cyrillic_ghe_bar> <9>	: "ӻ"	U04FB # CYRILLIC SMALL LETTER GHE WITH STROKE AND HOOK
 
 # Letter with left hook
-<dead_hook> <Cyrillic_EN>			: "Ԩ"	U0528 # CYRILLIC CAPITAL LETTER EN WITH LEFT HOOK
-<dead_hook> <Cyrillic_en>			: "ԩ"	U0529 # CYRILLIC SMALL LETTER EN WITH LEFT HOOK
 <Multi_key> <9> <Cyrillic_EN>		: "Ԩ"	U0528 # CYRILLIC CAPITAL LETTER EN WITH LEFT HOOK
 <Multi_key> <9> <Cyrillic_en>		: "ԩ"	U0529 # CYRILLIC SMALL LETTER EN WITH LEFT HOOK
 # <dead_cedilla> <Cyrillic_EN>		: "Ԩ"	U0528 # CYRILLIC CAPITAL LETTER EN WITH LEFT HOOK
